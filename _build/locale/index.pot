@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015, Bruno
-# This file is distributed under the same license as the Transl2 package.
+# Copyright (C) 2015, Bruno Skvorc
+# This file is distributed under the same license as the Diffbot PHP Client Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Transl2 1\n"
+"Project-Id-Version: Diffbot PHP Client Documentation 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-19 15:42+0000\n"
+"POT-Creation-Date: 2015-08-30 13:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,26 +17,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../index.rst:7
-msgid "Welcome to Transl2's documentation!"
+msgid "Diffbot PHP Client Documentation"
 msgstr ""
 
 #: ../../index.rst:9
+msgid "This documentation is intended for Diffbot's PHP client - for general Diffbot docs, see `Diffbot Documentation <https://www.diffbot.com/dev/docs/>`_."
+msgstr ""
+
+#: ../../index.rst:11
+msgid "If this is your first time encountering the PHP client, it's recommended you read :doc:`the overview </overview>`."
+msgstr ""
+
+#: ../../index.rst:13
 msgid "Contents:"
-msgstr ""
-
-#: ../../index.rst:17
-msgid "Indices and tables"
-msgstr ""
-
-#: ../../index.rst:19
-msgid ":ref:`genindex`"
-msgstr ""
-
-#: ../../index.rst:20
-msgid ":ref:`modindex`"
-msgstr ""
-
-#: ../../index.rst:21
-msgid ":ref:`search`"
 msgstr ""
 

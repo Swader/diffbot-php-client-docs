@@ -1,7 +1,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Transl2 1\n"
+"Project-Id-Version: diffbot-php 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-17 11:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -11,26 +11,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../index.rst:7
-msgid "Welcome to Transl2's documentation!"
-msgstr ""
-
-#: ../../index.rst:9
+#: ../../index.rst:13
 msgid "Contents:"
 msgstr "Sadrzaj:"
 
-#: ../../index.rst:17
-msgid "Indices and tables"
-msgstr ""
+#: ../../index.rst:7
+msgid "Diffbot PHP Client Documentation"
+msgstr "Dokumentacija za Diffbot PHP klijent"
 
-#: ../../index.rst:19
-msgid ":ref:`genindex`"
+#: ../../index.rst:9
+msgid ""
+"This documentation is intended for Diffbot's PHP client - for general "
+"Diffbot docs, see `Diffbot Documentation "
+"<https://www.diffbot.com/dev/docs/>`_."
 msgstr ""
+"Ova dokumentacija namijenjena je za upotrebu s Diffbotovim PHP klijentom - "
+"za opcenituDiffbot dokumentaciju, vidi `Diffbot dokumentaciju "
+"<https://www.diffbot.com/dev/docs/>`_."
 
-#: ../../index.rst:20
-msgid ":ref:`modindex`"
+#: ../../index.rst:11
+msgid ""
+"If this is your first time encountering the PHP client, it's recommended you"
+" read :doc:`the overview </overview>`."
 msgstr ""
+"Ukoliko se prvi puta susrecete s PHP klijentom, preporuca se da procitate "
+":doc:`pregled </overview>`."
 
-#: ../../index.rst:21
-msgid ":ref:`search`"
-msgstr ""
+#~ msgid "Indices and tables"
+#~ msgstr "Indeksi i tablice"
+
+#~ msgid ":ref:`genindex`"
+#~ msgstr ""
+
+#~ msgid ":ref:`modindex`"
+#~ msgstr ""
+
+#~ msgid ":ref:`search`"
+#~ msgstr ""
+
+#~ msgid "Welcome to Transl2's documentation!"
+#~ msgstr ""

@@ -3,20 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to SitePoint's RTDSphinx-l10n documentation!
-====================================================
+Diffbot PHP Client Documentation
+================================
+
+This documentation is intended for Diffbot's PHP client - for general Diffbot docs, see `Diffbot Documentation <https://www.diffbot.com/dev/docs/>`_.
+
+If this is your first time encountering the PHP client, it's recommended you read :doc:`the overview </overview>`.
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+   overview
