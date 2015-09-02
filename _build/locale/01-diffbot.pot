@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Bruno Skvorc
+# This file is distributed under the same license as the Diffbot PHP Client Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Diffbot PHP Client Documentation 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-02 21:55+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../01-diffbot.rst:11
+msgid "Diffbot Class"
+msgstr ""
+
+#: ../../01-diffbot.rst:17
+msgid "The Diffbot class is the first instance a developer must create when using the client. It serves as a container for global settings, and as a factory for the various API endpoint classes. The Diffbot class takes a single optional argument, the ``$token``, which can be obtained `here <https://diffbot.com/pricing>`_. Instantiate like so::"
+msgstr ""
+
+#: ../../01-diffbot.rst:21
+msgid "Alternatively, set the token globally, and instantiate without passing in the parameter::"
+msgstr ""
+
+#: ../../01-diffbot.rst:26
+msgid "Note that if you instantiate without a global token set, and don't pass in a token while instantiating either, you'll get a \\\\DiffbotException."
+msgstr ""
+
+#: ../../01-diffbot.rst:30
+msgid ":hidden:`setToken`"
+msgstr ""
+
+#: ../../01-diffbot.rst:34
+msgid "Useful for setting a default token for all future instances."
+msgstr ""
+
+#: ../../01-diffbot.rst:36
+msgid "The token."
+msgstr ""
+
+#: ../../01-diffbot.rst:37
+msgid "void, or throws an \\\\InvalidArgumentException if the token is invalid"
+msgstr ""
+
+#: ../../01-diffbot.rst:39
+#: ../../01-diffbot.rst:53
+msgid "Usage::"
+msgstr ""
+
+#: ../../01-diffbot.rst:45
+msgid ":hidden:`getToken`"
+msgstr ""
+
+#: ../../01-diffbot.rst:49
+msgid "Returns either the instance token, or the globally defined one - or null if neither is defined"
+msgstr ""
+
+#: ../../01-diffbot.rst:51
+msgid "null or string"
+msgstr ""
+
+#: ../../01-diffbot.rst:58
+msgid "The Diffbot class is the starting point of your API usage. Whenever you use the Diffbot PHP Client, you must start with the steps above."
+msgstr ""
+
+#: ../../01-diffbot.rst:60
+msgid "Next, we'll take a look at an API class."
+msgstr ""
+

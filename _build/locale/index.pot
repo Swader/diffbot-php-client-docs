@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Diffbot PHP Client Documentation 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-30 13:43+0000\n"
+"POT-Creation-Date: 2015-09-02 21:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,19 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../index.rst:7
+#: ../../index.rst:11
 msgid "Diffbot PHP Client Documentation"
 msgstr ""
 
-#: ../../index.rst:9
+#: ../../index.rst:13
 msgid "This documentation is intended for Diffbot's PHP client - for general Diffbot docs, see `Diffbot Documentation <https://www.diffbot.com/dev/docs/>`_."
 msgstr ""
 
-#: ../../index.rst:11
+#: ../../index.rst:15
 msgid "If this is your first time encountering the PHP client, it's recommended you read :doc:`the overview </overview>`."
 msgstr ""
 
-#: ../../index.rst:13
+#: ../../index.rst:17
 msgid "Contents:"
 msgstr ""
 

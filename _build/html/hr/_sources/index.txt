@@ -13,6 +13,7 @@ If this is your first time encountering the PHP client, it's recommended you rea
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    overview
+   01-diffbot

@@ -11,21 +11,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../overview.rst:6
+#: ../../overview.rst:11
 msgid "Overview"
 msgstr ""
 
-#: ../../overview.rst:9
+#: ../../overview.rst:14
 msgid "Diffbot"
 msgstr ""
 
-#: ../../overview.rst:11
+#: ../../overview.rst:16
 msgid ""
 "`Diffbot`_ is a visual machine learning AI which processes renders of web "
 "pages to generate structured JSON entities."
 msgstr ""
 
-#: ../../overview.rst:13
+#: ../../overview.rst:18
 msgid ""
 "In other words, you give Diffbot a URL and it returns human-readable data "
 "about it, but doesn't rely on what it finds in the source code - rather, it "
@@ -35,43 +35,43 @@ msgid ""
 "over-optimized SEO meta content."
 msgstr ""
 
-#: ../../overview.rst:15
+#: ../../overview.rst:20
 msgid "Diffbot exposes its services via a set of API endpoints."
 msgstr ""
 
-#: ../../overview.rst:19
+#: ../../overview.rst:24
 msgid ""
 "`Crawling with Visual Machine Learning <http://www.sitepoint.com/diffbot-"
 "crawling-visual-machine-learning>`_"
 msgstr ""
 
-#: ../../overview.rst:20
+#: ../../overview.rst:25
 msgid ""
 "`Analyze SitePoint Author Portfolios with Diffbot <http://www.sitepoint.com"
 "/analyze-sitepoint-author-portfolios-diffbot/>`_"
 msgstr ""
 
-#: ../../overview.rst:21
+#: ../../overview.rst:26
 msgid ""
 "`Collections and Merged APIs <http://www.sitepoint.com/diffbot-repeated-"
 "collections-merged-apis/>`_"
 msgstr ""
 
-#: ../../overview.rst:22
+#: ../../overview.rst:27
 msgid "`Other tutorials <http://www.sitepoint.com/tag/diffbot/>`_"
 msgstr ""
 
-#: ../../overview.rst:25
+#: ../../overview.rst:30
 msgid "Diffbot PHP Client"
 msgstr ""
 
-#: ../../overview.rst:27
+#: ../../overview.rst:32
 msgid ""
 "The Diffbot PHP Client is the official PHP wrapper for the API endpoints "
 "Diffbot provides."
 msgstr ""
 
-#: ../../overview.rst:29
+#: ../../overview.rst:34
 msgid ""
 "By using the PHP client, the developer can interact with both the APIs and "
 "the returned entities in an object oriented manner, rather than parse JSON "
@@ -80,31 +80,31 @@ msgid ""
 "immediate plans to transition to the feature-lacking version 6."
 msgstr ""
 
-#: ../../overview.rst:32
+#: ../../overview.rst:37
 msgid "Quickstart"
 msgstr ""
 
-#: ../../overview.rst:34
+#: ../../overview.rst:39
 msgid "Install via Composer::"
 msgstr ""
 
-#: ../../overview.rst:44
+#: ../../overview.rst:49
 msgid ""
 "Configure the API call with some setters (all will be explained in this "
 "documentation) and issue the call::"
 msgstr ""
 
-#: ../../overview.rst:48
+#: ../../overview.rst:53
 msgid "Consume the resulting data entity any way you see fit::"
 msgstr ""
 
-#: ../../overview.rst:17
+#: ../../overview.rst:22
 msgid ""
 "To read more about Diffbot, see the `official documentation "
 "<https://www.diffbot.com/dev/docs/>`_, or some of the following tutorials:"
 msgstr ""
 
-#: ../../overview.rst:38
+#: ../../overview.rst:43
 msgid ""
 "Create a Diffbot instance, provide a token, specify the URL you want to "
 "process, and use all this to create an instance of the API endpoint::"

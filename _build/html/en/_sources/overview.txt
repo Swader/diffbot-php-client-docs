@@ -1,5 +1,6 @@
 .. The overview file describes the purpose of the library
    Added: August 30th, 2015
+   Author: Bruno Skvorc <bruno@skvorc.me>
 
 ========
 Overview
