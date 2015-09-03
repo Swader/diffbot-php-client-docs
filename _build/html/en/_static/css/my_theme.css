@@ -1,7 +1,4 @@
-﻿@import url('theme.css');
-/* Custom styles */
-
-.rst-content dl dd {
+﻿.rst-content dl dd {
     margin: 24px 24px 24px 24px;
 }
 
