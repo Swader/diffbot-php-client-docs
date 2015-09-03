@@ -10,6 +10,9 @@ This documentation is intended for Diffbot's PHP client - for general Diffbot do
 
 If this is your first time encountering the PHP client, it's recommended you read :doc:`the overview </overview>`.
 
+:hidden:`maintoc`
+~~~~~~~~~~~~~~~~~
+
 Contents:
 
 .. toctree::

@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../index.rst:17
+#: ../../index.rst:20
 msgid "Contents:"
 msgstr "Sadrzaj:"
 
@@ -36,6 +36,10 @@ msgid ""
 msgstr ""
 "Ukoliko se prvi puta susrecete s PHP klijentom, preporuca se da procitate "
 ":doc:`pregled </overview>`."
+
+#: ../../index.rst:18
+msgid ":hidden:`maintoc`"
+msgstr ""
 
 #~ msgid "`Set Token <01-diffbot#\\Foo>`"
 #~ msgstr ""
