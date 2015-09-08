@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="Diffbot PHP Client Documentation 1 dokumentacija" href="index.html"/>
-        <link rel="next" title="Diffbot Class" href="01-diffbot.html"/>
+        <link rel="next" title="Diffbot klasa" href="01-diffbot.html"/>
         <link rel="prev" title="Dokumentacija za Diffbot PHP klijent" href="index.html"/> 
 
   
@@ -76,13 +76,39 @@
 <li class="toctree-l2"><a class="reference internal" href="#diffbot">Diffbot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#diffbot-php-client">Diffbotov PHP klijent</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#quickstart">Brzi pocetak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quicklinks">Brzi linkovi</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="01-diffbot.html">Diffbot Class</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="01-diffbot.html">Diffbot klasa</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#settoken"><span class="hidden">setToken</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#gettoken"><span class="hidden">getToken</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#sethttpclient"><span class="hidden">setHttpClient</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#gethttpclient"><span class="hidden">getHttpClient</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#setentityfactory"><span class="hidden">setEntityFactory</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#getentityfactory"><span class="hidden">getEntityFactory</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createproductapi"><span class="hidden">createProductApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createarticleapi"><span class="hidden">createArticleApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createimageapi"><span class="hidden">createImageApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createanalyzeapi"><span class="hidden">createAnalyzeApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#creatediscussionapi"><span class="hidden">createDiscussionApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createcustomapi"><span class="hidden">createCustomApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#id8"><span class="hidden">crawl</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#search"><span class="hidden">search</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-article.html">Article API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-product.html">Product API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-image.html">Image API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-custom.html">Custom API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-entityfactory.html">EntityFactory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-exceptions.html">Exceptions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-exceptions.html#diffbotexception">DiffbotException</a></li>
 </ul>
 </li>
 </ul>
@@ -129,7 +155,7 @@
 <p><a class="reference external" href="https://diffbot.com">Diffbot</a> je softverski robot, spoj umjetne inteligencije i strojnog ucenja, koji vizualno procesuira web stranice i vraca strukturirane JSON podatke o istima.</p>
 <p>Drugim rijecima, Diffbotu se daje URL, te on vraca podatke koji su citljivi ljudima. Razlika Diffbota i tradicionalnih <em>crawlera</em> je u tome sto Diffbot ne ovisi o izvornom HTML kodu koji nalazi na danim web stranicama, vec ih vizualno promatra i pokusava dokuciti ljudima bitne elemente, te iste pretvoriti u vrstu podataka koju krajnji korisnik lako konzumira u svojim aplikacijama. Samim time, Diffbot je relativno imun na SEO pretjerivanja i sulude kolicine meta tagova u HTML kodu koji se obicno koriste kako bi se prevario Google i preferirao neke stranice vise od drugih.</p>
 <p>Diffbotovim servisima se pristupa kroz set definiranih API tocaka.</p>
-<p>Da biste saznali vise o Diffbotu kao servisu, pogledajte <a class="reference external" href="https://www.diffbot.com/dev/docs">slubenu dokumentaciju</a> ili neke od sljedecih tutorijala:</p>
+<p>Da biste saznali vise o Diffbotu kao servisu, pogledajte <a class="reference external" href="https://www.diffbot.com/dev/docs">sluzbenu dokumentaciju</a> ili neke od sljedecih tutorijala:</p>
 <ul class="simple">
 <li><a class="reference external" href="http://www.sitepoint.com/diffbot-crawling-visual-machine-learning">Crawling with Visual Machine Learning</a></li>
 <li><a class="reference external" href="http://www.sitepoint.com/analyze-sitepoint-author-portfolios-diffbot/">Analyze SitePoint Author Portfolios with Diffbot</a></li>
@@ -163,6 +189,29 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="quicklinks">
+<h3>Brzi linkovi<a class="headerlink" href="#quicklinks" title="Link na taj naslov">¶</a></h3>
+<p>Slijedi popis linkova na specificne aspekte ovog klijenta, ovisno o vasim potrebama:</p>
+<ul class="simple">
+<li><p class="first"><a class="reference internal" href="api-product.html"><em>Products API</em></a> - ukoliko trebate obraditi online proizvode, web shopove, stranice na aukcijskim sjatovima, itd.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="api-article.html"><em>Articles API</em></a> - ukoliko trebate obraditi clanke, novosti, blog postove, i slicno.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="api-discussion.html"><em>Discussion API</em></a> - za obradu tema na forumima, komentara, te drugih vrsta dvosmjerne komunikacije.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="api-analyze.html"><em>Analyze API</em></a> - ukoliko ne znate sto cete obradjivati, te se zelite pouzdati u Diffbotovu intuiciju. Diffbot ce dati sve od sebe da sam shvati o kakvom se sadrzaju radi, te ce primjeniti jedan od odgovarajucih API-ja.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="api-image.html"><em>Image API</em></a> - ako planirate obraditi stranice koje sadrze mnogo grafickih elemenata, te zelite podatke o tim elementima. Primjeri su galerije, Pinterest stranice, Instagram, itd.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="api-custom.html"><em>Custom API</em></a> - ako ste izgradili svoj API na Diffbotu, te ga zelite koristiti s klijentom. Dobro radi u tandemu s <a class="reference internal" href="class-entityfactory.html"><em>EntityFactory klasom</em></a>.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="api-crawl.html"><em>Crawl API</em></a> - ako zelite primjeniti neki od gore navedenih API-ja na velik broj URLova odjednom.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="api-search.html"><em>Search API</em></a> - ako zelite pretraziti rezultate dobivene Crawl API-jem.</p>
+</li>
+</ul>
+<p>Koji god API mislite koristiti, u svakom slucaju prvo prodjite kroz <a class="reference internal" href="01-diffbot.html"><em>Diffbot klasu</em></a>.</p>
+</div>
 </div>
 </div>
 
@@ -172,7 +221,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="01-diffbot.html" class="btn btn-neutral float-right" title="Diffbot Class" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="01-diffbot.html" class="btn btn-neutral float-right" title="Diffbot klasa" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="Dokumentacija za Diffbot PHP klijent" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Diffbot PHP Client Documentation 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-03 09:40+0000\n"
+"POT-Creation-Date: 2015-09-08 00:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,56 +20,247 @@ msgstr ""
 msgid "Diffbot Class"
 msgstr ""
 
-#: ../../01-diffbot.rst:17
-msgid "The Diffbot class is the first instance a developer must create when using the client. It serves as a container for global settings, and as a factory for the various API endpoint classes. The Diffbot class takes a single optional argument, the ``$token``, which can be obtained `here <https://diffbot.com/pricing>`_. Instantiate like so::"
+#: ../../01-diffbot.rst:13
+msgid "The Diffbot class is the first instance a developer must create when using the client. It serves as a container for global settings, and as a factory for the various API endpoint classes."
 msgstr ""
 
-#: ../../01-diffbot.rst:21
+#: ../../01-diffbot.rst:19
+msgid "The Diffbot class takes a single optional argument, the ``$token``, which can be obtained `here <https://diffbot.com/pricing>`__. Instantiate like so::"
+msgstr ""
+
+#: ../../01-diffbot.rst:23
 msgid "Alternatively, set the token globally, and instantiate without passing in the parameter::"
 msgstr ""
 
-#: ../../01-diffbot.rst:26
-msgid "Note that if you instantiate without a global token set, and don't pass in a token while instantiating either, you'll get a \\\\DiffbotException."
+#: ../../01-diffbot.rst:28
+msgid "Note that if you instantiate without a global token set, and don't pass in a token while instantiating either, you'll get a :doc:`DiffbotException <class-exceptions>`."
 msgstr ""
 
-#: ../../01-diffbot.rst:30
+#: ../../01-diffbot.rst:32
 msgid ":hidden:`setToken`"
 msgstr ""
 
-#: ../../01-diffbot.rst:34
+#: ../../01-diffbot.rst:36
 msgid "Useful for setting a default token for all future instances."
 msgstr ""
 
-#: ../../01-diffbot.rst:36
+#: ../../01-diffbot.rst:38
 msgid "The token."
 msgstr ""
 
-#: ../../01-diffbot.rst:37
-msgid "void, or throws an \\\\InvalidArgumentException if the token is invalid"
+#: ../../01-diffbot.rst:39
+msgid "void, or throws an `\\\\InvalidArgumentException <http://php.net/manual/en/class.invalidargumentexception.php>`_ if the token is invalid"
 msgstr ""
 
-#: ../../01-diffbot.rst:39
-#: ../../01-diffbot.rst:53
+#: ../../01-diffbot.rst:41
+#: ../../01-diffbot.rst:55
+#: ../../01-diffbot.rst:70
+#: ../../01-diffbot.rst:96
+#: ../../01-diffbot.rst:124
+#: ../../01-diffbot.rst:142
+#: ../../01-diffbot.rst:161
+#: ../../01-diffbot.rst:183
+#: ../../01-diffbot.rst:202
+#: ../../01-diffbot.rst:226
+#: ../../01-diffbot.rst:270
 msgid "Usage::"
 msgstr ""
 
-#: ../../01-diffbot.rst:45
+#: ../../01-diffbot.rst:47
 msgid ":hidden:`getToken`"
 msgstr ""
 
-#: ../../01-diffbot.rst:49
+#: ../../01-diffbot.rst:51
 msgid "Returns either the instance token, or the globally defined one - or null if neither is defined"
 msgstr ""
 
-#: ../../01-diffbot.rst:51
+#: ../../01-diffbot.rst:53
 msgid "null or string"
 msgstr ""
 
-#: ../../01-diffbot.rst:58
-msgid "The Diffbot class is the starting point of your API usage. Whenever you use the Diffbot PHP Client, you must start with the steps above."
+#: ../../01-diffbot.rst:61
+msgid ":hidden:`setHttpClient`"
 msgstr ""
 
-#: ../../01-diffbot.rst:60
-msgid "Next, we'll take a look at an API class."
+#: ../../01-diffbot.rst:65
+msgid "Allows changing of HTTP clients used to send requests to the Diffbot API. Generally useful only during testing, but some edge cases may arise. This method does not need to be called for Diffbot to be usable - it will default to a new instance of the regular GuzzleHttp\\Client."
+msgstr ""
+
+#: ../../01-diffbot.rst:67
+msgid "The HTTP client."
+msgstr ""
+
+#: ../../01-diffbot.rst:68
+#: ../../01-diffbot.rst:94
+msgid "$this"
+msgstr ""
+
+#: ../../01-diffbot.rst:76
+msgid ":hidden:`getHttpClient`"
+msgstr ""
+
+#: ../../01-diffbot.rst:80
+msgid "Returns the currently set HTTP client. Can be changed via `setHttpClient <#setHttpClient>`_."
+msgstr ""
+
+#: ../../01-diffbot.rst:82
+msgid "GuzzleHttp\\\\Client"
+msgstr ""
+
+#: ../../01-diffbot.rst:85
+msgid ":hidden:`setEntityFactory`"
+msgstr ""
+
+#: ../../01-diffbot.rst:89
+msgid "Allows for changing the entity factory in use when returning and processing Diffbot-provided data. A custom Entity Factory might, for example, return Author entities (also custom) for all calls to a custom API set up in a user's Diffbot account. This helps with getting fully consumable custom data right from the API source, rather than requiring additional processing."
+msgstr ""
+
+#: ../../01-diffbot.rst:91
+msgid "If not explicitly set, defaults to built-in :doc:`EntityFactory <class-entityfactory>`."
+msgstr ""
+
+#: ../../01-diffbot.rst:93
+msgid "An EntityFactory implementation."
+msgstr ""
+
+#: ../../01-diffbot.rst:106
+msgid ":hidden:`getEntityFactory`"
+msgstr ""
+
+#: ../../01-diffbot.rst:110
+msgid "Returns the currently defined :doc:`EntityFactory <class-entityfactory>` instance. This method generally isn't needed outside of testing scenarios. See above for usage of the setter."
+msgstr ""
+
+#: ../../01-diffbot.rst:112
+msgid "Swader\\\\Diffbot\\\\Interfaces\\\\EntityFactory"
+msgstr ""
+
+#: ../../01-diffbot.rst:115
+msgid ":hidden:`createProductApi`"
+msgstr ""
+
+#: ../../01-diffbot.rst:119
+msgid "The product API turns web shops, catalogs, etc. into structured JSON (think eBay, Amazon...). This method creates an instance of the :doc:`Product API class <api-product>`. The method accepts a single string as a parameter: either a URL which to process, or the word \"crawl\" if used in conjunction with the `crawl <#id9>`_ method (see below). For a detailed directory of available methods and in depth usage examples, see the :doc:`Product API <api-product>` documentation."
+msgstr ""
+
+#: ../../01-diffbot.rst:121
+#: ../../01-diffbot.rst:139
+#: ../../01-diffbot.rst:158
+#: ../../01-diffbot.rst:180
+#: ../../01-diffbot.rst:199
+#: ../../01-diffbot.rst:222
+msgid "URL which is to be processed, or the word \"crawl\""
+msgstr ""
+
+#: ../../01-diffbot.rst:122
+msgid "Swader\\\\Diffbot\\\\Api\\\\Product"
+msgstr ""
+
+#: ../../01-diffbot.rst:133
+msgid ":hidden:`createArticleApi`"
+msgstr ""
+
+#: ../../01-diffbot.rst:137
+msgid "The article API turns online news posts, blog articles, etc. into structured JSON. This method creates an instance of the :doc:`Article API class <api-article>`. The method accepts a single string as a parameter: either a URL which to process, or the word \"crawl\" if used in conjunction with the `crawl <#id9>`_ method (see below). For a detailed directory of available methods and in depth usage examples, see the :doc:`Article API <api-article>` documentation."
+msgstr ""
+
+#: ../../01-diffbot.rst:140
+msgid "Swader\\\\Diffbot\\\\Api\\\\Article"
+msgstr ""
+
+#: ../../01-diffbot.rst:152
+msgid ":hidden:`createImageApi`"
+msgstr ""
+
+#: ../../01-diffbot.rst:156
+msgid "The image API finds images in a post and returns them as JSON. This method creates an instance of the :doc:`Image API class <api-image>`. The method accepts a single string as a parameter: either a URL which to process for images, or the word \"crawl\" if used in conjunction with the `crawl <#id9>`_ method (see below). For a detailed directory of available methods and in depth usage examples, see the :doc:`Image API <api-image>` documentation. Note that unlike Product and Article, the Image API can return several Image entities (see usage below). If not iterated through, the result refers to the first image only."
+msgstr ""
+
+#: ../../01-diffbot.rst:159
+msgid "Swader\\\\Diffbot\\\\Api\\\\Image"
+msgstr ""
+
+#: ../../01-diffbot.rst:174
+msgid ":hidden:`createAnalyzeApi`"
+msgstr ""
+
+#: ../../01-diffbot.rst:178
+msgid "The analyze API tries to autodetect the content it's dealing with (image, product, article...) and extracts it into structured JSON. This method creates an instance of the :doc:`Analyze API class <api-analyze>`. The method accepts a single string as a parameter: either a URL which to process, or the word \"crawl\" if used in conjunction with the `crawl <#id9>`_ method (see below). The Analyze API is the default API used during `crawl <#id9>`_ mode."
+msgstr ""
+
+#: ../../01-diffbot.rst:181
+msgid "Swader\\\\Diffbot\\\\Api\\\\Analyze"
+msgstr ""
+
+#: ../../01-diffbot.rst:193
+msgid ":hidden:`createDiscussionApi`"
+msgstr ""
+
+#: ../../01-diffbot.rst:197
+msgid "The discussion API turns online comments, forum topics or pages of reviews into structured JSON. Think Amazon review section, Youtube comments, article Disqus comments, etc. This method creates an instance of the :doc:`Discussion API class <api-discussion>`. The method accepts a single string as a parameter: either a URL which to process, or the word \"crawl\" if used in conjunction with the `crawl <#id9>`_ method (see below). Like the Image API above, this one also returns several :doc:`Post <api-discussion>` entities per call, if available, along with other data - see usage below."
+msgstr ""
+
+#: ../../01-diffbot.rst:200
+msgid "Swader\\\\Diffbot\\\\Api\\\\Discussion"
+msgstr ""
+
+#: ../../01-diffbot.rst:216
+msgid ":hidden:`createCustomApi`"
+msgstr ""
+
+#: ../../01-diffbot.rst:220
+msgid "Diffbot customers can define Custom APIs. For a tutorial on doing this, see `here <http://www.sitepoint.com/analyze-sitepoint-author-portfolios-diffbot/>`__. What it comes down to, is that you can tell Diffbot how to recognize certain areas of a web page, and have it translate that into JSON for you if none of the standard APIs do the trick. This allows for much more lightweight and specific calls, resulting in a quicker turnaround and (usually) more precise data. This method creates an instance of the :doc:`Custom API class <api-custom>`. The method accepts two parameters: either a URL which to process, or the word \"crawl\" if used in conjunction with the `crawl <#id9>`_ method (see below), and the name of the custom API to use. Unlike other APIs, this one has no specific entity to return and instead returns a :doc:`Wildcard Entity <api-custom>` which matches *anything*."
+msgstr ""
+
+#: ../../01-diffbot.rst:223
+msgid "Name of the custom API as defined in the `Diffbot UI <https://diffbot.com/dev>`_"
+msgstr ""
+
+#: ../../01-diffbot.rst:224
+msgid "Swader\\\\Diffbot\\\\Api\\\\Custom"
+msgstr ""
+
+#: ../../01-diffbot.rst:234
+msgid ":hidden:`crawl`"
+msgstr ""
+
+#: ../../01-diffbot.rst:238
+msgid "The crawl method is used to create new Crawlbot job (crawljob). To find out more about Crawlbot and what, how and why it does what it does, see `here <https://www.diffbot.com/dev/docs/crawl/>`__. I also recommend reading the `Crawlbot API docs <https://www.diffbot.com/dev/docs/crawl/api.jsp>`_ and the `Crawlbot support topics <http://support.diffbot.com/topics/crawlbot/>`_ just so you can dive right in without being too confused by the code below."
+msgstr ""
+
+#: ../../01-diffbot.rst:240
+msgid "In a nutshell, the Crawlbot crawls a set of seed URLs for links (even if a subdomain is passed to it as seed URL, it still looks through the entire main domain and all other subdomains it can find) and then processes all the pages it can find using the API you define (or opting for Analyze API by default). The result of the call is a collection of :doc:`JobCrawl <api-crawl>` objects, each with details about a defined job. To actually get data obtained by crawling and processing, use the `search API <#search>`_."
+msgstr ""
+
+#: ../../01-diffbot.rst:242
+msgid "Name of the new crawljob. If omitted, activates read only mode and returns joint data about all defined crawljobs for the current Diffbot token."
+msgstr ""
+
+#: ../../01-diffbot.rst:243
+msgid "Instance of the API to process the crawled URLs. If omitted, defaults to :doc:`Analyze API <api-analyze>`."
+msgstr ""
+
+#: ../../01-diffbot.rst:244
+msgid "Swader\\\\Diffbot\\\\Api\\\\Crawl"
+msgstr ""
+
+#: ../../01-diffbot.rst:246
+msgid "Here's how you can create a crawljob (see detailed :doc:`crawl docs <api-crawl>` for a step by step guide with explanations)::"
+msgstr ""
+
+#: ../../01-diffbot.rst:261
+msgid ":hidden:`search`"
+msgstr ""
+
+#: ../../01-diffbot.rst:265
+msgid "The Search API is used to search through sets of crawled and processed data obtained through the use of the Crawl or Bulk API. It accepts a simple string query, and returns an array of all matching entities. For a live example of crawl + search implemenation, see `here <http://search.sitepoint.tools>`_, and for a full walkthrough of the Search API, see the :doc:`Search API docs <api-search>`."
+msgstr ""
+
+#: ../../01-diffbot.rst:267
+msgid "The query to execute against the Search API"
+msgstr ""
+
+#: ../../01-diffbot.rst:268
+msgid "Swader\\\\Diffbot\\\\Api\\\\Search"
 msgstr ""
 

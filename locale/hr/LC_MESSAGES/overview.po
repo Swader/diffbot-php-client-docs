@@ -124,7 +124,7 @@ msgid ""
 "To read more about Diffbot, see the `official documentation "
 "<https://www.diffbot.com/dev/docs/>`_, or some of the following tutorials:"
 msgstr ""
-"Da biste saznali vise o Diffbotu kao servisu, pogledajte `slubenu "
+"Da biste saznali vise o Diffbotu kao servisu, pogledajte `sluzbenu "
 "dokumentaciju <https://www.diffbot.com/dev/docs>`_ ili neke od sljedecih "
 "tutorijala:"
 
@@ -136,3 +136,78 @@ msgstr ""
 "Kreirajte novu Diffbot instancu, dajte joj token, definirajte URL koji "
 "zelite obraditi, te napokon iz svega kreirajte instancu API tocke koju cete "
 "zvati::"
+
+#: ../../overview.rst:58
+msgid "Quicklinks"
+msgstr "Brzi linkovi"
+
+#: ../../overview.rst:60
+msgid ""
+"Here's a list sub-guides for this PHP client which may be useful depending "
+"on your specific needs:"
+msgstr "Slijedi popis linkova na specificne aspekte ovog klijenta, ovisno o vasim potrebama:"
+
+#: ../../overview.rst:62
+msgid ""
+":doc:`Products API <api-product>` - if you need to parse online products "
+"like webshop content, auction site pages, etc."
+msgstr ""
+":doc:`Products API <api-product>` - ukoliko trebate obraditi online proizvode, web shopove, stranice na aukcijskim sjatovima, itd."
+
+#: ../../overview.rst:63
+msgid ""
+":doc:`Articles API <api-article>` - if you need to parse online posts like "
+"news sites, blogs, tutorials, and other prose."
+msgstr ""
+":doc:`Articles API <api-article>` - ukoliko trebate obraditi clanke, novosti, blog postove, i slicno."
+
+#: ../../overview.rst:64
+msgid ""
+":doc:`Discussion API <api-discussion>` - for parsing forum topics, comment "
+"threads, and other back-and-forth forms of communication."
+msgstr ""
+":doc:`Discussion API <api-discussion>` - za obradu tema na forumima, komentara, te drugih vrsta dvosmjerne komunikacije."
+
+#: ../../overview.rst:65
+msgid ""
+":doc:`Analyze API <api-analyze>` - If you don't know what you're parsing, "
+"and want to rely on Diffbot's intuition to figure it out and auto-apply the "
+"correct API (one of the above)."
+msgstr ""
+":doc:`Analyze API <api-analyze>` - ukoliko ne znate sto cete obradjivati, te se zelite pouzdati u Diffbotovu intuiciju. Diffbot ce dati sve od sebe da sam shvati o kakvom se sadrzaju radi, te ce primjeniti jedan od odgovarajucih API-ja."
+
+#: ../../overview.rst:66
+msgid ""
+":doc:`Image API <api-image>` - if you're planning to parse an image-heavy "
+"site and want them all returned, along with extra data. Think galleries, "
+"pinterest pages, instagram..."
+msgstr ""
+":doc:`Image API <api-image>` - ako planirate obraditi stranice koje sadrze mnogo grafickih elemenata, te zelite podatke o tim elementima. Primjeri su galerije, Pinterest stranice, Instagram, itd."
+
+#: ../../overview.rst:67
+msgid ""
+":doc:`Custom API <api-custom>` - if you built your own API on Diffbot and "
+"want to use it with the client. Works well with :doc:`EntityFactory <class-"
+"entityfactory>`."
+msgstr ""
+":doc:`Custom API <api-custom>` - ako ste izgradili svoj API na Diffbotu, te ga zelite koristiti s klijentom. Dobro radi u tandemu s :doc:`EntityFactory klasom <class-entityfactory>`."
+
+#: ../../overview.rst:68
+msgid ""
+":doc:`Crawl API <api-crawl>` - if you want to apply any of the above on a "
+"massive number of URLs at once."
+msgstr ""
+":doc:`Crawl API <api-crawl>` - ako zelite primjeniti neki od gore navedenih API-ja na velik broj URLova odjednom."
+
+#: ../../overview.rst:69
+msgid ""
+":doc:`Search API <api-search>` - if you want to search the results produced "
+"by running the Crawl API above."
+msgstr ""
+":doc:`Search API <api-search>` - ako zelite pretraziti rezultate dobivene Crawl API-jem."
+
+#: ../../overview.rst:71
+msgid ""
+"Whatever your goal, make sure you read the main :doc:`Diffbot file "
+"<01-diffbot>` first."
+msgstr "Koji god API mislite koristiti, u svakom slucaju prvo prodjite kroz :doc:`Diffbot klasu <01-diffbot>`."

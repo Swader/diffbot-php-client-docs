@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Diffbot Class &mdash; Diffbot PHP Client Documentation 1 dokumentacija</title>
+  <title>Diffbot klasa &mdash; Diffbot PHP Client Documentation 1 dokumentacija</title>
   
 
   
@@ -31,6 +31,7 @@
 
   
     <link rel="top" title="Diffbot PHP Client Documentation 1 dokumentacija" href="index.html"/>
+        <link rel="next" title="Article API" href="api-article.html"/>
         <link rel="prev" title="Pregled" href="overview.html"/> 
 
   
@@ -75,13 +76,39 @@
 <li class="toctree-l2"><a class="reference internal" href="overview.html#diffbot">Diffbot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="overview.html#diffbot-php-client">Diffbotov PHP klijent</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="overview.html#quickstart">Brzi pocetak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#quicklinks">Brzi linkovi</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Diffbot Class</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Diffbot klasa</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#settoken"><span class="hidden">setToken</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gettoken"><span class="hidden">getToken</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sethttpclient"><span class="hidden">setHttpClient</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gethttpclient"><span class="hidden">getHttpClient</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setentityfactory"><span class="hidden">setEntityFactory</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getentityfactory"><span class="hidden">getEntityFactory</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#createproductapi"><span class="hidden">createProductApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#createarticleapi"><span class="hidden">createArticleApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#createimageapi"><span class="hidden">createImageApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#createanalyzeapi"><span class="hidden">createAnalyzeApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creatediscussionapi"><span class="hidden">createDiscussionApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#createcustomapi"><span class="hidden">createCustomApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8"><span class="hidden">crawl</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#search"><span class="hidden">search</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-article.html">Article API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-product.html">Product API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-image.html">Image API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-custom.html">Custom API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-entityfactory.html">EntityFactory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-exceptions.html">Exceptions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-exceptions.html#diffbotexception">DiffbotException</a></li>
 </ul>
 </li>
 </ul>
@@ -108,7 +135,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>Diffbot Class</li>
+    <li>Diffbot klasa</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -121,21 +148,22 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="namespace-Swader\Diffbot">
-<span id="diffbot-class"></span><h1>Diffbot Class<a class="headerlink" href="#namespace-Swader\Diffbot" title="Link na taj naslov">¶</a></h1>
-<dl class="class">
+  <div class="section" id="diffbot-class">
+<h1>Diffbot klasa<a class="headerlink" href="#diffbot-class" title="Link na taj naslov">¶</a></h1>
+<p>Diffbot klasa je prva klasa koju developer mora instancirati prilikom koristenja ovog klijenta. Sluzi kao globalni spremnik za konfiguraciju, te kao tvornica klasa raznih API-ja.</p>
+<span class="target" id="namespace-Swader\Diffbot"></span><dl class="class">
 <dt id="Swader\Diffbot\Diffbot">
 <em class="property">class </em><code class="descclassname">Swader\Diffbot\</code><code class="descname">Diffbot</code><a class="headerlink" href="#Swader\Diffbot\Diffbot" title="Link na tu definiciju">¶</a></dt>
-<dd><p>The Diffbot class is the first instance a developer must create when using the client. It serves as a container for global settings, and as a factory for the various API endpoint classes. The Diffbot class takes a single optional argument, the <code class="docutils literal"><span class="pre">$token</span></code>, which can be obtained <a class="reference external" href="https://diffbot.com/pricing">here</a>. Instantiate like so:</p>
+<dd><p>Diffbot klasa prima jedan neobavezni parametar - <code class="docutils literal"><span class="pre">$token</span></code> - koji se dobiva <a class="reference external" href="https://diffbot.com/pricing">ovdje</a>. Instancira se ovako:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nv">$diffbot</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Diffbot</span><span class="p">(</span><span class="s2">&quot;my_token&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Alternatively, set the token globally, and instantiate without passing in the parameter:</p>
+<p>Drugi pristup je da se setira token globalno, te instancira klasa bez parametra:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nx">Diffbot</span><span class="o">::</span><span class="na">setToken</span><span class="p">(</span><span class="s2">&quot;my_token&quot;</span><span class="p">);</span>
 <span class="nv">$diffbot</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Diffbot</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>Note that if you instantiate without a global token set, and don&#8217;t pass in a token while instantiating either, you&#8217;ll get a \DiffbotException.</p>
+<p>Ukoliko se Diffbot instancira bez podesenog globalnog tokena, a konstruktoru se takodjer ne da token argument, Diffbot ce baciti <a class="reference internal" href="class-exceptions.html"><em>DiffbotException</em></a>.</p>
 </dd></dl>
 
 <div class="section" id="settoken">
@@ -144,22 +172,22 @@
 <div><dl class="staticmethod">
 <dt id="Swader\Diffbot\Diffbot::setToken">
 <em class="property">static </em><code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">setToken</code><span class="sig-paren">(</span><em>$token</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::setToken" title="Link na tu definiciju">¶</a></dt>
-<dd><p>Useful for setting a default token for all future instances.</p>
+<dd><p>Koristi se za podesiti token za sve buduce instance Diffbot klase.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
-<li><strong>$token</strong> (<em>string</em>) &#8211; The token.</li>
+<li><strong>$token</strong> (<em>string</em>) &#8211; Token.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">void, or throws an \InvalidArgumentException if the token is invalid</p>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">void, ili baca <a class="reference external" href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a> ako token nije dobrog formata</p>
 </td>
 </tr>
 </tbody>
 </table>
-<p>Usage:</p>
+<p>Koristenje:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nx">Diffbot</span><span class="o">::</span><span class="na">setToken</span><span class="p">(</span><span class="s2">&quot;my_token&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -173,24 +201,407 @@
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::getToken">
 <code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">getToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::getToken" title="Link na tu definiciju">¶</a></dt>
-<dd><p>Returns either the instance token, or the globally defined one - or null if neither is defined</p>
+<dd><p>Vraca ili token zadane instance, ili globalno definirani token, ili null ukoliko nijedan ne postoji</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">null or string</td>
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">null ili string</td>
 </tr>
 </tbody>
 </table>
-<p>Usage:</p>
+<p>Koristenje:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">getToken</span><span class="p">();</span> <span class="c1">// &quot;my_token&quot;</span>
 </pre></div>
 </div>
 </dd></dl>
 
 </div></blockquote>
-<p>The Diffbot class is the starting point of your API usage. Whenever you use the Diffbot PHP Client, you must start with the steps above.</p>
-<p>Next, we&#8217;ll take a look at an API class.</p>
+</div>
+<div class="section" id="sethttpclient">
+<h2><span class="hidden">setHttpClient</span><a class="headerlink" href="#sethttpclient" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Diffbot::setHttpClient">
+<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">setHttpClient</code><span class="sig-paren">(</span><em>GuzzleHttp\Client $client</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::setHttpClient" title="Link na tu definiciju">¶</a></dt>
+<dd><p>Omogucava izmjenu HTTP klijenta koji se interno koristi za slanje poziva na Diffbot API. Namijenjeno za koristenje prilikom testiranja - nije od prevelike koristi izvan tog scenarija. Ovu se metodu ne treba zvati kako bi se Diffbot klasa mogla koristiti - default joj je GuzzleHttpClient.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$client</strong> (<em>GuzzleHttp\Client</em>) &#8211; HTTP klijent.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Koristenje:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GuzzleHttp\Client</span><span class="p">();</span>
+<span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">setHttpClient</span><span class="p">(</span><span class="nv">$client</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="gethttpclient">
+<h2><span class="hidden">getHttpClient</span><a class="headerlink" href="#gethttpclient" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Diffbot::getHttpClient">
+<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">getHttpClient</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::getHttpClient" title="Link na tu definiciju">¶</a></dt>
+<dd><p>Vraca trenutno odabrani HTTP klijent. Isti se moze mijenjati putem metode <a class="reference external" href="#setHttpClient">setHttpClient</a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">GuzzleHttp\Client</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="setentityfactory">
+<h2><span class="hidden">setEntityFactory</span><a class="headerlink" href="#setentityfactory" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Diffbot::setEntityFactory">
+<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">setEntityFactory</code><span class="sig-paren">(</span><em>Swader\Diffbot\Interfaces\EntityFactory $factory</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::setEntityFactory" title="Link na tu definiciju">¶</a></dt>
+<dd><p>Sluzi za izmjenu defaultne entity factory klase za neku drugu. Entity factory klasa sluzi za pretvaranje dobivenih Diffbot podataka u entitete koji imaju mogucnosti specificne za taj tip obradenih podataka. Na primjer, poseban Entity Factory mogao bi vracati Author entitete za Custom API koji sluzi za preuzimanje portfolija autora sa SitePoint.com. Time se dobivaju direktno iskoristivi podaci iz poziva Diffbotu, te nema potrebe za dodatnom obradom.</p>
+<p>Ako nije izricito zadano, default je <a class="reference internal" href="class-entityfactory.html"><em>EntityFactory klasa</em></a> koja dolazi s klijentom.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$token</strong> (<em>Swader\Diffbot\Interfaces\EntityFactory</em>) &#8211; Implementacija EntityFactory interfacea.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Koristenje:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$newEntityFactory</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\My\Custom\EntityFactory</span><span class="p">();</span>
+
+<span class="nv">$diffbot</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Diffbot</span><span class="p">(</span><span class="s1">&#39;my_token&#39;</span><span class="p">);</span>
+<span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">setEntityFactory</span><span class="p">(</span><span class="nv">$newEntityFactory</span><span class="p">);</span>
+
+<span class="c1">// @todo: Full tutorial about a custom Entity and EntityFactory</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getentityfactory">
+<h2><span class="hidden">getEntityFactory</span><a class="headerlink" href="#getentityfactory" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Diffbot::getEntityFactory">
+<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">getEntityFactory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::getEntityFactory" title="Link na tu definiciju">¶</a></dt>
+<dd><p>Vraca instancu trenutno definirane <a class="reference internal" href="class-entityfactory.html"><em>EntityFactory klase</em></a>. Ova metoda je obicno nepotrebna osim u situacijama testiranja. Vidi gore za koristenje settera radi izmjene EntityFactory instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">Swader\Diffbot\Interfaces\EntityFactory</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="createproductapi">
+<h2><span class="hidden">createProductApi</span><a class="headerlink" href="#createproductapi" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Diffbot::createProductApi">
+<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">createProductApi</code><span class="sig-paren">(</span><em>$url</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::createProductApi" title="Link na tu definiciju">¶</a></dt>
+<dd><p>Product API pretvara web shopove, kataloge i slicno u strukturirani JSON (npr. eBay, Amazon, itd.). Ova metoda kreira novu instancu <a class="reference internal" href="api-product.html"><em>Product API klase</em></a>. Metoda prima jedan parametar - URL stranice koju treba obraditi, ili rijec &#8220;crawl&#8221; ako se koristi sa <a class="reference external" href="#id9">crawl</a> metodom (vidi dolje). Za detaljni popis dostupnih metoda i specificne primjere koristenja, vidi <a class="reference internal" href="api-product.html"><em>Product API</em></a> dokumentaciju.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$url</strong> (<em>string</em>) &#8211; URL koji bi se trebao obraditi, ili rijec &#8220;crawl&#8221;</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Product</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Koristenje:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$api</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createProductApi</span><span class="p">(</span><span class="s2">&quot;http://www.amazon.com/Oh-The-Places-Youll-Go/dp/0679805273/&quot;</span><span class="p">);</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">offerPrice</span><span class="p">;</span> <span class="c1">// $11.99</span>
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getIsbn</span><span class="p">();</span> <span class="c1">// 0679805273</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="createarticleapi">
+<h2><span class="hidden">createArticleApi</span><a class="headerlink" href="#createarticleapi" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Diffbot::createArticleApi">
+<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">createArticleApi</code><span class="sig-paren">(</span><em>$url</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::createArticleApi" title="Link na tu definiciju">¶</a></dt>
+<dd><p>Article API pretvara novosti, clanke, blog postove i slicno u strukturirani JSON. Ova metoda kreira novu instancu <a class="reference internal" href="api-article.html"><em>Article API klase</em></a>. Metoda prima jedan parametar - URL stranice koju treba obraditi, ili rijec &#8220;crawl&#8221; ako se koristi sa <a class="reference external" href="#id9">crawl</a> metodom (vidi dolje). Za detaljni popis dostupnih metoda i specificne primjere koristenja, vidi <a class="reference internal" href="api-article.html"><em>Article API</em></a> dokumentaciju.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$url</strong> (<em>string</em>) &#8211; URL koji bi se trebao obraditi, ili rijec &#8220;crawl&#8221;</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Article</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Koristenje:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$api</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createArticleApi</span><span class="p">(</span><span class="s2">&quot;http://techcrunch.com/2012/05/31/diffbot-raises-2-million-seed-round-for-web-content-extraction-technology/&quot;</span><span class="p">);</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">publisherCountry</span><span class="p">;</span> <span class="c1">// United States</span>
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getAuthor</span><span class="p">();</span> <span class="c1">// Sarah Perez</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="createimageapi">
+<h2><span class="hidden">createImageApi</span><a class="headerlink" href="#createimageapi" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Diffbot::createImageApi">
+<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">createImageApi</code><span class="sig-paren">(</span><em>$url</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::createImageApi" title="Link na tu definiciju">¶</a></dt>
+<dd><p>Image API pronalazi slike na stranici te ih vraca u JSON obliku. Ova metoda kreira instancu <a class="reference internal" href="api-image.html"><em>Image API klase</em></a>, te prima jedan string argument - URL stranice koju treba obraditi, ili rijec &#8220;crawl&#8221; ukoliko se koristi zajedno s <a class="reference external" href="#id9">crawl</a> metodom (vidi dolje). Za detaljni popis dostupnih metoda, te specificne primjere koristenja, vidi <a class="reference internal" href="api-image.html"><em>Image API dokumentaciju</em></a>. Vrijedi napomenuti da, za razliku od Product i Article API, Image API vraca vise Image entiteta - ovisno o tome koliko slika je pronadjeno na stranici. Ukoliko se pristupa rezultatu direktno bez petlje, rezultat pretpostavlja da korisnik zeli prvu sliku koja je nadjena.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$url</strong> (<em>string</em>) &#8211; URL koji bi se trebao obraditi, ili rijec &#8220;crawl&#8221;</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Image</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Koristenje:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$api</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createImageApi</span><span class="p">(</span><span class="s2">&quot;http://smittenkitchen.com/blog/2012/01/buckwheat-baby-with-salted-caramel-syrup/&quot;</span><span class="p">);</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">naturalHeight</span><span class="p">;</span> <span class="c1">// 333</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$result</span> <span class="k">as</span> <span class="nv">$image</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">title</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getXPath</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="createanalyzeapi">
+<h2><span class="hidden">createAnalyzeApi</span><a class="headerlink" href="#createanalyzeapi" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Diffbot::createAnalyzeApi">
+<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">createAnalyzeApi</code><span class="sig-paren">(</span><em>$url</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::createAnalyzeApi" title="Link na tu definiciju">¶</a></dt>
+<dd><p>The analyze API tries to autodetect the content it&#8217;s dealing with (image, product, article...) and extracts it into structured JSON. This method creates an instance of the <a class="reference internal" href="api-analyze.html"><em>Analyze API class</em></a>. The method accepts a single string as a parameter: either a URL which to process, or the word &#8220;crawl&#8221; if used in conjunction with the <a class="reference external" href="#id9">crawl</a> method (see below). The Analyze API is the default API used during <a class="reference external" href="#id9">crawl</a> mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$url</strong> (<em>string</em>) &#8211; URL koji bi se trebao obraditi, ili rijec &#8220;crawl&#8221;</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Analyze</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Koristenje:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$api</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createAnalyzeApi</span><span class="p">(</span><span class="s2">&quot;http://techcrunch.com/2012/05/31/diffbot-raises-2-million-seed-round-for-web-content-extraction-technology/&quot;</span><span class="p">);</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">publisherCountry</span><span class="p">;</span> <span class="c1">// United States</span>
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getAuthor</span><span class="p">();</span> <span class="c1">// Sarah Perez</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="creatediscussionapi">
+<h2><span class="hidden">createDiscussionApi</span><a class="headerlink" href="#creatediscussionapi" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Diffbot::createDiscussionApi">
+<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">createDiscussionApi</code><span class="sig-paren">(</span><em>$url</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::createDiscussionApi" title="Link na tu definiciju">¶</a></dt>
+<dd><p>Discussion API pretvara online komentare, teme na forumima ili stranice s osvrtima u strukturirani JSON. Primjeri su osvrti na Amazonu, komentari ispod Youtube videa, Disqus komentari na clancima i novostima, itd. Ova metoda kreira instancu <a class="reference internal" href="api-discussion.html"><em>Discussion API klase</em></a>. Metoda prima jedan parametar - URL stranice koju treba obraditi, ili rijec &#8220;crawl&#8221; ako se koristi sa <cite>crawl &lt;#id9&gt;_ metodom (vidi dolje). Kao i Image API, Discussion API vraca kolekciju od vise entiteta po jednom pozivu, ukoliko je to moguce, uz neke ostale podatke - vidi koristenje dolje, ili u detaljnoj dokumentaciji.</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$url</strong> (<em>string</em>) &#8211; URL koji bi se trebao obraditi, ili rijec &#8220;crawl&#8221;</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Discussion</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Koristenje:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$api</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createDiscussionApi</span><span class="p">(</span><span class="s2">&quot;http://boards.straightdope.com/sdmb/showthread.php?t=740315&quot;</span><span class="p">);</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">numPosts</span><span class="p">;</span> <span class="c1">// 43</span>
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getParticipants</span><span class="p">();</span> <span class="c1">// 23</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$result</span> <span class="k">as</span> <span class="nv">$post</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="nv">$post</span><span class="o">-&gt;</span><span class="na">getAuthor</span><span class="p">();</span>
+    <span class="k">echo</span> <span class="nv">$post</span><span class="o">-&gt;</span><span class="na">votes</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="createcustomapi">
+<h2><span class="hidden">createCustomApi</span><a class="headerlink" href="#createcustomapi" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Diffbot::createCustomApi">
+<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">createCustomApi</code><span class="sig-paren">(</span><em>$url</em>, <em>$name</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::createCustomApi" title="Link na tu definiciju">¶</a></dt>
+<dd><p>Diffbotovi korisnici mogu definirati Custom API, proizvoljnih oblika i funkcionalnosti. Za vodic kroz kreiranje Custom API-ja, vidi <a class="reference external" href="http://www.sitepoint.com/analyze-sitepoint-author-portfolios-diffbot/">ovdje</a>. Stvar se svodi na to da se Diffbot moze istrenirati da vidi pojedine dijelove stranice kao podatke s posebnim znacenjem, i prevede ih u JSON ukoliko nijedan od standardnih API-ja to ne radi uspjesno. Time se postizu mnogo brza vremena obrade, te (obicno) precizniji rezultati. Ova metoda kreira novu instancu <a class="reference internal" href="api-custom.html"><em>Custom API klase</em></a>, prilikom cega prima dva parametra - ili URL koji se treba obraditi, ili rijec &#8220;crawl&#8221; ukoliko se API koristi zajedno s <a class="reference external" href="#id9">crawl</a> metodom (vidi dolje), te ime Custom API-ja kao sto je ono definirano u korisnickom web sucelju Diffbota. Za razliku od ostalih API-ja, Custom API uvijek vraca <a class="reference internal" href="api-custom.html"><em>Wildcard entitete</em></a>, koji odgovaraju <em>svim</em> vrstama obradjenih podataka.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$url</strong> (<em>string</em>) &#8211; URL koji bi se trebao obraditi, ili rijec &#8220;crawl&#8221;</li>
+<li><strong>$name</strong> (<em>string</em>) &#8211; Ime Custom API-ja kao sto je prikazano u <a class="reference external" href="https://diffbot.com/dev">Diffbot sucelju</a></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Custom</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Koristenje:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$api</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">createCustomApi</span><span class="p">(</span><span class="s2">&quot;http://sitepoint.com/author/bskvorc&quot;</span><span class="p">,</span> <span class="s2">&quot;AuthorFolio&quot;</span><span class="p">);</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">bio</span><span class="p">;</span> <span class="c1">// Bruno is a coder from Croatia with Master&#39;s Degrees in...</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="id8">
+<h2><span class="hidden">crawl</span><a class="headerlink" href="#id8" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Diffbot::crawl">
+<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">crawl</code><span class="sig-paren">(</span><em>$name = null</em>, <em>Swader\Diffbot\Api $api = null</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::crawl" title="Link na tu definiciju">¶</a></dt>
+<dd><p>Crawl metoda se koristi za kreiranje novog Crawlbot zadatka (crawljoba). Za vise informacija o Crawlbotu, te svemu sto, zasto i kako radi, vidi <a class="reference external" href="https://www.diffbot.com/dev/docs/crawl/">ovdje</a>. Radi izbjegavanja nejasnoca, korisno je procitati i <a class="reference external" href="https://www.diffbot.com/dev/docs/crawl/api.jsp">Crawlbot API dokumentaciju</a>, kao i <a class="reference external" href="http://support.diffbot.com/topics/crawlbot/">Crawlbot podrsku</a>.</p>
+<p>Crawlbot uzima pocetni (seed) URL od kojeg sam dalje trazi povezane URLove, te ih obradjuje koristeci zadani API. Procesuiraju se i linkovi na poddomenama zadane domene. Ukoliko API nije eksplicitno definiran, po defaultu se koristi Analyze API. Rezultat poziva je kolekcija <a class="reference internal" href="api-crawl.html"><em>JobCrawl</em></a> objekata, svaki s detaljima o crawljobu o kojem se radi. Da bi se dobili podaci, tj. rezultati obrade postignuti crawlanjem, treba se koristiti <a class="reference external" href="#search">search API</a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$name</strong> (<em>string</em>) &#8211; Ime novog crawljoba. U slucaju da ga se izostavi, aktivira se read-only nacin rada koji vraca podatke o svim crawljobovima na zadanom Diffbot tokenu.</li>
+<li><strong>$api</strong> (<em>Swader\Diffbot\Api</em>) &#8211; Instanca API-ja koji treba obraditi crawlane URLove. Default je Analyze API, ukoliko se neki izricito ne zada.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Crawl</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Ovako se kreira crawljob (za detalje, vidi <a class="reference internal" href="api-crawl.html"><em>crawl dokumentaciju</em></a> koja sadrzi korak-po-korak uputstva):</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$url</span> <span class="o">=</span> <span class="s1">&#39;crawl&#39;</span><span class="p">;</span>
+<span class="nv">$articleApi</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createArticleAPI</span><span class="p">(</span><span class="nv">$url</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setDiscussion</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+
+<span class="nv">$crawl</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">crawl</span><span class="p">(</span><span class="s1">&#39;mycrawl_01&#39;</span><span class="p">,</span> <span class="nv">$articleApi</span><span class="p">);</span>
+
+<span class="nv">$crawl</span><span class="o">-&gt;</span><span class="na">setSeeds</span><span class="p">([</span><span class="s1">&#39;http://sitepoint.com&#39;</span><span class="p">]);</span>
+
+<span class="nv">$job</span> <span class="o">=</span> <span class="nv">$crawl</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="c1">// See JobCrawl class to find out which getters are available</span>
+<span class="nx">dump</span><span class="p">(</span><span class="nv">$job</span><span class="o">-&gt;</span><span class="na">getDownloadUrl</span><span class="p">(</span><span class="s2">&quot;json&quot;</span><span class="p">));</span> <span class="c1">// outputs download URL to JSON dataset of the job&#39;s result</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="search">
+<h2><span class="hidden">search</span><a class="headerlink" href="#search" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Diffbot::search">
+<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">search</code><span class="sig-paren">(</span><em>$q</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::search" title="Link na tu definiciju">¶</a></dt>
+<dd><p>Search API je API za pretragu podataka dobivenih pomocu Crawl ili Bulk API-ja. Kao parametar prima string koji predstavlja upit na Diffbot bazu, te vraca array svih entiteta koji odgovaraju upitu. Za aktualni i funkcionalni primjer koristenja Crawl API-ja i Search API-ja, vidi <a class="reference external" href="http://search.sitepoint.tools">ovdje</a>, a za detaljno pojasnjenje Search API-ja, vidi <a class="reference internal" href="api-search.html"><em>Search API dokumentaciju</em></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$q</strong> (<em>string</em>) &#8211; Upit kojeg Search API treba izvrsiti na Diffbot bazi</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Search</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Koristenje:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$search</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">search</span><span class="p">(</span><span class="s1">&#39;author:&quot;Miles Johnson&quot; AND type:article&#39;</span><span class="p">);</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$search</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$result</span> <span class="k">as</span> <span class="nv">$article</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="nv">$article</span><span class="o">-&gt;</span><span class="na">getTitle</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
 </div>
 </div>
 
@@ -199,6 +610,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api-article.html" class="btn btn-neutral float-right" title="Article API" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="overview.html" class="btn btn-neutral" title="Pregled" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

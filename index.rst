@@ -20,3 +20,13 @@ Contents:
 
    overview
    01-diffbot
+   api-article
+   api-product
+   api-discussion
+   api-image
+   api-analyze
+   api-custom
+   api-crawl
+   api-search
+   class-entityfactory
+   class-exceptions

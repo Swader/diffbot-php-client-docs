@@ -1,0 +1,222 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>EntityFactory &mdash; Diffbot PHP Client Documentation 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/local_build.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Diffbot PHP Client Documentation 1 documentation" href="index.html"/>
+        <link rel="next" title="Exceptions" href="class-exceptions.html"/>
+        <link rel="prev" title="Search API" href="api-search.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Diffbot PHP Client Documentation
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#diffbot">Diffbot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#diffbot-php-client">Diffbot PHP Client</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#quickstart">Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#quicklinks">Quicklinks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="01-diffbot.html">Diffbot Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#settoken"><span class="hidden">setToken</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#gettoken"><span class="hidden">getToken</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#sethttpclient"><span class="hidden">setHttpClient</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#gethttpclient"><span class="hidden">getHttpClient</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#setentityfactory"><span class="hidden">setEntityFactory</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#getentityfactory"><span class="hidden">getEntityFactory</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createproductapi"><span class="hidden">createProductApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createarticleapi"><span class="hidden">createArticleApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createimageapi"><span class="hidden">createImageApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createanalyzeapi"><span class="hidden">createAnalyzeApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#creatediscussionapi"><span class="hidden">createDiscussionApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createcustomapi"><span class="hidden">createCustomApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#id8"><span class="hidden">crawl</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#search"><span class="hidden">search</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-article.html">Article API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-product.html">Product API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-image.html">Image API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-custom.html">Custom API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">EntityFactory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-exceptions.html">Exceptions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-exceptions.html#diffbotexception">DiffbotException</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Diffbot PHP Client Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>EntityFactory</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/class-entityfactory.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="entityfactory">
+<h1>EntityFactory<a class="headerlink" href="#entityfactory" title="Permalink to this headline">¶</a></h1>
+<p>Description goes here.</p>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="class-exceptions.html" class="btn btn-neutral float-right" title="Exceptions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api-search.html" class="btn btn-neutral" title="Search API" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Bruno Skvorc.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

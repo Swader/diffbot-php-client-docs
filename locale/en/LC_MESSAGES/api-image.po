@@ -1,0 +1,23 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Diffbot PHP Client Documentation 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-07 21:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api-image.rst:11
+msgid "Image API"
+msgstr ""
+
+#: ../../api-image.rst:13
+msgid "Description goes here."
+msgstr ""
+
+#~ msgid "Added: September 7th, 2015 Author: Bruno Skvorc <bruno@skvorc.me>"
+#~ msgstr ""

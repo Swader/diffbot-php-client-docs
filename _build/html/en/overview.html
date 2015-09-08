@@ -76,6 +76,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#diffbot">Diffbot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#diffbot-php-client">Diffbot PHP Client</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#quickstart">Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quicklinks">Quicklinks</a></li>
 </ul>
 </li>
 </ul>
@@ -83,6 +84,31 @@
 <li class="toctree-l1"><a class="reference internal" href="01-diffbot.html">Diffbot Class</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#settoken"><span class="hidden">setToken</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#gettoken"><span class="hidden">getToken</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#sethttpclient"><span class="hidden">setHttpClient</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#gethttpclient"><span class="hidden">getHttpClient</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#setentityfactory"><span class="hidden">setEntityFactory</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#getentityfactory"><span class="hidden">getEntityFactory</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createproductapi"><span class="hidden">createProductApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createarticleapi"><span class="hidden">createArticleApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createimageapi"><span class="hidden">createImageApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createanalyzeapi"><span class="hidden">createAnalyzeApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#creatediscussionapi"><span class="hidden">createDiscussionApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createcustomapi"><span class="hidden">createCustomApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#id8"><span class="hidden">crawl</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#search"><span class="hidden">search</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-article.html">Article API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-product.html">Product API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-image.html">Image API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-custom.html">Custom API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-entityfactory.html">EntityFactory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-exceptions.html">Exceptions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-exceptions.html#diffbotexception">DiffbotException</a></li>
 </ul>
 </li>
 </ul>
@@ -161,6 +187,21 @@
 <div class="highlight-php"><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$processedArticle</span><span class="o">-&gt;</span><span class="na">author</span><span class="p">;</span> <span class="c1">// Bruno Skvorc</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="quicklinks">
+<h3>Quicklinks<a class="headerlink" href="#quicklinks" title="Permalink to this headline">¶</a></h3>
+<p>Here&#8217;s a list sub-guides for this PHP client which may be useful depending on your specific needs:</p>
+<ul class="simple">
+<li><a class="reference internal" href="api-product.html"><em>Products API</em></a> - if you need to parse online products like webshop content, auction site pages, etc.</li>
+<li><a class="reference internal" href="api-article.html"><em>Articles API</em></a> - if you need to parse online posts like news sites, blogs, tutorials, and other prose.</li>
+<li><a class="reference internal" href="api-discussion.html"><em>Discussion API</em></a> - for parsing forum topics, comment threads, and other back-and-forth forms of communication.</li>
+<li><a class="reference internal" href="api-analyze.html"><em>Analyze API</em></a> - If you don&#8217;t know what you&#8217;re parsing, and want to rely on Diffbot&#8217;s intuition to figure it out and auto-apply the correct API (one of the above).</li>
+<li><a class="reference internal" href="api-image.html"><em>Image API</em></a> - if you&#8217;re planning to parse an image-heavy site and want them all returned, along with extra data. Think galleries, pinterest pages, instagram...</li>
+<li><a class="reference internal" href="api-custom.html"><em>Custom API</em></a> - if you built your own API on Diffbot and want to use it with the client. Works well with <a class="reference internal" href="class-entityfactory.html"><em>EntityFactory</em></a>.</li>
+<li><a class="reference internal" href="api-crawl.html"><em>Crawl API</em></a> - if you want to apply any of the above on a massive number of URLs at once.</li>
+<li><a class="reference internal" href="api-search.html"><em>Search API</em></a> - if you want to search the results produced by running the Crawl API above.</li>
+</ul>
+<p>Whatever your goal, make sure you read the main <a class="reference internal" href="01-diffbot.html"><em>Diffbot file</em></a> first.</p>
 </div>
 </div>
 </div>

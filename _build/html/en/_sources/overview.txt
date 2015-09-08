@@ -50,4 +50,20 @@ Consume the resulting data entity any way you see fit::
 
     echo $processedArticle->author; // Bruno Skvorc
 
+Quicklinks
+~~~~~~~~~~
+
+Here's a list sub-guides for this PHP client which may be useful depending on your specific needs:
+
+* :doc:`Products API <api-product>` - if you need to parse online products like webshop content, auction site pages, etc.
+* :doc:`Articles API <api-article>` - if you need to parse online posts like news sites, blogs, tutorials, and other prose.
+* :doc:`Discussion API <api-discussion>` - for parsing forum topics, comment threads, and other back-and-forth forms of communication.
+* :doc:`Analyze API <api-analyze>` - If you don't know what you're parsing, and want to rely on Diffbot's intuition to figure it out and auto-apply the correct API (one of the above).
+* :doc:`Image API <api-image>` - if you're planning to parse an image-heavy site and want them all returned, along with extra data. Think galleries, pinterest pages, instagram...
+* :doc:`Custom API <api-custom>` - if you built your own API on Diffbot and want to use it with the client. Works well with :doc:`EntityFactory <class-entityfactory>`.
+* :doc:`Crawl API <api-crawl>` - if you want to apply any of the above on a massive number of URLs at once.
+* :doc:`Search API <api-search>` - if you want to search the results produced by running the Crawl API above.
+
+Whatever your goal, make sure you read the main :doc:`Diffbot file <01-diffbot>` first.
+
 .. _`Diffbot`: https://diffbot.com

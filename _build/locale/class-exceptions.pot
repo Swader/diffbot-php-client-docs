@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Bruno Skvorc
+# This file is distributed under the same license as the Diffbot PHP Client Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Diffbot PHP Client Documentation 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-08 00:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../class-exceptions.rst:11
+msgid "Exceptions"
+msgstr ""
+
+#: ../../class-exceptions.rst:13
+msgid "This document contains the descriptions and throw cases for all exceptions in the client. Use this reference when you're unsure why you may have gotten an exception."
+msgstr ""
+
+#: ../../class-exceptions.rst:16
+msgid "DiffbotException"
+msgstr ""
+
+#: ../../class-exceptions.rst:18
+msgid "The DiffbotException is an empty exception class that extends the base PHP ``\\Exception``. It is the base for all other Diffbot exceptions - though currently, it is the only one."
+msgstr ""
+
+#: ../../class-exceptions.rst:20
+msgid "Its main current purpose is to let the user know that something went wrong with the client, not its dependencies or the application consuming it."
+msgstr ""
+
