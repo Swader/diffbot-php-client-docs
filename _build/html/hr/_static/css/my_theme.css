@@ -21,6 +21,10 @@ nav .hidden, div.section#maintoc .hidden {
     visibility: visible !important;
 }
 
+div.section#maintoc h2 {
+    display: none !important;
+}
+
 .wy-table-bordered-all, .rst-content table.docutils {
     border: 1px solid #e1e4e5;
 }
