@@ -1,0 +1,5 @@
+{
+    "require": {
+        "swader/diffbot-php-client": "^0.4.4"
+    }
+}

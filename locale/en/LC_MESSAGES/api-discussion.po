@@ -19,5 +19,9 @@ msgstr ""
 msgid "Description goes here."
 msgstr ""
 
+#: ../../api-discussion.rst:16
+msgid "Discussion API Class"
+msgstr ""
+
 #~ msgid "Added: September 7th, 2015 Author: Bruno Skvorc <bruno@skvorc.me>"
 #~ msgstr ""

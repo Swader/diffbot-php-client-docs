@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../class-entityfactory.rst:11
+#: ../../class-entityfactory.rst:11 ../../class-entityfactory.rst:16
 msgid "EntityFactory"
 msgstr ""
 

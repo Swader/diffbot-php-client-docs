@@ -15,9 +15,82 @@ msgstr ""
 msgid "Analyze API"
 msgstr ""
 
-#: ../../api-analyze.rst:13
-msgid "Description goes here."
+#: ../../api-analyze.rst:18
+msgid "Analyze API Class"
 msgstr ""
+
+#: ../../api-analyze.rst:13
+msgid ""
+"This API is a sort of \"catch all\" for all other API types in that it "
+"automatically determines the type of content being processed, and applies "
+"the appropriate API call to it."
+msgstr ""
+
+#: ../../api-analyze.rst:15
+msgid ""
+"This API will return entities matching the determined content type. For "
+"example, if you run Analyze API on a URL like ``www.sitepoint.com/quick-tip-"
+"get-homestead-vagrant-vm-running/``, the content type will be determined as "
+"\"article\" and it'll be exactly as if you had called the Article API "
+"(:php:class:`Swader\\\\Diffbot\\\\Api\\\\Article`) on it."
+msgstr ""
+
+#: ../../api-analyze.rst:25
+msgid ":hidden:`setDiscussion`"
+msgstr ""
+
+#: ../../api-analyze.rst:29
+msgid "Either ``true`` or ``false``"
+msgstr ""
+
+#: ../../api-analyze.rst:30 ../../api-analyze.rst:40
+msgid "$this"
+msgstr ""
+
+#: ../../api-analyze.rst:32
+msgid ""
+"If set to false, will not extract article comments in a Discussion entity "
+"embedded in the Article / Product entity. By default, it will."
+msgstr ""
+
+#: ../../api-analyze.rst:35
+msgid ":hidden:`setMode`"
+msgstr ""
+
+#: ../../api-analyze.rst:39
+msgid "\"article\", \"product\", \"image\" or \"auto\""
+msgstr ""
+
+#: ../../api-analyze.rst:42
+msgid ""
+"By default the Analyze API will fully extract all pages that match an "
+"existing Automatic API -- articles, products or image pages. Set mode to a "
+"specific page-type (e.g., mode=article) to extract content only from that "
+"specific page-type. All other pages will simply return the default Analyze "
+"fields."
+msgstr ""
+
+#: ../../api-analyze.rst:44
+msgid "Usage with defaults::"
+msgstr ""
+
+#: ../../api-analyze.rst:60
+msgid "Usage with discussion off::"
+msgstr ""
+
+#: ../../api-analyze.rst:76
+msgid "Usage with non-matching mode::"
+msgstr ""
+
+#: ../../api-analyze.rst:92
+msgid ""
+"In the last example above, no data is available due to a mismatch in mode - "
+"using image parsing on an article entity does not produce any useful "
+"information."
+msgstr ""
+
+#~ msgid "Description goes here."
+#~ msgstr ""
 
 #~ msgid "Added: September 7th, 2015 Author: Bruno Skvorc <bruno@skvorc.me>"
 #~ msgstr ""

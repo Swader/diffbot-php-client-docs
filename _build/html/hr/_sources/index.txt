@@ -20,6 +20,10 @@ Contents:
 
    overview
    01-diffbot
+
+   abstract-api
+   abstract-entity
+
    api-article
    api-product
    api-discussion
@@ -28,5 +32,9 @@ Contents:
    api-custom
    api-crawl
    api-search
+
    class-entityfactory
+   class-entityiterator
    class-exceptions
+   class-interfaces
+   class-traits

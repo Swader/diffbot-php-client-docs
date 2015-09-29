@@ -7,3 +7,17 @@ Image API
 =========
 
 Description goes here.
+
+Image API Class
+===============
+
+.. php:namespace:: Swader\Diffbot\Api
+
+.. php:class:: Image
+
+Image Entity Class
+==================
+
+.. php:namespace:: Swader\Diffbot\Entity
+
+.. php:class:: Image

@@ -26,14 +26,14 @@ msgstr ""
 msgid "DiffbotException"
 msgstr ""
 
-#: ../../class-exceptions.rst:18
+#: ../../class-exceptions.rst:22
 msgid ""
 "The DiffbotException is an empty exception class that extends the base PHP "
 "``\\Exception``. It is the base for all other Diffbot exceptions - though "
 "currently, it is the only one."
 msgstr ""
 
-#: ../../class-exceptions.rst:20
+#: ../../class-exceptions.rst:24
 msgid ""
 "Its main current purpose is to let the user know that something went wrong "
 "with the client, not its dependencies or the application consuming it."

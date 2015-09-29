@@ -94,21 +94,135 @@
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createanalyzeapi"><span class="hidden">createAnalyzeApi</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#creatediscussionapi"><span class="hidden">createDiscussionApi</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createcustomapi"><span class="hidden">createCustomApi</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#id8"><span class="hidden">crawl</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#crawl"><span class="hidden">crawl</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#search"><span class="hidden">search</span></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api-article.html">Article API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-product.html">Product API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Image API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-custom.html">Custom API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="class-entityfactory.html">EntityFactory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="class-exceptions.html">Exceptions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="class-exceptions.html#diffbotexception">DiffbotException</a></li>
+<li class="toctree-l1"><a class="reference internal" href="abstract-api.html">API Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#settimeout"><span class="hidden">setTimeout</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#call"><span class="hidden">call</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#buildurl"><span class="hidden">buildUrl</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="abstract-entity.html">Entity Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#getdata"><span class="hidden">getData</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#call"><span class="hidden">__call</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#get"><span class="hidden">__get</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-article.html">Article API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-article.html#namespace-Swader\Diffbot\Api">Article API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setsentiment"><span class="hidden">setSentiment</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setpaging"><span class="hidden">setPaging</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setmaxtags"><span class="hidden">setMaxTags</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setdiscussion"><span class="hidden">setDiscussion</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-article.html#article-entity-class">Article Entity Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#id1"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gettype"><span class="hidden">getType</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gettext"><span class="hidden">getText</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gethtml"><span class="hidden">getHtml</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getdate"><span class="hidden">getDate</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getauthor"><span class="hidden">getAuthor</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gettags"><span class="hidden">getTags</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getnumpages"><span class="hidden">getNumPages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getnextpages"><span class="hidden">getNextPages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getsentiment"><span class="hidden">getSentiment</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getdiscussion"><span class="hidden">getDiscussion</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getimages"><span class="hidden">getImages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getvideos"><span class="hidden">getVideos</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-product.html">Product API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-product.html#namespace-Swader\Diffbot\Api">Product API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-discussion.html#namespace-Swader\Diffbot\Api">Discussion API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Image API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#namespace-Swader\Diffbot\Api">Image API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-analyze.html#namespace-Swader\Diffbot\Api">Analyze API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-analyze.html#setdiscussion"><span class="hidden">setDiscussion</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-analyze.html#setmode"><span class="hidden">setMode</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-custom.html">Custom API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-custom.html#namespace-Swader\Diffbot\Api">Custom API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-custom.html#construct"><span class="hidden">__construct</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-custom.html#namespace-Swader\Diffbot\Entity">Wildcard Entity Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#crawl-api-class">Crawl API Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#jobcrawl-class">JobCrawl Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-search.html#namespace-Swader\Diffbot\Api">Search API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-entityfactory.html">EntityFactory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-entityfactory.html#id1">EntityFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-entityiterator.html">EntityIterator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-entityiterator.html#namespace-Swader\Diffbot\Entity">EntityIterator Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-exceptions.html">Exceptions (iznimke)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-exceptions.html#namespace-Swader\Diffbot\Exceptions">DiffbotException</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-interfaces.html">Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-interfaces.html#api">Api</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#settimeout"><span class="hidden">setTimeout</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#call"><span class="hidden">call</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#buildurl"><span class="hidden">buildUrl</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class-interfaces.html#entityfactory">EntityFactory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#createappropriateiterator"><span class="hidden">createAppropriateIterator</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-traits.html">Traits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-traits.html#diffbotaware">DiffbotAware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#registerdiffbot"><span class="hidden">registerDiffbot</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class-traits.html#standardapi">StandardApi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setlinks"><span class="hidden">setLinks</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setmeta"><span class="hidden">setMeta</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setbreadcrumb"><span class="hidden">setBreadcrumb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setquerystring"><span class="hidden">setQuerystring</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#standardentity">StandardEntity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getlang"><span class="hidden">getLang</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#gethumanlanguage"><span class="hidden">getHumanLanguage</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getpageurl"><span class="hidden">getPageUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getresolvedpageurl"><span class="hidden">getResolvedPageUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#gettitle"><span class="hidden">getTitle</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getlinks"><span class="hidden">getLinks</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getmeta"><span class="hidden">getMeta</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getbreadcrumb"><span class="hidden">getBreadcrumb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getquerystring"><span class="hidden">getQueryString</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -151,6 +265,14 @@
   <div class="section" id="image-api">
 <h1>Image API<a class="headerlink" href="#image-api" title="Link na taj naslov">¶</a></h1>
 <p>Description goes here.</p>
+<div class="section" id="namespace-Swader\Diffbot\Api">
+<span id="image-api-class"></span><h2>Image API Class<a class="headerlink" href="#namespace-Swader\Diffbot\Api" title="Link na taj naslov">¶</a></h2>
+<dl class="class">
+<dt id="Swader\Diffbot\Api\Image">
+<em class="property">class </em><code class="descclassname">Swader\Diffbot\Api\</code><code class="descname">Image</code><a class="headerlink" href="#Swader\Diffbot\Api\Image" title="Link na tu definiciju">¶</a></dt>
+<dd></dd></dl>
+
+</div>
 </div>
 
 

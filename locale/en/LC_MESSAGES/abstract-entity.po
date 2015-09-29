@@ -1,0 +1,114 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Diffbot PHP Client Documentation 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-20 09:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../abstract-entity.rst:11
+msgid "Entity Abstract"
+msgstr ""
+
+#: ../../abstract-entity.rst:13
+msgid ""
+"This page will describe the Entity Abstract class. This class is the root of"
+" all Entity classes. Entity classes are used as containers for return values"
+" from various API endpoints. For example, the Article API will return an "
+"Article Entity, the Discussion API will return a Discussion Entity, and so "
+"on."
+msgstr ""
+
+#: ../../abstract-entity.rst:22
+msgid ":hidden:`__construct`"
+msgstr ""
+
+#: ../../abstract-entity.rst:26
+msgid ""
+"This class takes a single argument during construction, an array of data. "
+"This data is then turned into gettable information by means of getters, both"
+" direct and magic. Some getters do additional processing of the data in "
+"order to make it more useful to the user."
+msgstr ""
+
+#: ../../abstract-entity.rst:28
+msgid "The data"
+msgstr ""
+
+#: ../../abstract-entity.rst:31
+msgid ":hidden:`getData`"
+msgstr ""
+
+#: ../../abstract-entity.rst:35
+msgid ""
+"Returns the raw data passed into the Entity by the parent API class. This "
+"will be an associative array (see Usage below)."
+msgstr ""
+
+#: ../../abstract-entity.rst:37
+msgid "array"
+msgstr ""
+
+#: ../../abstract-entity.rst:39 ../../abstract-entity.rst:69
+msgid "Usage::"
+msgstr ""
+
+#: ../../abstract-entity.rst:51
+msgid ":hidden:`__call`"
+msgstr ""
+
+#: ../../abstract-entity.rst:55
+msgid ""
+"Magic method for resolving undefined getters and only getters. If the method"
+" being called starts with ``get``, the remainder of its name will be turned "
+"into a key to search inside the `$data` property (see ``getData``). Once the"
+" call is identified as a *getter* call, ``__get`` is invoked (see below)."
+msgstr ""
+
+#: ../../abstract-entity.rst:57
+msgid "mixed"
+msgstr ""
+
+#: ../../abstract-entity.rst:58
+msgid "BadMethodCallException if the prefix of the method is not ``get``"
+msgstr ""
+
+#: ../../abstract-entity.rst:61
+msgid ":hidden:`__get`"
+msgstr ""
+
+#: ../../abstract-entity.rst:65
+msgid ""
+"This method is called automatically when ``__call`` is called. It looks for "
+"the property being asked for inside the ``$data`` property of the current "
+"class, or returns null if not found."
+msgstr ""
+
+#: ../../abstract-entity.rst:67
+msgid "string"
+msgstr ""
+
+#: ../../abstract-entity.rst:15
+msgid ""
+"It is important to note that an API class will *never* return an Entity "
+"class directly. Rather, it will return an "
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`, an iterable "
+"container with all the Entities inside. The container, however, is "
+"configured in such a way that executing *get* methods on it directly will "
+"forward those calls to the first Entity in its dataset. Thus, in instances "
+"where"
+msgstr ""
+
+#~ msgid ""
+#~ "It is important to note that an API class will *never* return an Entity "
+#~ "class directly. Rather, it will return an :doc:`EntityIterator <class-"
+#~ "entityiterator>`, an iterable container with all the Entities inside. The "
+#~ "container, however, is configured in such a way that executing *get* methods"
+#~ " on it directly will forward those calls to the first Entity in its dataset."
+#~ " Thus, in instances where"
+#~ msgstr ""

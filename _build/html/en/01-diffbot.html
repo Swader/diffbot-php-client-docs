@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="Diffbot PHP Client Documentation 1 documentation" href="index.html"/>
-        <link rel="next" title="Article API" href="api-article.html"/>
+        <link rel="next" title="API Abstract" href="abstract-api.html"/>
         <link rel="prev" title="Overview" href="overview.html"/> 
 
   
@@ -94,21 +94,135 @@
 <li class="toctree-l2"><a class="reference internal" href="#createanalyzeapi"><span class="hidden">createAnalyzeApi</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creatediscussionapi"><span class="hidden">createDiscussionApi</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#createcustomapi"><span class="hidden">createCustomApi</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id8"><span class="hidden">crawl</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#crawl"><span class="hidden">crawl</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#search"><span class="hidden">search</span></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api-article.html">Article API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-product.html">Product API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-image.html">Image API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-custom.html">Custom API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="class-entityfactory.html">EntityFactory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="abstract-api.html">API Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#settimeout"><span class="hidden">setTimeout</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#call"><span class="hidden">call</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#buildurl"><span class="hidden">buildUrl</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="abstract-entity.html">Entity Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#getdata"><span class="hidden">getData</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#call"><span class="hidden">__call</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#get"><span class="hidden">__get</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-article.html">Article API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-article.html#namespace-Swader\Diffbot\Api">Article API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setsentiment"><span class="hidden">setSentiment</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setpaging"><span class="hidden">setPaging</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setmaxtags"><span class="hidden">setMaxTags</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setdiscussion"><span class="hidden">setDiscussion</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-article.html#article-entity-class">Article Entity Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#id1"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gettype"><span class="hidden">getType</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gettext"><span class="hidden">getText</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gethtml"><span class="hidden">getHtml</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getdate"><span class="hidden">getDate</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getauthor"><span class="hidden">getAuthor</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gettags"><span class="hidden">getTags</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getnumpages"><span class="hidden">getNumPages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getnextpages"><span class="hidden">getNextPages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getsentiment"><span class="hidden">getSentiment</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getdiscussion"><span class="hidden">getDiscussion</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getimages"><span class="hidden">getImages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getvideos"><span class="hidden">getVideos</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-product.html">Product API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-product.html#namespace-Swader\Diffbot\Api">Product API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-discussion.html#namespace-Swader\Diffbot\Api">Discussion API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-image.html">Image API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-image.html#namespace-Swader\Diffbot\Api">Image API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-analyze.html#namespace-Swader\Diffbot\Api">Analyze API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-analyze.html#setdiscussion"><span class="hidden">setDiscussion</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-analyze.html#setmode"><span class="hidden">setMode</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-custom.html">Custom API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-custom.html#namespace-Swader\Diffbot\Api">Custom API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-custom.html#construct"><span class="hidden">__construct</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-custom.html#namespace-Swader\Diffbot\Entity">Wildcard Entity Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#crawl-api-class">Crawl API Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#jobcrawl-class">JobCrawl Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-search.html#namespace-Swader\Diffbot\Api">Search API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-entityfactory.html">EntityFactory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-entityfactory.html#id1">EntityFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-entityiterator.html">EntityIterator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-entityiterator.html#namespace-Swader\Diffbot\Entity">EntityIterator Class</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="class-exceptions.html">Exceptions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="class-exceptions.html#diffbotexception">DiffbotException</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class-exceptions.html#namespace-Swader\Diffbot\Exceptions">DiffbotException</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-interfaces.html">Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-interfaces.html#api">Api</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#settimeout"><span class="hidden">setTimeout</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#call"><span class="hidden">call</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#buildurl"><span class="hidden">buildUrl</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class-interfaces.html#entityfactory">EntityFactory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#createappropriateiterator"><span class="hidden">createAppropriateIterator</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-traits.html">Traits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-traits.html#diffbotaware">DiffbotAware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#registerdiffbot"><span class="hidden">registerDiffbot</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class-traits.html#standardapi">StandardApi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setlinks"><span class="hidden">setLinks</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setmeta"><span class="hidden">setMeta</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setbreadcrumb"><span class="hidden">setBreadcrumb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setquerystring"><span class="hidden">setQuerystring</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#standardentity">StandardEntity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getlang"><span class="hidden">getLang</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#gethumanlanguage"><span class="hidden">getHumanLanguage</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getpageurl"><span class="hidden">getPageUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getresolvedpageurl"><span class="hidden">getResolvedPageUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#gettitle"><span class="hidden">getTitle</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getlinks"><span class="hidden">getLinks</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getmeta"><span class="hidden">getMeta</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getbreadcrumb"><span class="hidden">getBreadcrumb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getquerystring"><span class="hidden">getQueryString</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +277,7 @@
 <span class="nv">$diffbot</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Diffbot</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>Note that if you instantiate without a global token set, and don&#8217;t pass in a token while instantiating either, you&#8217;ll get a <a class="reference internal" href="class-exceptions.html"><em>DiffbotException</em></a>.</p>
+<p>Note that if you instantiate without a global token set, and don&#8217;t pass in a token while instantiating either, you&#8217;ll get a <a class="reference internal" href="class-exceptions.html#Swader\Diffbot\Exceptions\DiffbotException" title="Swader\Diffbot\Exceptions\DiffbotException"><code class="xref php php-exc docutils literal"><span class="pre">Swader\Diffbot\Exceptions\DiffbotException</span></code></a> thrown.</p>
 </dd></dl>
 
 <div class="section" id="settoken">
@@ -172,8 +286,7 @@
 <div><dl class="staticmethod">
 <dt id="Swader\Diffbot\Diffbot::setToken">
 <em class="property">static </em><code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">setToken</code><span class="sig-paren">(</span><em>$token</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::setToken" title="Permalink to this definition">¶</a></dt>
-<dd><p>Useful for setting a default token for all future instances.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -187,6 +300,7 @@
 </tr>
 </tbody>
 </table>
+<p>Useful for setting a default token for all future instances.</p>
 <p>Usage:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nx">Diffbot</span><span class="o">::</span><span class="na">setToken</span><span class="p">(</span><span class="s2">&quot;my_token&quot;</span><span class="p">);</span>
 </pre></div>
@@ -201,8 +315,7 @@
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::getToken">
 <code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">getToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::getToken" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns either the instance token, or the globally defined one - or null if neither is defined</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -210,6 +323,7 @@
 </tr>
 </tbody>
 </table>
+<p>Returns either the instance token, or the globally defined one - or null if neither is defined</p>
 <p>Usage:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">getToken</span><span class="p">();</span> <span class="c1">// &quot;my_token&quot;</span>
 </pre></div>
@@ -224,8 +338,7 @@
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::setHttpClient">
 <code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">setHttpClient</code><span class="sig-paren">(</span><em>GuzzleHttp\Client $client</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::setHttpClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows changing of HTTP clients used to send requests to the Diffbot API. Generally useful only during testing, but some edge cases may arise. This method does not need to be called for Diffbot to be usable - it will default to a new instance of the regular GuzzleHttpClient.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -239,6 +352,7 @@
 </tr>
 </tbody>
 </table>
+<p>Allows changing of HTTP clients used to send requests to the Diffbot API. Generally useful only during testing, but some edge cases may arise. This method does not need to be called for Diffbot to be usable - it will default to a new instance of the regular GuzzleHttpClient.</p>
 <p>Usage:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GuzzleHttp\Client</span><span class="p">();</span>
 <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">setHttpClient</span><span class="p">(</span><span class="nv">$client</span><span class="p">);</span>
@@ -254,7 +368,7 @@
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::getHttpClient">
 <code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">getHttpClient</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::getHttpClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the currently set HTTP client. Can be changed via <a class="reference external" href="#setHttpClient">setHttpClient</a>.</p>
+<dd><p>Returns the currently set HTTP client. Can be changed via <a class="reference internal" href="#Swader\Diffbot\Diffbot::setHttpClient" title="Swader\Diffbot\Diffbot::setHttpClient"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Diffbot::setHttpClient</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -272,15 +386,13 @@
 <blockquote>
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::setEntityFactory">
-<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">setEntityFactory</code><span class="sig-paren">(</span><em>Swader\Diffbot\Interfaces\EntityFactory $factory</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::setEntityFactory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows for changing the entity factory in use when returning and processing Diffbot-provided data. A custom Entity Factory might, for example, return Author entities (also custom) for all calls to a custom API set up in a user&#8217;s Diffbot account. This helps with getting fully consumable custom data right from the API source, rather than requiring additional processing.</p>
-<p>If not explicitly set, defaults to built-in <a class="reference internal" href="class-entityfactory.html"><em>EntityFactory</em></a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">setEntityFactory</code><span class="sig-paren">(</span><em>$factory</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::setEntityFactory" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$token</strong> (<em>Swader\Diffbot\Interfaces\EntityFactory</em>) &#8211; An EntityFactory implementation.</li>
+<li><strong>$factory</strong> (<a class="reference internal" href="class-interfaces.html#Swader\Diffbot\Interfaces\EntityFactory" title="Swader\Diffbot\Interfaces\EntityFactory"><em>Swader\Diffbot\Interfaces\EntityFactory</em></a>) &#8211; A <a class="reference internal" href="class-interfaces.html#Swader\Diffbot\Interfaces\EntityFactory" title="Swader\Diffbot\Interfaces\EntityFactory"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Interfaces\EntityFactory</span></code></a> implementation.</li>
 </ul>
 </td>
 </tr>
@@ -289,6 +401,8 @@
 </tr>
 </tbody>
 </table>
+<p>Allows for changing the entity factory in use when returning and processing Diffbot-provided data. A custom Entity Factory might, for example, return Author entities (also custom) for all calls to a custom API set up in a user&#8217;s Diffbot account. This helps with getting fully consumable custom data right from the API source, rather than requiring additional processing.</p>
+<p>If not explicitly set, defaults to built-in <a class="reference internal" href="class-entityfactory.html#Swader\Diffbot\Factory\Entity" title="Swader\Diffbot\Factory\Entity"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Factory\Entity</span></code></a>.</p>
 <p>Usage:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nv">$newEntityFactory</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\My\Custom\EntityFactory</span><span class="p">();</span>
 
@@ -308,15 +422,15 @@
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::getEntityFactory">
 <code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">getEntityFactory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::getEntityFactory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the currently defined <a class="reference internal" href="class-entityfactory.html"><em>EntityFactory</em></a> instance. This method generally isn&#8217;t needed outside of testing scenarios. See above for usage of the setter.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Swader\Diffbot\Interfaces\EntityFactory</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference internal" href="class-interfaces.html#Swader\Diffbot\Interfaces\EntityFactory" title="Swader\Diffbot\Interfaces\EntityFactory"><code class="xref php php-interface docutils literal"><span class="pre">Swader\Diffbot\Interfaces\EntityFactory</span></code></a></td>
 </tr>
 </tbody>
 </table>
+<p>Returns the currently defined <a class="reference internal" href="class-interfaces.html#Swader\Diffbot\Interfaces\EntityFactory" title="Swader\Diffbot\Interfaces\EntityFactory"><code class="xref php php-interface docutils literal"><span class="pre">Swader\Diffbot\Interfaces\EntityFactory</span></code></a> instance. This method generally isn&#8217;t needed outside of testing scenarios. See above for usage of the setter.</p>
 </dd></dl>
 
 </div></blockquote>
@@ -327,8 +441,7 @@
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::createProductApi">
 <code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">createProductApi</code><span class="sig-paren">(</span><em>$url</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::createProductApi" title="Permalink to this definition">¶</a></dt>
-<dd><p>The product API turns web shops, catalogs, etc. into structured JSON (think eBay, Amazon...). This method creates an instance of the <a class="reference internal" href="api-product.html"><em>Product API class</em></a>. The method accepts a single string as a parameter: either a URL which to process, or the word &#8220;crawl&#8221; if used in conjunction with the <a class="reference external" href="#id9">crawl</a> method (see below). For a detailed directory of available methods and in depth usage examples, see the <a class="reference internal" href="api-product.html"><em>Product API</em></a> documentation.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -337,11 +450,12 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Product</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api-product.html#Swader\Diffbot\Api\Product" title="Swader\Diffbot\Api\Product"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Product</span></code></a></p>
 </td>
 </tr>
 </tbody>
 </table>
+<p>The product API turns web shops, catalogs, etc. into structured JSON (think eBay, Amazon...). This method creates an instance of the <a class="reference internal" href="api-product.html#Swader\Diffbot\Api\Product" title="Swader\Diffbot\Api\Product"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Product</span></code></a> class. The method accepts a single string as a parameter: either a URL which to process, or the word &#8220;crawl&#8221; if used in conjunction with the <a class="reference internal" href="#Swader\Diffbot\Diffbot::crawl" title="Swader\Diffbot\Diffbot::crawl"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Diffbot::crawl</span></code></a> method (see below). For a detailed directory of available methods and in depth usage examples, see the <a class="reference internal" href="api-product.html#Swader\Diffbot\Api\Product" title="Swader\Diffbot\Api\Product"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Product</span></code></a> documentation.</p>
 <p>Usage:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nv">$api</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createProductApi</span><span class="p">(</span><span class="s2">&quot;http://www.amazon.com/Oh-The-Places-Youll-Go/dp/0679805273/&quot;</span><span class="p">);</span>
 <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
@@ -360,8 +474,7 @@
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::createArticleApi">
 <code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">createArticleApi</code><span class="sig-paren">(</span><em>$url</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::createArticleApi" title="Permalink to this definition">¶</a></dt>
-<dd><p>The article API turns online news posts, blog articles, etc. into structured JSON. This method creates an instance of the <a class="reference internal" href="api-article.html"><em>Article API class</em></a>. The method accepts a single string as a parameter: either a URL which to process, or the word &#8220;crawl&#8221; if used in conjunction with the <a class="reference external" href="#id9">crawl</a> method (see below). For a detailed directory of available methods and in depth usage examples, see the <a class="reference internal" href="api-article.html"><em>Article API</em></a> documentation.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -370,11 +483,12 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Article</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api-article.html#Swader\Diffbot\Api\Article" title="Swader\Diffbot\Api\Article"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Article</span></code></a></p>
 </td>
 </tr>
 </tbody>
 </table>
+<p>The article API turns online news posts, blog articles, etc. into structured JSON. This method creates an instance of the <a class="reference internal" href="api-article.html#Swader\Diffbot\Api\Article" title="Swader\Diffbot\Api\Article"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Article</span></code></a> class. The method accepts a single string as a parameter: either a URL which to process, or the word &#8220;crawl&#8221; if used in conjunction with the <a class="reference internal" href="#Swader\Diffbot\Diffbot::crawl" title="Swader\Diffbot\Diffbot::crawl"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Diffbot::crawl</span></code></a> method (see below). For a detailed directory of available methods and in depth usage examples, see the <a class="reference internal" href="api-article.html#Swader\Diffbot\Api\Article" title="Swader\Diffbot\Api\Article"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Article</span></code></a> documentation.</p>
 <p>Usage:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nv">$api</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createArticleApi</span><span class="p">(</span><span class="s2">&quot;http://techcrunch.com/2012/05/31/diffbot-raises-2-million-seed-round-for-web-content-extraction-technology/&quot;</span><span class="p">);</span>
 <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
@@ -393,8 +507,7 @@
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::createImageApi">
 <code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">createImageApi</code><span class="sig-paren">(</span><em>$url</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::createImageApi" title="Permalink to this definition">¶</a></dt>
-<dd><p>The image API finds images in a post and returns them as JSON. This method creates an instance of the <a class="reference internal" href="api-image.html"><em>Image API class</em></a>. The method accepts a single string as a parameter: either a URL which to process for images, or the word &#8220;crawl&#8221; if used in conjunction with the <a class="reference external" href="#id9">crawl</a> method (see below). For a detailed directory of available methods and in depth usage examples, see the <a class="reference internal" href="api-image.html"><em>Image API</em></a> documentation. Note that unlike Product and Article, the Image API can return several Image entities (see usage below). If not iterated through, the result refers to the first image only.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -403,11 +516,12 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Image</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api-image.html#Swader\Diffbot\Api\Image" title="Swader\Diffbot\Api\Image"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Image</span></code></a></p>
 </td>
 </tr>
 </tbody>
 </table>
+<p>The image API finds images in a post and returns them as JSON. This method creates an instance of the <a class="reference internal" href="api-image.html#Swader\Diffbot\Api\Image" title="Swader\Diffbot\Api\Image"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Image</span></code></a> class. The method accepts a single string as a parameter: either a URL which to process for images, or the word &#8220;crawl&#8221; if used in conjunction with the <a class="reference internal" href="#Swader\Diffbot\Diffbot::crawl" title="Swader\Diffbot\Diffbot::crawl"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Diffbot::crawl</span></code></a> method (see below). For a detailed directory of available methods and in depth usage examples, see the <a class="reference internal" href="api-image.html#Swader\Diffbot\Api\Image" title="Swader\Diffbot\Api\Image"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Image</span></code></a> documentation. Note that unlike Product and Article, the Image API can return several Image entities (see usage below). If not iterated through, the result refers to the first image only.</p>
 <p>Usage:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nv">$api</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createImageApi</span><span class="p">(</span><span class="s2">&quot;http://smittenkitchen.com/blog/2012/01/buckwheat-baby-with-salted-caramel-syrup/&quot;</span><span class="p">);</span>
 <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
@@ -430,8 +544,7 @@
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::createAnalyzeApi">
 <code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">createAnalyzeApi</code><span class="sig-paren">(</span><em>$url</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::createAnalyzeApi" title="Permalink to this definition">¶</a></dt>
-<dd><p>The analyze API tries to autodetect the content it&#8217;s dealing with (image, product, article...) and extracts it into structured JSON. This method creates an instance of the <a class="reference internal" href="api-analyze.html"><em>Analyze API class</em></a>. The method accepts a single string as a parameter: either a URL which to process, or the word &#8220;crawl&#8221; if used in conjunction with the <a class="reference external" href="#id9">crawl</a> method (see below). The Analyze API is the default API used during <a class="reference external" href="#id9">crawl</a> mode.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -440,11 +553,12 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Analyze</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api-analyze.html#Swader\Diffbot\Api\Analyze" title="Swader\Diffbot\Api\Analyze"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Analyze</span></code></a></p>
 </td>
 </tr>
 </tbody>
 </table>
+<p>The analyze API tries to autodetect the content it&#8217;s dealing with (image, product, article...) and extracts it into structured JSON. This method creates an instance of the <a class="reference internal" href="api-analyze.html#Swader\Diffbot\Api\Analyze" title="Swader\Diffbot\Api\Analyze"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Analyze</span></code></a> class. The method accepts a single string as a parameter: either a URL which to process, or the word &#8220;crawl&#8221; if used in conjunction with the <a class="reference internal" href="#Swader\Diffbot\Diffbot::crawl" title="Swader\Diffbot\Diffbot::crawl"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Diffbot::crawl</span></code></a> method (see below). The Analyze API is the default API used during <a class="reference internal" href="#Swader\Diffbot\Diffbot::crawl" title="Swader\Diffbot\Diffbot::crawl"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Diffbot::crawl</span></code></a> mode.</p>
 <p>Usage:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nv">$api</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createAnalyzeApi</span><span class="p">(</span><span class="s2">&quot;http://techcrunch.com/2012/05/31/diffbot-raises-2-million-seed-round-for-web-content-extraction-technology/&quot;</span><span class="p">);</span>
 <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
@@ -463,8 +577,7 @@
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::createDiscussionApi">
 <code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">createDiscussionApi</code><span class="sig-paren">(</span><em>$url</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::createDiscussionApi" title="Permalink to this definition">¶</a></dt>
-<dd><p>The discussion API turns online comments, forum topics or pages of reviews into structured JSON. Think Amazon review section, Youtube comments, article Disqus comments, etc. This method creates an instance of the <a class="reference internal" href="api-discussion.html"><em>Discussion API class</em></a>. The method accepts a single string as a parameter: either a URL which to process, or the word &#8220;crawl&#8221; if used in conjunction with the <a class="reference external" href="#id9">crawl</a> method (see below). Like the Image API above, this one also returns several <a class="reference internal" href="api-discussion.html"><em>Post</em></a> entities per call, if available, along with other data - see usage below.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -473,11 +586,12 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Discussion</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api-discussion.html#Swader\Diffbot\Api\Discussion" title="Swader\Diffbot\Api\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Discussion</span></code></a></p>
 </td>
 </tr>
 </tbody>
 </table>
+<p>The discussion API turns online comments, forum topics or pages of reviews into structured JSON. Think Amazon review section, Youtube comments, article Disqus comments, etc. This method creates an instance of the <a class="reference internal" href="api-discussion.html#Swader\Diffbot\Api\Discussion" title="Swader\Diffbot\Api\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Discussion</span></code></a>. The method accepts a single string as a parameter: either a URL which to process, or the word &#8220;crawl&#8221; if used in conjunction with the <a class="reference internal" href="#Swader\Diffbot\Diffbot::crawl" title="Swader\Diffbot\Diffbot::crawl"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Diffbot::crawl</span></code></a> method (see below). Like the Image API above, this one also returns several <a class="reference internal" href="api-discussion.html#Swader\Diffbot\Api\Discussion" title="Swader\Diffbot\Api\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Discussion</span></code></a> entities per call, if available, along with other data - see usage below.</p>
 <p>Usage:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nv">$api</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createDiscussionApi</span><span class="p">(</span><span class="s2">&quot;http://boards.straightdope.com/sdmb/showthread.php?t=740315&quot;</span><span class="p">);</span>
 <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
@@ -501,8 +615,7 @@
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::createCustomApi">
 <code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">createCustomApi</code><span class="sig-paren">(</span><em>$url</em>, <em>$name</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::createCustomApi" title="Permalink to this definition">¶</a></dt>
-<dd><p>Diffbot customers can define Custom APIs. For a tutorial on doing this, see <a class="reference external" href="http://www.sitepoint.com/analyze-sitepoint-author-portfolios-diffbot/">here</a>. What it comes down to, is that you can tell Diffbot how to recognize certain areas of a web page, and have it translate that into JSON for you if none of the standard APIs do the trick. This allows for much more lightweight and specific calls, resulting in a quicker turnaround and (usually) more precise data. This method creates an instance of the <a class="reference internal" href="api-custom.html"><em>Custom API class</em></a>. The method accepts two parameters: either a URL which to process, or the word &#8220;crawl&#8221; if used in conjunction with the <a class="reference external" href="#id9">crawl</a> method (see below), and the name of the custom API to use. Unlike other APIs, this one has no specific entity to return and instead returns a <a class="reference internal" href="api-custom.html"><em>Wildcard Entity</em></a> which matches <em>anything</em>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -512,11 +625,12 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Custom</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api-custom.html#Swader\Diffbot\Api\Custom" title="Swader\Diffbot\Api\Custom"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Custom</span></code></a></p>
 </td>
 </tr>
 </tbody>
 </table>
+<p>Diffbot customers can define Custom APIs. For a tutorial on doing this, see <a class="reference external" href="http://www.sitepoint.com/analyze-sitepoint-author-portfolios-diffbot/">here</a>. What it comes down to, is that you can tell Diffbot how to recognize certain areas of a web page, and have it translate that into JSON for you if none of the standard APIs do the trick. This allows for much more lightweight and specific calls, resulting in a quicker turnaround and (usually) more precise data. This method creates an instance of the <a class="reference internal" href="api-custom.html#Swader\Diffbot\Api\Custom" title="Swader\Diffbot\Api\Custom"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Custom</span></code></a>. The method accepts two parameters: either a URL which to process, or the word &#8220;crawl&#8221; if used in conjunction with the <a class="reference internal" href="#Swader\Diffbot\Diffbot::crawl" title="Swader\Diffbot\Diffbot::crawl"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Diffbot::crawl</span></code></a> method (see below), and the name of the custom API to use. Unlike other APIs, this one has no specific entity to return and instead returns a <a class="reference internal" href="api-custom.html#Swader\Diffbot\Entity\Wildcard" title="Swader\Diffbot\Entity\Wildcard"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\Wildcard</span></code></a> entity which matches <em>anything</em>.</p>
 <p>Usage:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nv">$api</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">createCustomApi</span><span class="p">(</span><span class="s2">&quot;http://sitepoint.com/author/bskvorc&quot;</span><span class="p">,</span> <span class="s2">&quot;AuthorFolio&quot;</span><span class="p">);</span>
 <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
@@ -528,30 +642,30 @@
 
 </div></blockquote>
 </div>
-<div class="section" id="id8">
-<h2><span class="hidden">crawl</span><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="crawl">
+<h2><span class="hidden">crawl</span><a class="headerlink" href="#crawl" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::crawl">
 <code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">crawl</code><span class="sig-paren">(</span><em>$name = null</em>, <em>Swader\Diffbot\Api $api = null</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::crawl" title="Permalink to this definition">¶</a></dt>
-<dd><p>The crawl method is used to create new Crawlbot job (crawljob). To find out more about Crawlbot and what, how and why it does what it does, see <a class="reference external" href="https://www.diffbot.com/dev/docs/crawl/">here</a>. I also recommend reading the <a class="reference external" href="https://www.diffbot.com/dev/docs/crawl/api.jsp">Crawlbot API docs</a> and the <a class="reference external" href="http://support.diffbot.com/topics/crawlbot/">Crawlbot support topics</a> just so you can dive right in without being too confused by the code below.</p>
-<p>In a nutshell, the Crawlbot crawls a set of seed URLs for links (even if a subdomain is passed to it as seed URL, it still looks through the entire main domain and all other subdomains it can find) and then processes all the pages it can find using the API you define (or opting for Analyze API by default). The result of the call is a collection of <a class="reference internal" href="api-crawl.html"><em>JobCrawl</em></a> objects, each with details about a defined job. To actually get data obtained by crawling and processing, use the <a class="reference external" href="#search">search API</a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>$name</strong> (<em>string</em>) &#8211; Name of the new crawljob. If omitted, activates read only mode and returns joint data about all defined crawljobs for the current Diffbot token.</li>
-<li><strong>$api</strong> (<em>Swader\Diffbot\Api</em>) &#8211; Instance of the API to process the crawled URLs. If omitted, defaults to <a class="reference internal" href="api-analyze.html"><em>Analyze API</em></a>.</li>
+<li><strong>$api</strong> (<a class="reference internal" href="api-search.html#namespace-Swader\Diffbot\Api"><em>Swader\Diffbot\Api</em></a>) &#8211; Instance of the API to process the crawled URLs. If omitted, defaults to <a class="reference internal" href="api-analyze.html#Swader\Diffbot\Api\Analyze" title="Swader\Diffbot\Api\Analyze"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Analyze</span></code></a>.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Crawl</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api-crawl.html#Swader\Diffbot\Api\Crawl" title="Swader\Diffbot\Api\Crawl"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Crawl</span></code></a></p>
 </td>
 </tr>
 </tbody>
 </table>
-<p>Here&#8217;s how you can create a crawljob (see detailed <a class="reference internal" href="api-crawl.html"><em>crawl docs</em></a> for a step by step guide with explanations):</p>
+<p>The crawl method is used to create new Crawlbot job (crawljob). To find out more about Crawlbot and what, how and why it does what it does, see <a class="reference external" href="https://www.diffbot.com/dev/docs/crawl/">here</a>. I also recommend reading the <a class="reference external" href="https://www.diffbot.com/dev/docs/crawl/api.jsp">Crawlbot API docs</a> and the <a class="reference external" href="http://support.diffbot.com/topics/crawlbot/">Crawlbot support topics</a> just so you can dive right in without being too confused by the code below.</p>
+<p>In a nutshell, the Crawlbot crawls a set of seed URLs for links (even if a subdomain is passed to it as seed URL, it still looks through the entire main domain and all other subdomains it can find) and then processes all the pages it can find using the API you define (or opting for Analyze API by default). The result of the call is a collection of <a class="reference internal" href="api-crawl.html#Swader\Diffbot\Entity\JobCrawl" title="Swader\Diffbot\Entity\JobCrawl"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\JobCrawl</span></code></a> objects, each with details about a defined job. To actually get data obtained by crawling and processing, use the <a class="reference internal" href="#Swader\Diffbot\Diffbot::search" title="Swader\Diffbot\Diffbot::search"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Diffbot::search</span></code></a> API.</p>
+<p>Here&#8217;s how you can create a crawljob (see detailed <a class="reference internal" href="api-search.html#Swader\Diffbot\Api\Search" title="Swader\Diffbot\Api\Search"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Search</span></code></a> for a step by step guide with explanations):</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nv">$url</span> <span class="o">=</span> <span class="s1">&#39;crawl&#39;</span><span class="p">;</span>
 <span class="nv">$articleApi</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createArticleAPI</span><span class="p">(</span><span class="nv">$url</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setDiscussion</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
 
@@ -575,8 +689,7 @@
 <div><dl class="method">
 <dt id="Swader\Diffbot\Diffbot::search">
 <code class="descclassname">Swader\Diffbot\Diffbot::</code><code class="descname">search</code><span class="sig-paren">(</span><em>$q</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Diffbot::search" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Search API is used to search through sets of crawled and processed data obtained through the use of the Crawl or Bulk API. It accepts a simple string query, and returns an array of all matching entities. For a live example of crawl + search implemenation, see <a class="reference external" href="http://search.sitepoint.tools">here</a>, and for a full walkthrough of the Search API, see the <a class="reference internal" href="api-search.html"><em>Search API docs</em></a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -585,11 +698,12 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Swader\Diffbot\Api\Search</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api-search.html#Swader\Diffbot\Api\Search" title="Swader\Diffbot\Api\Search"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Search</span></code></a></p>
 </td>
 </tr>
 </tbody>
 </table>
+<p>The Search API is used to search through sets of crawled and processed data obtained through the use of the Crawl or Bulk API. It accepts a simple string query, and returns an array of all matching entities. For a live example of crawl + search implemenation, see <a class="reference external" href="http://search.sitepoint.tools">here</a>, and for a full walkthrough of the Search API, see the <a class="reference internal" href="api-search.html#Swader\Diffbot\Api\Search" title="Swader\Diffbot\Api\Search"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Search</span></code></a> docs.</p>
 <p>Usage:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="nv">$search</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">search</span><span class="p">(</span><span class="s1">&#39;author:&quot;Miles Johnson&quot; AND type:article&#39;</span><span class="p">);</span>
 <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$search</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
@@ -611,7 +725,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="api-article.html" class="btn btn-neutral float-right" title="Article API" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="abstract-api.html" class="btn btn-neutral float-right" title="API Abstract" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="overview.html" class="btn btn-neutral" title="Overview" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

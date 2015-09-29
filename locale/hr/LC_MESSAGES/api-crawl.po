@@ -19,5 +19,21 @@ msgstr ""
 msgid "Description goes here."
 msgstr ""
 
+#: ../../api-crawl.rst:16
+msgid "Crawl API Class"
+msgstr ""
+
+#: ../../api-crawl.rst:18
+msgid "The Crawl API is used"
+msgstr ""
+
+#: ../../api-crawl.rst:26
+msgid "JobCrawl Class"
+msgstr ""
+
+#: ../../api-crawl.rst:28
+msgid "The JobCrawl class is a container of information about a crawljob."
+msgstr ""
+
 #~ msgid "Added: September 7th, 2015 Author: Bruno Skvorc <bruno@skvorc.me>"
 #~ msgstr ""

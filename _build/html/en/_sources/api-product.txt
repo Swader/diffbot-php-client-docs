@@ -7,3 +7,10 @@ Product API
 ===========
 
 Description goes here.
+
+Product API Class
+=================
+
+.. php:namespace:: Swader\Diffbot\Api
+
+.. php:class:: Product

@@ -15,9 +15,88 @@ msgstr ""
 msgid "Custom API"
 msgstr ""
 
-#: ../../api-custom.rst:13
-msgid "Description goes here."
+#: ../../api-custom.rst:18
+msgid "Custom API Class"
 msgstr ""
+
+#: ../../api-custom.rst:13
+msgid "The Custom API is user defined in the Diffbot UI."
+msgstr ""
+
+#: ../../api-custom.rst:15
+msgid ""
+"For a tutorial on creating a Custom API in the Diffbot UI, see `here "
+"<http://www.sitepoint.com/analyze-sitepoint-author-portfolios-diffbot/>`__."
+msgstr ""
+
+#: ../../api-custom.rst:24
+msgid ""
+"When you have a Custom API ready on Diffbot's end, you instantiate the "
+"Custom API class and pass in the Custom API name, along with the URL to "
+"process. Everything from that point on is identical to the other APIs, "
+"except the fact that instead of specific entities being returned, all Custom"
+" API calls return an iterator of "
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Wildcard` entities."
+msgstr ""
+
+#: ../../api-custom.rst:27
+msgid ":hidden:`__construct`"
+msgstr ""
+
+#: ../../api-custom.rst:31
+msgid "The URL to process"
+msgstr ""
+
+#: ../../api-custom.rst:32
+msgid "The name of the API"
+msgstr ""
+
+#: ../../api-custom.rst:34
+msgid ""
+"The construct method is identical to the one in "
+":php:class:`Swader\\\\Diffbot\\\\Abstracts\\\\Api` with one difference - it "
+"also needs the name of the Custom API in question, so that it can build the "
+"API URL to which the call will be dispatched when "
+":php:meth:`Swader\\\\Diffbot\\\\Abstracts\\\\Api::call` is called::"
+msgstr ""
+
+#: ../../api-custom.rst:51
+msgid ""
+"In the example above, *AuthorFolio* is a custom API from `this tutorial "
+"<http://www.sitepoint.com/analyze-sitepoint-author-portfolios-diffbot/>`__, "
+"which processes a SitePoint author's portfolio. The ``getBio`` call works "
+"because of the magic methods in "
+":php:class:`Swader\\\\Diffbot\\\\Abstracts\\\\Entity` which "
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Wildcard` inherits."
+msgstr ""
+
+#: ../../api-custom.rst:54
+msgid "Wildcard Entity Class"
+msgstr ""
+
+#: ../../api-custom.rst:60
+msgid ""
+"The Wildcard entity is returned when the type of a processed post does not "
+"match a type defined in the currently set EntityFactory (see "
+":php:class:`Swader\\\\Diffbot\\\\Factory\\\\Entity` and "
+":php:meth:`Swader\\\\Diffbot\\\\Diffbot::setEntityFactory`)."
+msgstr ""
+
+#: ../../api-custom.rst:62
+msgid ""
+"It is nothing more than a *concretization* of "
+":php:class:`Swader\\\\Diffbot\\\\Abstracts\\\\Entity` and as such contains "
+"no additional methods."
+msgstr ""
+
+#: ../../api-custom.rst:64
+msgid ""
+"In the example above, the ``getBio`` method is called on a Wilcard instance,"
+" returned by the call to the *AuthorFolio*. custom API."
+msgstr ""
+
+#~ msgid "Description goes here."
+#~ msgstr ""
 
 #~ msgid "Added: September 7th, 2015 Author: Bruno Skvorc <bruno@skvorc.me>"
 #~ msgstr ""

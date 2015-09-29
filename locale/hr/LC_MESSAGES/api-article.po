@@ -16,8 +16,563 @@ msgid "Article API"
 msgstr ""
 
 #: ../../api-article.rst:13
-msgid "Description goes here."
+msgid ""
+"This API is used to turn content like blog posts, news articles, and other "
+"prose into JSON."
 msgstr ""
+
+#: ../../api-article.rst:15
+msgid ""
+"For examples of data that might be returned, please see http://diffbot.com "
+"and run the Article API demo."
+msgstr ""
+
+#: ../../api-article.rst:20
+msgid "Article API Class"
+msgstr ""
+
+#: ../../api-article.rst:114
+msgid "Article Entity Class"
+msgstr ""
+
+#: ../../api-article.rst:28 ../../api-article.rst:128
+msgid ":hidden:`__construct`"
+msgstr ""
+
+#: ../../api-article.rst:32
+msgid "The URL of the page to process or the string \"crawl\""
+msgstr ""
+
+#: ../../api-article.rst:33 ../../api-article.rst:43 ../../api-article.rst:66
+#: ../../api-article.rst:97 ../../api-article.rst:109
+msgid "$this"
+msgstr ""
+
+#: ../../api-article.rst:38
+msgid ":hidden:`setSentiment`"
+msgstr ""
+
+#: ../../api-article.rst:42 ../../api-article.rst:65 ../../api-article.rst:108
+msgid "Either ``true`` or ``false``"
+msgstr ""
+
+#: ../../api-article.rst:47 ../../api-article.rst:77
+msgid "Usage::"
+msgstr ""
+
+#: ../../api-article.rst:61
+msgid ":hidden:`setPaging`"
+msgstr ""
+
+#: ../../api-article.rst:68
+msgid ""
+"If set to false, Diffbot will not auto-concatenate several pages of a multi-"
+"page article into one. Defaults to true, max 20 pages."
+msgstr ""
+
+#: ../../api-article.rst:70
+msgid ""
+"For more info about auto-concatenation, see `here "
+"<http://support.diffbot.com/automatic-apis/handling-multiple-page-"
+"articles/>`__."
+msgstr ""
+
+#: ../../api-article.rst:72
+msgid ""
+"While practical, this is a less reliable method of concatenating long posts "
+"than finding out the number of pages manually and processing them each one "
+"by one. Not only does it often fail to recognize the next page links, but "
+"also if there's a chance that the series is longer than 20 parts, everything"
+" from 20 onward will remain ignored. This is a limitation of Diffbot, not "
+"the client, and there's little chance of it changing - concatenations longer"
+" than 20 pages would likely trigger timeouts as the page count becomes less "
+"and less trivial."
+msgstr ""
+
+#: ../../api-article.rst:92
+msgid ":hidden:`setMaxTags`"
+msgstr ""
+
+#: ../../api-article.rst:99
+msgid ""
+"Set the maximum number of automatically-generated tags to return. By default"
+" a maximum of five tags will be returned. Tags are a built-in feature of "
+"Diffbot, and *could* generate different results on two different calls to "
+"the same URL provided enough time has passed, due to Diffbot's engine "
+"evolving over time as it processed more and more content."
+msgstr ""
+
+#: ../../api-article.rst:96
+msgid "The number of tags to generate and return"
+msgstr ""
+
+#: ../../api-article.rst:104
+msgid ":hidden:`setDiscussion`"
+msgstr ""
+
+#: ../../api-article.rst:118
+msgid ""
+"For an overview of the abstract class all Entities build on, see "
+":php:class:`Swader\\\\Diffbot\\\\Abstracts\\\\Entity`."
+msgstr ""
+
+#: ../../api-article.rst:17
+msgid ""
+"The Article API part of the Diffbot PHP client consists of two main classes:"
+" the API class, and the Article Entity class. We'll describe them in order. "
+"Note that the API class extends "
+":php:class:`Swader\\\\Diffbot\\\\Abstracts\\\\Api`, so be sure to read that "
+"first if you haven't already."
+msgstr ""
+
+#: ../../api-article.rst:35
+msgid ""
+"This class takes a single argument during construction, the URL of the page "
+"to process. Alternatively, the argument can be the string \"crawl\", if the "
+"API is to be used in conjunction with "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Crawl`."
+msgstr ""
+
+#: ../../api-article.rst:45
+msgid ""
+"This method sets the ``sentiment`` optional field value. This determines "
+"whether or not to return the sentiment score of the analyzed article text, a"
+" value ranging from -1.0 (very negative) to 1.0 (very positive). Sentiment "
+"analysis is powered by `Semantria <http://support.diffbot.com/automatic-apis"
+"/semantria-powered-sentiment-entity-extraction-and-other-text-analysis-"
+"features/>`__ for advanced features like keyword and entity extraction, but "
+"the basic sentiment analysis (score only) is enabled for everyone, even "
+"those without Semantria accounts."
+msgstr ""
+
+#: ../../api-article.rst:116
+msgid ""
+"When the Article API is done processing an article (or several) the result "
+"will be an Article Entity (i.e. a collection of *one* Article Entities "
+"inside an instance of "
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`."
+msgstr ""
+
+#: ../../api-article.rst:74
+msgid ""
+"If you need to process multiple pages of something, it is thus recommended "
+"you find out those links yourself, then pass them into Article API one by "
+"one and concatenate later. If you'd like to analyze the entire concatenated "
+"post after the fact, it's best to manually concat and then send the merged "
+"content into Diffbot as a `POST value <https://tldrify.com/bhr>`__ for "
+"processing."
+msgstr ""
+
+#: ../../api-article.rst:132
+msgid "The data from which to build the Article entity"
+msgstr ""
+
+#: ../../api-article.rst:134
+msgid ""
+"The Article entity's constructor needs the data to populate its properties "
+"(see getters below). This class is automatically instantiated after an "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Article` or "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Analyze` call. You probably won't "
+"ever need to manually create an instance of this class."
+msgstr ""
+
+#: ../../api-article.rst:136
+msgid ""
+"In the case of the Article entity, the constructor differs from the abstract"
+" one (:php:meth:`Swader\\\\Diffbot\\\\Abstracts\\\\Api::__construct`) in "
+"that it also looks for the `discussion` key in the result, in order to build"
+" a :php:class:`Swader\\\\Diffbot\\\\Entity\\\\Discussion` sub-entity (see "
+":php:meth:`Swader\\\\Diffbot\\\\Entity\\\\Article::getDiscussion`)."
+msgstr ""
+
+#: ../../api-article.rst:139
+msgid ":hidden:`getType`"
+msgstr ""
+
+#: ../../api-article.rst:143 ../../api-article.rst:166
+#: ../../api-article.rst:175
+msgid "string"
+msgstr ""
+
+#: ../../api-article.rst:145
+msgid "Will always return \"article\" for articles::"
+msgstr ""
+
+#: ../../api-article.rst:153
+msgid ":hidden:`getText`"
+msgstr ""
+
+#: ../../api-article.rst:159
+msgid ""
+"Returns the plaintext content of the processed article. HTML tags are "
+"stripped completely, images are removed. If the text property is missing in "
+"the result, returns ``null``."
+msgstr ""
+
+#: ../../api-article.rst:162
+msgid ":hidden:`getHtml`"
+msgstr ""
+
+#: ../../api-article.rst:168
+msgid ""
+"Returns the full HTML content of the article. If the HTML property is "
+"missing in the result, returns ``null``."
+msgstr ""
+
+#: ../../api-article.rst:171
+msgid ":hidden:`getDate`"
+msgstr ""
+
+#: ../../api-article.rst:180
+msgid ":hidden:`getAuthor`"
+msgstr ""
+
+#: ../../api-article.rst:186
+msgid ""
+"Returns the name of the author as written on the page. If Diffbot was unable"
+" to figure out who the author is, ``null`` is returned."
+msgstr ""
+
+#: ../../api-article.rst:189
+msgid ":hidden:`getTags`"
+msgstr ""
+
+#: ../../api-article.rst:193 ../../api-article.rst:262
+#: ../../api-article.rst:303 ../../api-article.rst:327
+msgid "array"
+msgstr ""
+
+#: ../../api-article.rst:195
+msgid ""
+"Returns an array of tags/entities, generated from analysis of the extracted "
+"text and cross-referenced with DBpedia and other data sources. Note that "
+"these are *not* the meta tags as defined by the author, but machine learned "
+"ones::"
+msgstr ""
+
+#: ../../api-article.rst:249
+msgid ":hidden:`getNumPages`"
+msgstr ""
+
+#: ../../api-article.rst:253
+msgid "int"
+msgstr ""
+
+#: ../../api-article.rst:258
+msgid ":hidden:`getNextPages`"
+msgstr ""
+
+#: ../../api-article.rst:264
+msgid ""
+"If the article is a multi-page one, returns the list of URLs of the pages "
+"that follow after the one that was processed. If the article is a single-"
+"page one, an empty array is returned."
+msgstr ""
+
+#: ../../api-article.rst:267
+msgid ":hidden:`getSentiment`"
+msgstr ""
+
+#: ../../api-article.rst:273
+msgid ""
+"Returns the sentiment score of the analyzed article text, a value ranging "
+"from -1.0 (very negative) to 1.0 (very positive). If sentiment score is "
+"absent (due to Diffbot being unable to determine it, or due to "
+":php:meth:`Swader\\\\Diffbot\\\\Api\\\\Article::setSentiment` being set to "
+"``false``, returns ``null``."
+msgstr ""
+
+#: ../../api-article.rst:276
+msgid ":hidden:`getDiscussion`"
+msgstr ""
+
+#: ../../api-article.rst:282
+msgid ""
+"Returns the :php:class:`Swader\\\\Diffbot\\\\Entity\\\\Discussion` found on "
+"the article's page (comments section). See "
+":php:meth:`Swader\\\\Diffbot\\\\Api\\\\Article::setDiscussion` for details "
+"and below for usage::"
+msgstr ""
+
+#: ../../api-article.rst:296
+msgid ""
+"For other methods exposed on the "
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Discussion` entity, see its "
+"documentation."
+msgstr ""
+
+#: ../../api-article.rst:299
+msgid ":hidden:`getImages`"
+msgstr ""
+
+#: ../../api-article.rst:305
+msgid ""
+"An array of images found in the article, with their details. The elements of"
+" the array are arrays like this one::"
+msgstr ""
+
+#: ../../api-article.rst:320
+msgid ""
+"Unlike the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Discussion` API which "
+"returns details about discussion posts even when used with the "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Article` API, the image data "
+"returned with this method is minimal. For fuller details about images, use "
+"the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Image` API."
+msgstr ""
+
+#: ../../api-article.rst:323
+msgid ":hidden:`getVideos`"
+msgstr ""
+
+#: ../../api-article.rst:329
+msgid ""
+"Essentially identical to the above ``getImages``, but for videos. Arrays in "
+"the resulting array will look like this::"
+msgstr ""
+
+#: ../../api-article.rst:280
+msgid ":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Discussion` | null"
+msgstr ""
+
+#: ../../api-article.rst:101
+msgid ""
+"For an example of what the tags might look like, run the demo example at "
+"https://diffbot.com or see "
+":php:meth:`Swader\\\\Diffbot\\\\Entity\\\\Article::getTags`."
+msgstr ""
+
+#: ../../api-article.rst:255
+msgid ""
+"Returns the number of pages if the article is a multi-page one. Read about "
+"auto-concatenation `here <http://support.diffbot.com/automatic-apis"
+"/handling-multiple-page-articles/>`__ and study the "
+":php:meth:`Swader\\\\Diffbot\\\\Api\\\\Article::setPaging` method for more "
+"details."
+msgstr ""
+
+#: ../../api-article.rst:111
+msgid ""
+"Whether or not to use the Discussion API to additionally process any "
+"detected comment or review threads in the article. Behaves as if the "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Discussion` was set to process the "
+"page, and merges the returned data with the Article API's results by means "
+"of a ``discussion`` field in the result. The field will have all the sub-"
+"fields of the usual :php:class:`Swader\\\\Diffbot\\\\Api\\\\Discussion` "
+"call; i.e. you will be able to access the "
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Discussion` entity and all its "
+"sub entities via the "
+":php:meth:`Swader\\\\Diffbot\\\\Entity\\\\Article::getDiscussion` method."
+msgstr ""
+
+#: ../../api-article.rst:120
+msgid ""
+"Note that the Article entity can also be returned by the "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Analyze` API in \"article\" mode, or"
+" in default mode when processing a URL that contains an article (auto-"
+"determined)."
+msgstr ""
+
+#: ../../api-article.rst:157 ../../api-article.rst:184
+msgid "string | null"
+msgstr ""
+
+#: ../../api-article.rst:177
+msgid ""
+"Returns date as per `RFC 2616 "
+"<http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3>`_. Example "
+"date: \"Wed, 18 Dec 2013 00:00:00 GMT\". Note that this is `strtotime "
+"<http://php.net/manual/en/function.strtotime.php>`__ friendly for further "
+"conversions."
+msgstr ""
+
+#: ../../api-article.rst:271
+msgid "float | null"
+msgstr ""
+
+#: ../../api-article.rst:246
+msgid ""
+"Returns a maximum of 5 by default, though this can be changed in "
+":php:meth:`Swader\\\\Diffbot\\\\Api\\\\Article::setMaxTags`."
+msgstr ""
+
+#~ msgid "Article Entity"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note that the Article entity can also be returned by the "
+#~ ":php:class:`Swader\\\\Diffbot\\\\Api\\\\Analyze` API in \"article\" mode, or"
+#~ " in default mode when processing a URL that contains an article."
+#~ msgstr ""
+
+#~ msgid "string|null"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Returns date as per `RFC 2616 "
+#~ "<http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3>`_. Example "
+#~ "date: \"Wed, 18 Dec 2013 00:00:00 GMT\" Note that this is \"strtotime\" "
+#~ "friendly for further conversions."
+#~ msgstr ""
+
+#~ msgid "float|null"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Whether or not to use the Discussion API to additionally process any "
+#~ "detected comment or review threads in the article. Behaves as if the "
+#~ ":php:class:`Swader\\\\Diffbot\\Api\\\\Discussion` was set to process the "
+#~ "page, and merges the returned data with the Article API's results by means "
+#~ "of a ``discussion`` field in the result. The field will have all the sub-"
+#~ "fields of the usual :php:class:`Swader\\\\Diffbot\\\\Api\\\\Discussion` "
+#~ "call; i.e. you will be able to access the "
+#~ ":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Discussion` entity and all its "
+#~ "sub entities via the "
+#~ ":php:meth:`Swader\\\\Diffbot\\\\Entity\\\\Article::getDiscussion` method."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For an example of what the tags might look like, run the demo example at "
+#~ "https://diffbot.com"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Whether or not to use the Discussion API to additionally process any "
+#~ "detected comment or review threads in the article. Behaves as if the "
+#~ ":php:class:`Swader\\\\Diffbot\\Api\\\\Discussion` was set to process the "
+#~ "page, and merges the returned data with the Article API's results by means "
+#~ "of a ``discussion`` field in the result. The field will have all the sub-"
+#~ "fields of the usual :php:class:`Swader\\\\Diffbot\\Api\\\\Discussion` call; "
+#~ "i.e. you will be able to access the "
+#~ ":php:class:`Swader\\\\Diffbot\\Entity\\\\Discussion` entity and all its sub "
+#~ "entities via the "
+#~ ":php:meth:`Swader\\\\Diffbot\\Entity\\\\Article::getDiscussion` method."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Returns the number of pages if the article is a multi-page one. Read about "
+#~ "auto-concatenation `here <http://support.diffbot.com/automatic-apis"
+#~ "/handling-multiple-page-articles/>`__."
+#~ msgstr ""
+
+#~ msgid ":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Discussion`"
+#~ msgstr ""
+
+#~ msgid ":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Discussion`|null"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Essentially identical to ``getImages``, but for videos. Arrays in the "
+#~ "resulting array will look like this::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Returns an array of tags/entities, generated from analysis of the extracted "
+#~ "text and cross-referenced with DBpedia and other data sources::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Whether or not to use the Discussion API to additionally process any "
+#~ "detected comment or review threads in the article. Behaves as if the "
+#~ ":php:class:`Swader\\\\Diffbot\\Api\\\\Discussion` was set to process the "
+#~ "page, and merges the returned data with the Article API's results by means "
+#~ "of a ``discussion`` field in the result. The field will have all the sub-"
+#~ "fields of the usual :php:class:`Swader\\\\Diffbot\\Api\\\\Discussion` call."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you need to process multiple pages of something, it is thus recommended "
+#~ "you find out those links yourself, then pass them into Article API one by "
+#~ "one and concatenate later. If you'd like to analyze the entire concatenated "
+#~ "post after the fact, it's best to manually concat and then send the merged "
+#~ "content into Diffbot as a ``POST value <https://tldrify.com/bhr>``__ for "
+#~ "processing."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Article API part of the Diffbot PHP client consists of two main classes:"
+#~ " the API class, and the Article Entity class. We'll describe them in order. "
+#~ "Note that the API class extends the API Abstract class, so be sure to "
+#~ ":doc:`read that first <abstract-api>` if you haven't already."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This class takes a single argument during construction, the URL of the page "
+#~ "to process. Alternatively, the argument can be the string \"crawl\", if the "
+#~ "API is to be used in conjunction with the :doc:`Crawl API <api-crawl>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Whether or not to use the Discussion API to additionally process any "
+#~ "detected comment or review threads in the article. Behaves as if the "
+#~ ":doc:`Discussion API <api-discussion>` was set to process the page, and "
+#~ "merges the returned data with the Article API's results by means of a "
+#~ "``discussion`` field in the result. The field will have all the sub-fields "
+#~ "of the usual :doc:`Discussion API <api-discussion>` call."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When the Article API is done processing an article (or several) the result "
+#~ "will be an Article Entity (i.e. a collection inside an instance of "
+#~ ":php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This method sets the ``sentiment`` optional field value. This determines "
+#~ "whether or not to return the sentiment score of the analyzed article text, a"
+#~ " value ranging from -1.0 (very negative) to 1.0 (very positive). Sentiment "
+#~ "analysis is powered by `Semantria <http://support.diffbot.com/automatic-apis"
+#~ "/semantria-powered-sentiment-entity-extraction-and-other-text-analysis-"
+#~ "features/>`__ for advanced features like keyword and entity extraction, but "
+#~ "the basic sentiment analysis (score only) is enabled for everyone, even "
+#~ "those without Semantria accounts. Obviously, anything below zero is a "
+#~ "negative sentiment, while numbers greater than zero indicate positive "
+#~ "sentiment."
+#~ msgstr ""
+
+#~ msgid "t or f"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For an overview of the abstract class all Entities build on, see "
+#~ ":php:class:`Swader\\\\Diffbot\\\\Abstract\\\\Entity`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When the Article API is done processing an article (or several) the result "
+#~ "will be an Article Entity (i.e. a collection inside an instance of "
+#~ ":php:class:`Swader\\\\Diffbot\\\\Factory\\\\Entity`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When the Article API is done processing an article (or several) the result "
+#~ "will be an Article Entity."
+#~ msgstr ""
+
+#~ msgid "For an overview"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Article API part of the Diffbot PHP client consists of two main areas: "
+#~ "the API class, and the Article Entity class. We'll describe them in order. "
+#~ "Note that the API class extends the API Abstract class, so be sure to "
+#~ ":doc:`read that first <abstract-api>` if you haven't already."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This class takes a single argument during construction, the URL of the page "
+#~ "to process. Alternatively, the argument can be \"crawl\", if the API is to "
+#~ "be used in conjunction with the :doc:`Crawl API <api-crawl>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Article API part of the Diffbot PHP client consists of two main areas: "
+#~ "the API class, and the Article Entity class. We'll describe them in order. "
+#~ "Note that the API class extends the API Abstract class, so be sure to "
+#~ ":doc:`read that first <api-abstract>` if you haven't already."
+#~ msgstr ""
+
+#~ msgid "Description goes here."
+#~ msgstr ""
 
 #~ msgid "Added: September 7th, 2015 Author: Bruno Skvorc <bruno@skvorc.me>"
 #~ msgstr ""

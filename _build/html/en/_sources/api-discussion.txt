@@ -7,3 +7,10 @@ Discussion API
 ==============
 
 Description goes here.
+
+Discussion API Class
+====================
+
+.. php:namespace:: Swader\Diffbot\Api
+
+.. php:class:: Discussion

@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Entity Abstract &mdash; Diffbot PHP Client Documentation 1 dokumentacija</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/local_build.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Diffbot PHP Client Documentation 1 dokumentacija" href="index.html"/>
+        <link rel="next" title="Article API" href="api-article.html"/>
+        <link rel="prev" title="API Abstract" href="abstract-api.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Diffbot PHP Client Documentation
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Pregled</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#diffbot">Diffbot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#diffbot-php-client">Diffbotov PHP klijent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#quickstart">Brzi pocetak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#quicklinks">Brzi linkovi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="01-diffbot.html">Diffbot klasa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#settoken"><span class="hidden">setToken</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#gettoken"><span class="hidden">getToken</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#sethttpclient"><span class="hidden">setHttpClient</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#gethttpclient"><span class="hidden">getHttpClient</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#setentityfactory"><span class="hidden">setEntityFactory</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#getentityfactory"><span class="hidden">getEntityFactory</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createproductapi"><span class="hidden">createProductApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createarticleapi"><span class="hidden">createArticleApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createimageapi"><span class="hidden">createImageApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createanalyzeapi"><span class="hidden">createAnalyzeApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#creatediscussionapi"><span class="hidden">createDiscussionApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createcustomapi"><span class="hidden">createCustomApi</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#crawl"><span class="hidden">crawl</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#search"><span class="hidden">search</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="abstract-api.html">API Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#settimeout"><span class="hidden">setTimeout</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#call"><span class="hidden">call</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#buildurl"><span class="hidden">buildUrl</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Entity Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getdata"><span class="hidden">getData</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#call"><span class="hidden">__call</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get"><span class="hidden">__get</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-article.html">Article API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-article.html#namespace-Swader\Diffbot\Api">Article API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setsentiment"><span class="hidden">setSentiment</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setpaging"><span class="hidden">setPaging</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setmaxtags"><span class="hidden">setMaxTags</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setdiscussion"><span class="hidden">setDiscussion</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-article.html#article-entity-class">Article Entity Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#id1"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gettype"><span class="hidden">getType</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gettext"><span class="hidden">getText</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gethtml"><span class="hidden">getHtml</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getdate"><span class="hidden">getDate</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getauthor"><span class="hidden">getAuthor</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gettags"><span class="hidden">getTags</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getnumpages"><span class="hidden">getNumPages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getnextpages"><span class="hidden">getNextPages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getsentiment"><span class="hidden">getSentiment</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getdiscussion"><span class="hidden">getDiscussion</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getimages"><span class="hidden">getImages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getvideos"><span class="hidden">getVideos</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-product.html">Product API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-product.html#namespace-Swader\Diffbot\Api">Product API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-discussion.html#namespace-Swader\Diffbot\Api">Discussion API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-image.html">Image API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-image.html#namespace-Swader\Diffbot\Api">Image API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-analyze.html#namespace-Swader\Diffbot\Api">Analyze API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-analyze.html#setdiscussion"><span class="hidden">setDiscussion</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-analyze.html#setmode"><span class="hidden">setMode</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-custom.html">Custom API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-custom.html#namespace-Swader\Diffbot\Api">Custom API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-custom.html#construct"><span class="hidden">__construct</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-custom.html#namespace-Swader\Diffbot\Entity">Wildcard Entity Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#crawl-api-class">Crawl API Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#jobcrawl-class">JobCrawl Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-search.html#namespace-Swader\Diffbot\Api">Search API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-entityfactory.html">EntityFactory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-entityfactory.html#id1">EntityFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-entityiterator.html">EntityIterator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-entityiterator.html#namespace-Swader\Diffbot\Entity">EntityIterator Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-exceptions.html">Exceptions (iznimke)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-exceptions.html#namespace-Swader\Diffbot\Exceptions">DiffbotException</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-interfaces.html">Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-interfaces.html#api">Api</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#settimeout"><span class="hidden">setTimeout</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#call"><span class="hidden">call</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#buildurl"><span class="hidden">buildUrl</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class-interfaces.html#entityfactory">EntityFactory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#createappropriateiterator"><span class="hidden">createAppropriateIterator</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-traits.html">Traits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-traits.html#diffbotaware">DiffbotAware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#registerdiffbot"><span class="hidden">registerDiffbot</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class-traits.html#standardapi">StandardApi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setlinks"><span class="hidden">setLinks</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setmeta"><span class="hidden">setMeta</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setbreadcrumb"><span class="hidden">setBreadcrumb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setquerystring"><span class="hidden">setQuerystring</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#standardentity">StandardEntity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getlang"><span class="hidden">getLang</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#gethumanlanguage"><span class="hidden">getHumanLanguage</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getpageurl"><span class="hidden">getPageUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getresolvedpageurl"><span class="hidden">getResolvedPageUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#gettitle"><span class="hidden">getTitle</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getlinks"><span class="hidden">getLinks</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getmeta"><span class="hidden">getMeta</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getbreadcrumb"><span class="hidden">getBreadcrumb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getquerystring"><span class="hidden">getQueryString</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Diffbot PHP Client Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Entity Abstract</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/abstract-entity.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="entity-abstract">
+<h1>Entity Abstract<a class="headerlink" href="#entity-abstract" title="Link na taj naslov">¶</a></h1>
+<p>This page will describe the Entity Abstract class. This class is the root of all Entity classes. Entity classes are used as containers for return values from various API endpoints. For example, the Article API will return an Article Entity, the Discussion API will return a Discussion Entity, and so on.</p>
+<p>It is important to note that an API class will <em>never</em> return an Entity class directly. Rather, it will return an <a class="reference internal" href="class-entityiterator.html#Swader\Diffbot\Entity\EntityIterator" title="Swader\Diffbot\Entity\EntityIterator"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\EntityIterator</span></code></a>, an iterable container with all the Entities inside. The container, however, is configured in such a way that executing <em>get</em> methods on it directly will forward those calls to the first Entity in its dataset. Thus, in instances where</p>
+<span class="target" id="namespace-Swader\Diffbot\Abstracts"></span><dl class="class">
+<dt id="Swader\Diffbot\Abstracts\Entity">
+<em class="property">class </em><code class="descclassname">Swader\Diffbot\Abstracts\</code><code class="descname">Entity</code><a class="headerlink" href="#Swader\Diffbot\Abstracts\Entity" title="Link na tu definiciju">¶</a></dt>
+<dd></dd></dl>
+
+<div class="section" id="construct">
+<h2><span class="hidden">__construct</span><a class="headerlink" href="#construct" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Abstracts\Entity::__construct">
+<code class="descclassname">Swader\Diffbot\Abstracts\Entity::</code><code class="descname">__construct</code><span class="sig-paren">(</span><em>array $data</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Abstracts\Entity::__construct" title="Link na tu definiciju">¶</a></dt>
+<dd><p>This class takes a single argument during construction, an array of data. This data is then turned into gettable information by means of getters, both direct and magic. Some getters do additional processing of the data in order to make it more useful to the user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$data</strong> (<em>array</em>) &#8211; The data</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getdata">
+<h2><span class="hidden">getData</span><a class="headerlink" href="#getdata" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Abstracts\Entity::getData">
+<code class="descclassname">Swader\Diffbot\Abstracts\Entity::</code><code class="descname">getData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Abstracts\Entity::getData" title="Link na tu definiciju">¶</a></dt>
+<dd><p>Returns the raw data passed into the Entity by the parent API class. This will be an associative array (see Usage below).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+<p>Usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ...</span>
+
+<span class="nv">$data</span> <span class="o">=</span> <span class="nv">$article</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">];</span>
+<span class="k">echo</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">];</span>
+
+<span class="c1">// etc.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="call">
+<h2><span class="hidden">__call</span><a class="headerlink" href="#call" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Abstracts\Entity::__call">
+<code class="descclassname">Swader\Diffbot\Abstracts\Entity::</code><code class="descname">__call</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Abstracts\Entity::__call" title="Link na tu definiciju">¶</a></dt>
+<dd><p>Magic method for resolving undefined getters and only getters. If the method being called starts with <code class="docutils literal"><span class="pre">get</span></code>, the remainder of its name will be turned into a key to search inside the <cite>$data</cite> property (see <code class="docutils literal"><span class="pre">getData</span></code>). Once the call is identified as a <em>getter</em> call, <code class="docutils literal"><span class="pre">__get</span></code> is invoked (see below).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">mixed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Throws:</th><td class="field-body">BadMethodCallException if the prefix of the method is not <code class="docutils literal"><span class="pre">get</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="get">
+<h2><span class="hidden">__get</span><a class="headerlink" href="#get" title="Link na taj naslov">¶</a></h2>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Abstracts\Entity::__get">
+<code class="descclassname">Swader\Diffbot\Abstracts\Entity::</code><code class="descname">__get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Abstracts\Entity::__get" title="Link na tu definiciju">¶</a></dt>
+<dd></dd></dl>
+
+<p>This method is called automatically when <code class="docutils literal"><span class="pre">__call</span></code> is called. It looks for the property being asked for inside the <code class="docutils literal"><span class="pre">$data</span></code> property of the current class, or returns null if not found.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+<p>Usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$api</span><span class="o">-&gt;</span> <span class="c1">// ... set up API</span>
+<span class="nv">$myUrl</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">buildUrl</span><span class="p">();</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api-article.html" class="btn btn-neutral float-right" title="Article API" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="abstract-api.html" class="btn btn-neutral" title="API Abstract" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Sva prava zadržana 2015, Bruno Skvorc.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

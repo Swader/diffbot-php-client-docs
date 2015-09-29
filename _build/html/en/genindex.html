@@ -93,21 +93,135 @@
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createanalyzeapi"><span class="hidden">createAnalyzeApi</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#creatediscussionapi"><span class="hidden">createDiscussionApi</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createcustomapi"><span class="hidden">createCustomApi</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#id8"><span class="hidden">crawl</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#crawl"><span class="hidden">crawl</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#search"><span class="hidden">search</span></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api-article.html">Article API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-product.html">Product API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-image.html">Image API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-custom.html">Custom API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="class-entityfactory.html">EntityFactory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="abstract-api.html">API Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#settimeout"><span class="hidden">setTimeout</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#call"><span class="hidden">call</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#buildurl"><span class="hidden">buildUrl</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="abstract-entity.html">Entity Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#getdata"><span class="hidden">getData</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#call"><span class="hidden">__call</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#get"><span class="hidden">__get</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-article.html">Article API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-article.html#namespace-Swader\Diffbot\Api">Article API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setsentiment"><span class="hidden">setSentiment</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setpaging"><span class="hidden">setPaging</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setmaxtags"><span class="hidden">setMaxTags</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#setdiscussion"><span class="hidden">setDiscussion</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-article.html#article-entity-class">Article Entity Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#id1"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gettype"><span class="hidden">getType</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gettext"><span class="hidden">getText</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gethtml"><span class="hidden">getHtml</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getdate"><span class="hidden">getDate</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getauthor"><span class="hidden">getAuthor</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#gettags"><span class="hidden">getTags</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getnumpages"><span class="hidden">getNumPages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getnextpages"><span class="hidden">getNextPages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getsentiment"><span class="hidden">getSentiment</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getdiscussion"><span class="hidden">getDiscussion</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getimages"><span class="hidden">getImages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#getvideos"><span class="hidden">getVideos</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-product.html">Product API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-product.html#namespace-Swader\Diffbot\Api">Product API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-discussion.html#namespace-Swader\Diffbot\Api">Discussion API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-image.html">Image API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-image.html#namespace-Swader\Diffbot\Api">Image API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-analyze.html#namespace-Swader\Diffbot\Api">Analyze API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-analyze.html#setdiscussion"><span class="hidden">setDiscussion</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-analyze.html#setmode"><span class="hidden">setMode</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-custom.html">Custom API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-custom.html#namespace-Swader\Diffbot\Api">Custom API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-custom.html#construct"><span class="hidden">__construct</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-custom.html#namespace-Swader\Diffbot\Entity">Wildcard Entity Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#crawl-api-class">Crawl API Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#jobcrawl-class">JobCrawl Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-search.html#namespace-Swader\Diffbot\Api">Search API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-entityfactory.html">EntityFactory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-entityfactory.html#id1">EntityFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-entityiterator.html">EntityIterator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-entityiterator.html#namespace-Swader\Diffbot\Entity">EntityIterator Class</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="class-exceptions.html">Exceptions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="class-exceptions.html#diffbotexception">DiffbotException</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class-exceptions.html#namespace-Swader\Diffbot\Exceptions">DiffbotException</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-interfaces.html">Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-interfaces.html#api">Api</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#settimeout"><span class="hidden">setTimeout</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#call"><span class="hidden">call</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#buildurl"><span class="hidden">buildUrl</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class-interfaces.html#entityfactory">EntityFactory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#createappropriateiterator"><span class="hidden">createAppropriateIterator</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-traits.html">Traits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-traits.html#diffbotaware">DiffbotAware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#registerdiffbot"><span class="hidden">registerDiffbot</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class-traits.html#standardapi">StandardApi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setlinks"><span class="hidden">setLinks</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setmeta"><span class="hidden">setMeta</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setbreadcrumb"><span class="hidden">setBreadcrumb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setquerystring"><span class="hidden">setQuerystring</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#standardentity">StandardEntity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getlang"><span class="hidden">getLang</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#gethumanlanguage"><span class="hidden">getHumanLanguage</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getpageurl"><span class="hidden">getPageUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getresolvedpageurl"><span class="hidden">getResolvedPageUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#gettitle"><span class="hidden">getTitle</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getlinks"><span class="hidden">getLinks</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getmeta"><span class="hidden">getMeta</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getbreadcrumb"><span class="hidden">getBreadcrumb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getquerystring"><span class="hidden">getQueryString</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -149,15 +263,124 @@
 <h1 id="index">Index</h1>
 
 <div class="genindex-jumpbox">
- <a href="#C"><strong>C</strong></a>
+ <a href="#_"><strong>_</strong></a>
+ | <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
  | <a href="#G"><strong>G</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#J"><strong>J</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
+ | <a href="#W"><strong>W</strong></a>
  
 </div>
+<h2 id="_">_</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="abstract-entity.html#Swader\Diffbot\Abstracts\Entity::__call"><strong>__call() (Swader\Diffbot\Abstracts\Entity method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="abstract-api.html#Swader\Diffbot\Abstracts\Api::__construct"><strong>__construct() (Swader\Diffbot\Abstracts\Api method)</strong></a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="abstract-entity.html#Swader\Diffbot\Abstracts\Entity::__construct"><strong>(Swader\Diffbot\Abstracts\Entity method)</strong></a>
+  </dt>
+
+        
+  <dt><a href="api-article.html#Swader\Diffbot\Api\Article::__construct"><strong>(Swader\Diffbot\Api\Article method)</strong></a>
+  </dt>
+
+        
+  <dt><a href="api-custom.html#Swader\Diffbot\Api\Custom::__construct"><strong>(Swader\Diffbot\Api\Custom method)</strong></a>
+  </dt>
+
+        
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article::__construct"><strong>(Swader\Diffbot\Entity\Article method)</strong></a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="abstract-entity.html#Swader\Diffbot\Abstracts\Entity::__get"><strong>__get() (Swader\Diffbot\Abstracts\Entity method)</strong></a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api-analyze.html#Swader\Diffbot\Api\Analyze"><strong>Analyze (class in Swader\Diffbot\Api)</strong></a>
+  </dt>
+
+      
+  <dt><a href="abstract-api.html#Swader\Diffbot\Abstracts\Api"><strong>Api (class in Swader\Diffbot\Abstracts)</strong></a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="class-interfaces.html#Swader\Diffbot\Interfaces\Api"><strong>(interface in Swader\Diffbot\Interfaces)</strong></a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Api\Article"><strong>Article (class in Swader\Diffbot\Api)</strong></a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article"><strong>(class in Swader\Diffbot\Entity)</strong></a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="abstract-api.html#Swader\Diffbot\Abstracts\Api::buildUrl"><strong>buildUrl() (Swader\Diffbot\Abstracts\Api method)</strong></a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="class-interfaces.html#Swader\Diffbot\Interfaces\Api::buildUrl"><strong>(Swader\Diffbot\Interfaces\Api method)</strong></a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="abstract-api.html#Swader\Diffbot\Abstracts\Api::call"><strong>call() (Swader\Diffbot\Abstracts\Api method)</strong></a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="class-interfaces.html#Swader\Diffbot\Interfaces\Api::call"><strong>(Swader\Diffbot\Interfaces\Api method)</strong></a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="api-crawl.html#Swader\Diffbot\Api\Crawl"><strong>Crawl (class in Swader\Diffbot\Api)</strong></a>
+  </dt>
+
       
   <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot::crawl"><strong>crawl() (Swader\Diffbot\Diffbot method)</strong></a>
   </dt>
@@ -167,15 +390,19 @@
   </dt>
 
       
-  <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot::createArticleApi"><strong>createArticleApi() (Swader\Diffbot\Diffbot method)</strong></a>
+  <dt><a href="class-interfaces.html#Swader\Diffbot\Interfaces\EntityFactory::createAppropriateIterator"><strong>createAppropriateIterator() (Swader\Diffbot\Interfaces\EntityFactory method)</strong></a>
   </dt>
 
       
-  <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot::createCustomApi"><strong>createCustomApi() (Swader\Diffbot\Diffbot method)</strong></a>
+  <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot::createArticleApi"><strong>createArticleApi() (Swader\Diffbot\Diffbot method)</strong></a>
   </dt>
 
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot::createCustomApi"><strong>createCustomApi() (Swader\Diffbot\Diffbot method)</strong></a>
+  </dt>
+
       
   <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot::createDiscussionApi"><strong>createDiscussionApi() (Swader\Diffbot\Diffbot method)</strong></a>
   </dt>
@@ -188,6 +415,10 @@
   <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot::createProductApi"><strong>createProductApi() (Swader\Diffbot\Diffbot method)</strong></a>
   </dt>
 
+      
+  <dt><a href="api-custom.html#Swader\Diffbot\Api\Custom"><strong>Custom (class in Swader\Diffbot\Api)</strong></a>
+  </dt>
+
   </dl></td>
 </tr></table>
 
@@ -198,6 +429,46 @@
   <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot"><strong>Diffbot (class in Swader\Diffbot)</strong></a>
   </dt>
 
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\DiffbotAware"><strong>DiffbotAware (trait in Swader\Diffbot\Traits)</strong></a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="class-exceptions.html#Swader\Diffbot\Exceptions\DiffbotException"><strong>DiffbotException</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-discussion.html#Swader\Diffbot\Api\Discussion"><strong>Discussion (class in Swader\Diffbot\Api)</strong></a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="abstract-entity.html#Swader\Diffbot\Abstracts\Entity"><strong>Entity (class in Swader\Diffbot\Abstracts)</strong></a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="class-entityfactory.html#Swader\Diffbot\Factory\Entity"><strong>(class in Swader\Diffbot\Factory)</strong></a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="class-interfaces.html#Swader\Diffbot\Interfaces\EntityFactory"><strong>EntityFactory (interface in Swader\Diffbot\Interfaces)</strong></a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="class-entityiterator.html#Swader\Diffbot\Entity\EntityIterator"><strong>EntityIterator (class in Swader\Diffbot\Entity)</strong></a>
+  </dt>
+
   </dl></td>
 </tr></table>
 
@@ -205,17 +476,145 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article::getAuthor"><strong>getAuthor() (Swader\Diffbot\Entity\Article method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\StandardEntity::getBreadcrumb"><strong>getBreadcrumb() (Swader\Diffbot\Traits\StandardEntity method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="abstract-entity.html#Swader\Diffbot\Abstracts\Entity::getData"><strong>getData() (Swader\Diffbot\Abstracts\Entity method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article::getDate"><strong>getDate() (Swader\Diffbot\Entity\Article method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article::getDiscussion"><strong>getDiscussion() (Swader\Diffbot\Entity\Article method)</strong></a>
+  </dt>
+
+      
   <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot::getEntityFactory"><strong>getEntityFactory() (Swader\Diffbot\Diffbot method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article::getHtml"><strong>getHtml() (Swader\Diffbot\Entity\Article method)</strong></a>
   </dt>
 
       
   <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot::getHttpClient"><strong>getHttpClient() (Swader\Diffbot\Diffbot method)</strong></a>
   </dt>
 
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\StandardEntity::getHumanLanguage"><strong>getHumanLanguage() (Swader\Diffbot\Traits\StandardEntity method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article::getImages"><strong>getImages() (Swader\Diffbot\Entity\Article method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\StandardEntity::getLang"><strong>getLang() (Swader\Diffbot\Traits\StandardEntity method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\StandardEntity::getLinks"><strong>getLinks() (Swader\Diffbot\Traits\StandardEntity method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\StandardEntity::getMeta"><strong>getMeta() (Swader\Diffbot\Traits\StandardEntity method)</strong></a>
+  </dt>
+
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article::getNextPages"><strong>getNextPages() (Swader\Diffbot\Entity\Article method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article::getNumPages"><strong>getNumPages() (Swader\Diffbot\Entity\Article method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\StandardEntity::getPageUrl"><strong>getPageUrl() (Swader\Diffbot\Traits\StandardEntity method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\StandardEntity::getQueryString"><strong>getQueryString() (Swader\Diffbot\Traits\StandardEntity method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\StandardEntity::getResolvedPageUrl"><strong>getResolvedPageUrl() (Swader\Diffbot\Traits\StandardEntity method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article::getSentiment"><strong>getSentiment() (Swader\Diffbot\Entity\Article method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article::getTags"><strong>getTags() (Swader\Diffbot\Entity\Article method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article::getText"><strong>getText() (Swader\Diffbot\Entity\Article method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\StandardEntity::getTitle"><strong>getTitle() (Swader\Diffbot\Traits\StandardEntity method)</strong></a>
+  </dt>
+
+      
   <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot::getToken"><strong>getToken() (Swader\Diffbot\Diffbot method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article::getType"><strong>getType() (Swader\Diffbot\Entity\Article method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Entity\Article::getVideos"><strong>getVideos() (Swader\Diffbot\Entity\Article method)</strong></a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api-image.html#Swader\Diffbot\Api\Image"><strong>Image (class in Swader\Diffbot\Api)</strong></a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="J">J</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api-crawl.html#Swader\Diffbot\Entity\JobCrawl"><strong>JobCrawl (class in Swader\Diffbot\Entity)</strong></a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api-product.html#Swader\Diffbot\Api\Product"><strong>Product (class in Swader\Diffbot\Api)</strong></a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\DiffbotAware::registerDiffbot"><strong>registerDiffbot() (Swader\Diffbot\Traits\DiffbotAware method)</strong></a>
   </dt>
 
   </dl></td>
@@ -225,9 +624,27 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="api-search.html#Swader\Diffbot\Api\Search"><strong>Search (class in Swader\Diffbot\Api)</strong></a>
+  </dt>
+
+      
   <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot::search"><strong>search() (Swader\Diffbot\Diffbot method)</strong></a>
   </dt>
 
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\StandardApi::setBreadcrumb"><strong>setBreadcrumb() (Swader\Diffbot\Traits\StandardApi method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-analyze.html#Swader\Diffbot\Api\Analyze::setDiscussion"><strong>setDiscussion() (Swader\Diffbot\Api\Analyze method)</strong></a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="api-article.html#Swader\Diffbot\Api\Article::setDiscussion"><strong>(Swader\Diffbot\Api\Article method)</strong></a>
+  </dt>
+
+      </dl></dd>
       
   <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot::setEntityFactory"><strong>setEntityFactory() (Swader\Diffbot\Diffbot method)</strong></a>
   </dt>
@@ -236,6 +653,36 @@
   <dt><a href="01-diffbot.html#Swader\Diffbot\Diffbot::setHttpClient"><strong>setHttpClient() (Swader\Diffbot\Diffbot method)</strong></a>
   </dt>
 
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Api\Article::setMaxTags"><strong>setMaxTags() (Swader\Diffbot\Api\Article method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-analyze.html#Swader\Diffbot\Api\Analyze::setMode"><strong>setMode() (Swader\Diffbot\Api\Analyze method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Api\Article::setPaging"><strong>setPaging() (Swader\Diffbot\Api\Article method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\StandardApi::setQuerystring"><strong>setQuerystring() (Swader\Diffbot\Traits\StandardApi method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-article.html#Swader\Diffbot\Api\Article::setSentiment"><strong>setSentiment() (Swader\Diffbot\Api\Article method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="abstract-api.html#Swader\Diffbot\Abstracts\Api::setTimeout"><strong>setTimeout() (Swader\Diffbot\Abstracts\Api method)</strong></a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="class-interfaces.html#Swader\Diffbot\Interfaces\Api::setTimeout"><strong>(Swader\Diffbot\Interfaces\Api method)</strong></a>
+  </dt>
+
+      </dl></dd>
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
@@ -243,7 +690,53 @@
   </dt>
 
       
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\StandardApi"><strong>StandardApi (trait in Swader\Diffbot\Traits)</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-traits.html#Swader\Diffbot\Traits\StandardEntity"><strong>StandardEntity (trait in Swader\Diffbot\Traits)</strong></a>
+  </dt>
+
+      
   <dt><a href="01-diffbot.html#namespace-Swader\Diffbot"><strong>Swader\Diffbot (namespace)</strong></a>
+  </dt>
+
+      
+  <dt><a href="abstract-api.html#namespace-Swader\Diffbot\Abstracts"><strong>Swader\Diffbot\Abstracts (namespace)</strong></a>, <a href="abstract-entity.html#namespace-Swader\Diffbot\Abstracts"><strong>[1]</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-analyze.html#namespace-Swader\Diffbot\Api"><strong>Swader\Diffbot\Api (namespace)</strong></a>, <a href="api-article.html#namespace-Swader\Diffbot\Api"><strong>[1]</strong></a>, <a href="api-crawl.html#namespace-Swader\Diffbot\Api"><strong>[2]</strong></a>, <a href="api-custom.html#namespace-Swader\Diffbot\Api"><strong>[3]</strong></a>, <a href="api-discussion.html#namespace-Swader\Diffbot\Api"><strong>[4]</strong></a>, <a href="api-image.html#namespace-Swader\Diffbot\Api"><strong>[5]</strong></a>, <a href="api-product.html#namespace-Swader\Diffbot\Api"><strong>[6]</strong></a>, <a href="api-search.html#namespace-Swader\Diffbot\Api"><strong>[7]</strong></a>
+  </dt>
+
+      
+  <dt><a href="api-article.html#namespace-Swader\Diffbot\Entity"><strong>Swader\Diffbot\Entity (namespace)</strong></a>, <a href="api-crawl.html#namespace-Swader\Diffbot\Entity"><strong>[1]</strong></a>, <a href="api-custom.html#namespace-Swader\Diffbot\Entity"><strong>[2]</strong></a>, <a href="class-entityiterator.html#namespace-Swader\Diffbot\Entity"><strong>[3]</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-exceptions.html#namespace-Swader\Diffbot\Exceptions"><strong>Swader\Diffbot\Exceptions (namespace)</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-entityfactory.html#namespace-Swader\Diffbot\Factory"><strong>Swader\Diffbot\Factory (namespace)</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-interfaces.html#namespace-Swader\Diffbot\Interfaces"><strong>Swader\Diffbot\Interfaces (namespace)</strong></a>
+  </dt>
+
+      
+  <dt><a href="class-traits.html#namespace-Swader\Diffbot\Traits"><strong>Swader\Diffbot\Traits (namespace)</strong></a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api-custom.html#Swader\Diffbot\Entity\Wildcard"><strong>Wildcard (class in Swader\Diffbot\Entity)</strong></a>
   </dt>
 
   </dl></td>

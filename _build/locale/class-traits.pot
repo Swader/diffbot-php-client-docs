@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Bruno Skvorc
+# This file is distributed under the same license as the Diffbot PHP Client Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Diffbot PHP Client Documentation 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-26 21:06+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../class-traits.rst:11
+msgid "Traits"
+msgstr ""
+
+#: ../../class-traits.rst:13
+msgid "All the traits used in the Diffbot PHP client are described in this one document."
+msgstr ""
+
+#: ../../class-traits.rst:18
+msgid "DiffbotAware"
+msgstr ""
+
+#: ../../class-traits.rst:22
+msgid "The DiffbotAware trait is there to make the API classes spawned by Diffbot aware of their parent, so that common configuration values and other factories can be accessed even after an API class has been instantiated."
+msgstr ""
+
+#: ../../class-traits.rst:24
+msgid "Unless you're implementing your own API class which *doesn't* extend the :php:class:`\\\\Swader\\\\Diffbot\\\\Abstracts\\\\Api`, you won't need this."
+msgstr ""
+
+#: ../../class-traits.rst:27
+msgid ":hidden:`registerDiffbot`"
+msgstr ""
+
+#: ../../class-traits.rst:31
+msgid ":php:class:`Swader\\\\Diffbot\\\\Diffbot` - an instance of the Diffbot main class to inject into children, like instances of various API classes."
+msgstr ""
+
+#: ../../class-traits.rst:32
+#: ../../class-traits.rst:67
+#: ../../class-traits.rst:77
+msgid "$this"
+msgstr ""
+
+#: ../../class-traits.rst:35
+msgid "StandardApi"
+msgstr ""
+
+#: ../../class-traits.rst:39
+msgid "The StandardApi trait contains some methods common to most, if not all, API classes. These methods are setters for fields which appear in every Diffbot API: links, breadcrumb, meta and querystring. More information available under `optional fields <https://www.diffbot.com/dev/docs/article/>`__ in various API doc files."
+msgstr ""
+
+#: ../../class-traits.rst:42
+msgid ":hidden:`setLinks`"
+msgstr ""
+
+#: ../../class-traits.rst:52
+msgid ":hidden:`setMeta`"
+msgstr ""
+
+#: ../../class-traits.rst:62
+msgid ":hidden:`setBreadcrumb`"
+msgstr ""
+
+#: ../../class-traits.rst:66
+#: ../../class-traits.rst:76
+msgid "Either ``true`` or ``false``"
+msgstr ""
+
+#: ../../class-traits.rst:69
+msgid "Sets the ``breadcrumb`` optional field to true. The API then returns a top-level array (breadcrumb) of URLs and link text from page breadcrumbs."
+msgstr ""
+
+#: ../../class-traits.rst:72
+msgid ":hidden:`setQuerystring`"
+msgstr ""
+
+#: ../../class-traits.rst:79
+msgid "Sets the ``querystring`` optional field to true. The API then returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as true."
+msgstr ""
+
+#: ../../class-traits.rst:82
+msgid "StandardEntity"
+msgstr ""
+
+#: ../../class-traits.rst:86
+msgid "The StandardEntity trait is here to add some common methods to the various entities. These make sense only in the standard entities, i.e. the data formats returned by Diffbot, which is why they aren't in the abstract :php:class:`\\\\Swader\\\\Diffbot\\\\Abstracts\\\\Entity` class. You probably won't need this trait unless you define a :php:class:`\\\\Swader\\\\Diffbot\\\\Api\\\\Custom` API which offers fields of the same names as those returned by the getters in this trait."
+msgstr ""
+
+#: ../../class-traits.rst:89
+msgid ":hidden:`getLang`"
+msgstr ""
+
+#: ../../class-traits.rst:93
+#: ../../class-traits.rst:102
+#: ../../class-traits.rst:111
+#: ../../class-traits.rst:120
+#: ../../class-traits.rst:129
+msgid "string"
+msgstr ""
+
+#: ../../class-traits.rst:95
+msgid "Returns the language code of the detected language of the processed content. The code returned is a two-character ISO 639-1 code: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes"
+msgstr ""
+
+#: ../../class-traits.rst:98
+msgid ":hidden:`getHumanLanguage`"
+msgstr ""
+
+#: ../../class-traits.rst:104
+msgid "Alias method for ``getLang()`` above."
+msgstr ""
+
+#: ../../class-traits.rst:107
+msgid ":hidden:`getPageUrl`"
+msgstr ""
+
+#: ../../class-traits.rst:113
+msgid "Returns the URL which was processed"
+msgstr ""
+
+#: ../../class-traits.rst:116
+msgid ":hidden:`getResolvedPageUrl`"
+msgstr ""
+
+#: ../../class-traits.rst:122
+msgid "Returns page URL which was resolved by redirects, if any. Will often be identical to result from ``getPageUrl`` above."
+msgstr ""
+
+#: ../../class-traits.rst:125
+msgid ":hidden:`getTitle`"
+msgstr ""
+
+#: ../../class-traits.rst:131
+msgid "Returns the title of the document which was processed."
+msgstr ""
+
+#: ../../class-traits.rst:134
+msgid ":hidden:`getLinks`"
+msgstr ""
+
+#: ../../class-traits.rst:138
+#: ../../class-traits.rst:148
+#: ../../class-traits.rst:157
+#: ../../class-traits.rst:167
+msgid "array | null"
+msgstr ""
+
+#: ../../class-traits.rst:140
+msgid "Returns an array of all links found on the processed page. Links will be simple string elements in an indexed array. If the :php:meth:`Swader\\\\Diffbot\\\\Traits\\\\StandardApi::setLinks` method was not called, will return ``null``."
+msgstr ""
+
+#: ../../class-traits.rst:144
+msgid ":hidden:`getMeta`"
+msgstr ""
+
+#: ../../class-traits.rst:150
+msgid "Returns an array containing the full contents of page meta tags, including sub-arrays for OpenGraph tags, Twitter Card metadata, schema.org microdata, and -- if available -- oEmbed metadata. If the :php:meth:`Swader\\\\Diffbot\\\\Traits\\\\StandardApi::setMeta` method was not called, will return ``null``."
+msgstr ""
+
+#: ../../class-traits.rst:153
+msgid ":hidden:`getBreadcrumb`"
+msgstr ""
+
+#: ../../class-traits.rst:159
+msgid "Returns a top-level array (breadcrumb) of URLs and link text from page breadcrumbs. If the :php:meth:`Swader\\\\Diffbot\\\\Traits\\\\StandardApi::setBreadcrumb` method was not called, will return ``null``."
+msgstr ""
+
+#: ../../class-traits.rst:163
+msgid ":hidden:`getQueryString`"
+msgstr ""
+
+#: ../../class-traits.rst:169
+msgid "Returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as true. If the :php:meth:`Swader\\\\Diffbot\\\\Traits\\\\StandardApi::setQuerystring` method was not called, will return ``null``."
+msgstr ""
+

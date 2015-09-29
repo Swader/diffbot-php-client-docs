@@ -7,3 +7,23 @@ Crawl API
 =========
 
 Description goes here.
+
+Crawl API Class
+===============
+
+    The Crawl API is used
+
+.. php:namespace:: Swader\Diffbot\Api
+
+.. php:class:: Crawl
+
+
+JobCrawl Class
+==============
+
+    The JobCrawl class is a container of information about a crawljob.
+
+.. php:namespace:: Swader\Diffbot\Entity
+
+.. php:class:: JobCrawl
+

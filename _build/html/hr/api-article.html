@@ -32,7 +32,7 @@
   
     <link rel="top" title="Diffbot PHP Client Documentation 1 dokumentacija" href="index.html"/>
         <link rel="next" title="Product API" href="api-product.html"/>
-        <link rel="prev" title="Diffbot klasa" href="01-diffbot.html"/> 
+        <link rel="prev" title="Entity Abstract" href="abstract-entity.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -94,21 +94,135 @@
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createanalyzeapi"><span class="hidden">createAnalyzeApi</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#creatediscussionapi"><span class="hidden">createDiscussionApi</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#createcustomapi"><span class="hidden">createCustomApi</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#id8"><span class="hidden">crawl</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#crawl"><span class="hidden">crawl</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="01-diffbot.html#search"><span class="hidden">search</span></a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Article API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-product.html">Product API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-image.html">Image API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-custom.html">Custom API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="class-entityfactory.html">EntityFactory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="class-exceptions.html">Exceptions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="class-exceptions.html#diffbotexception">DiffbotException</a></li>
+<li class="toctree-l1"><a class="reference internal" href="abstract-api.html">API Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#settimeout"><span class="hidden">setTimeout</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#call"><span class="hidden">call</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-api.html#buildurl"><span class="hidden">buildUrl</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="abstract-entity.html">Entity Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#getdata"><span class="hidden">getData</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#call"><span class="hidden">__call</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract-entity.html#get"><span class="hidden">__get</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Article API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#namespace-Swader\Diffbot\Api">Article API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setsentiment"><span class="hidden">setSentiment</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setpaging"><span class="hidden">setPaging</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setmaxtags"><span class="hidden">setMaxTags</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setdiscussion"><span class="hidden">setDiscussion</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#article-entity-class">Article Entity Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gettype"><span class="hidden">getType</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gettext"><span class="hidden">getText</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gethtml"><span class="hidden">getHtml</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getdate"><span class="hidden">getDate</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getauthor"><span class="hidden">getAuthor</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gettags"><span class="hidden">getTags</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getnumpages"><span class="hidden">getNumPages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getnextpages"><span class="hidden">getNextPages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getsentiment"><span class="hidden">getSentiment</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getdiscussion"><span class="hidden">getDiscussion</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getimages"><span class="hidden">getImages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getvideos"><span class="hidden">getVideos</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-product.html">Product API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-product.html#namespace-Swader\Diffbot\Api">Product API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-discussion.html#namespace-Swader\Diffbot\Api">Discussion API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-image.html">Image API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-image.html#namespace-Swader\Diffbot\Api">Image API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-analyze.html#namespace-Swader\Diffbot\Api">Analyze API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-analyze.html#setdiscussion"><span class="hidden">setDiscussion</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-analyze.html#setmode"><span class="hidden">setMode</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-custom.html">Custom API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-custom.html#namespace-Swader\Diffbot\Api">Custom API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-custom.html#construct"><span class="hidden">__construct</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-custom.html#namespace-Swader\Diffbot\Entity">Wildcard Entity Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#crawl-api-class">Crawl API Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#jobcrawl-class">JobCrawl Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-search.html#namespace-Swader\Diffbot\Api">Search API Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-entityfactory.html">EntityFactory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-entityfactory.html#id1">EntityFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-entityiterator.html">EntityIterator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-entityiterator.html#namespace-Swader\Diffbot\Entity">EntityIterator Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-exceptions.html">Exceptions (iznimke)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-exceptions.html#namespace-Swader\Diffbot\Exceptions">DiffbotException</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-interfaces.html">Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-interfaces.html#api">Api</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#settimeout"><span class="hidden">setTimeout</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#call"><span class="hidden">call</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#buildurl"><span class="hidden">buildUrl</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class-interfaces.html#entityfactory">EntityFactory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-interfaces.html#createappropriateiterator"><span class="hidden">createAppropriateIterator</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-traits.html">Traits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class-traits.html#diffbotaware">DiffbotAware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#registerdiffbot"><span class="hidden">registerDiffbot</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class-traits.html#standardapi">StandardApi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setlinks"><span class="hidden">setLinks</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setmeta"><span class="hidden">setMeta</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setbreadcrumb"><span class="hidden">setBreadcrumb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#setquerystring"><span class="hidden">setQuerystring</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#standardentity">StandardEntity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getlang"><span class="hidden">getLang</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#gethumanlanguage"><span class="hidden">getHumanLanguage</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getpageurl"><span class="hidden">getPageUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getresolvedpageurl"><span class="hidden">getResolvedPageUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#gettitle"><span class="hidden">getTitle</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getlinks"><span class="hidden">getLinks</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getmeta"><span class="hidden">getMeta</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getbreadcrumb"><span class="hidden">getBreadcrumb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getquerystring"><span class="hidden">getQueryString</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -150,7 +264,533 @@
             
   <div class="section" id="article-api">
 <h1>Article API<a class="headerlink" href="#article-api" title="Link na taj naslov">¶</a></h1>
-<p>Description goes here.</p>
+<p>This API is used to turn content like blog posts, news articles, and other prose into JSON.</p>
+<p>For examples of data that might be returned, please see <a class="reference external" href="http://diffbot.com">http://diffbot.com</a> and run the Article API demo.</p>
+<p>The Article API part of the Diffbot PHP client consists of two main classes: the API class, and the Article Entity class. We&#8217;ll describe them in order. Note that the API class extends <a class="reference internal" href="abstract-api.html#Swader\Diffbot\Abstracts\Api" title="Swader\Diffbot\Abstracts\Api"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Abstracts\Api</span></code></a>, so be sure to read that first if you haven&#8217;t already.</p>
+<div class="section" id="namespace-Swader\Diffbot\Api">
+<span id="article-api-class"></span><h2>Article API Class<a class="headerlink" href="#namespace-Swader\Diffbot\Api" title="Link na taj naslov">¶</a></h2>
+<dl class="class">
+<dt id="Swader\Diffbot\Api\Article">
+<em class="property">class </em><code class="descclassname">Swader\Diffbot\Api\</code><code class="descname">Article</code><a class="headerlink" href="#Swader\Diffbot\Api\Article" title="Link na tu definiciju">¶</a></dt>
+<dd></dd></dl>
+
+<div class="section" id="construct">
+<h3><span class="hidden">__construct</span><a class="headerlink" href="#construct" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Api\Article::__construct">
+<code class="descclassname">Swader\Diffbot\Api\Article::</code><code class="descname">__construct</code><span class="sig-paren">(</span><em>$url</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Api\Article::__construct" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$url</strong> (<em>string</em>) &#8211; The URL of the page to process or the string &#8220;crawl&#8221;</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p>This class takes a single argument during construction, the URL of the page to process. Alternatively, the argument can be the string &#8220;crawl&#8221;, if the API is to be used in conjunction with <a class="reference internal" href="api-crawl.html#Swader\Diffbot\Api\Crawl" title="Swader\Diffbot\Api\Crawl"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Crawl</span></code></a>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="setsentiment">
+<h3><span class="hidden">setSentiment</span><a class="headerlink" href="#setsentiment" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Api\Article::setSentiment">
+<code class="descclassname">Swader\Diffbot\Api\Article::</code><code class="descname">setSentiment</code><span class="sig-paren">(</span><em>$bool</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Api\Article::setSentiment" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$bool</strong> (<em>bool</em>) &#8211; Either <code class="docutils literal"><span class="pre">true</span></code> or <code class="docutils literal"><span class="pre">false</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p>This method sets the <code class="docutils literal"><span class="pre">sentiment</span></code> optional field value. This determines whether or not to return the sentiment score of the analyzed article text, a value ranging from -1.0 (very negative) to 1.0 (very positive). Sentiment analysis is powered by <a class="reference external" href="http://support.diffbot.com/automatic-apis/semantria-powered-sentiment-entity-extraction-and-other-text-analysis-features/">Semantria</a> for advanced features like keyword and entity extraction, but the basic sentiment analysis (score only) is enabled for everyone, even those without Semantria accounts.</p>
+<blockquote>
+<div><p>Usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$url</span> <span class="o">=</span> <span class="s1">&#39;http://www.sitepoint.com/diffbot-crawling-visual-machine-learning/&#39;</span><span class="p">;</span>
+
+<span class="c1">// ...</span>
+
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">setSentiment</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">cal</span><span class="p">();</span>
+
+<span class="c1">// ...</span>
+
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">sentiment</span><span class="p">;</span> <span class="c1">// -0.0979</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="setpaging">
+<h3><span class="hidden">setPaging</span><a class="headerlink" href="#setpaging" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Api\Article::setPaging">
+<code class="descclassname">Swader\Diffbot\Api\Article::</code><code class="descname">setPaging</code><span class="sig-paren">(</span><em>$bool = true</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Api\Article::setPaging" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$bool</strong> (<em>bool</em>) &#8211; Either <code class="docutils literal"><span class="pre">true</span></code> or <code class="docutils literal"><span class="pre">false</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p>If set to false, Diffbot will not auto-concatenate several pages of a multi-page article into one. Defaults to true, max 20 pages.</p>
+<p>For more info about auto-concatenation, see <a class="reference external" href="http://support.diffbot.com/automatic-apis/handling-multiple-page-articles/">here</a>.</p>
+<p>While practical, this is a less reliable method of concatenating long posts than finding out the number of pages manually and processing them each one by one. Not only does it often fail to recognize the next page links, but also if there&#8217;s a chance that the series is longer than 20 parts, everything from 20 onward will remain ignored. This is a limitation of Diffbot, not the client, and there&#8217;s little chance of it changing - concatenations longer than 20 pages would likely trigger timeouts as the page count becomes less and less trivial.</p>
+<p>If you need to process multiple pages of something, it is thus recommended you find out those links yourself, then pass them into Article API one by one and concatenate later. If you&#8217;d like to analyze the entire concatenated post after the fact, it&#8217;s best to manually concat and then send the merged content into Diffbot as a <a class="reference external" href="https://tldrify.com/bhr">POST value</a> for processing.</p>
+<blockquote>
+<div><p>Usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$url</span> <span class="o">=</span> <span class="s1">&#39;http://www.some-seven-part-article.com/&#39;</span><span class="p">;</span>
+
+<span class="c1">// ...</span>
+
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">setPaging</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">cal</span><span class="p">();</span>
+
+<span class="c1">// ...</span>
+
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">numPages</span><span class="p">;</span> <span class="c1">// 7</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="setmaxtags">
+<h3><span class="hidden">setMaxTags</span><a class="headerlink" href="#setmaxtags" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Api\Article::setMaxTags">
+<code class="descclassname">Swader\Diffbot\Api\Article::</code><code class="descname">setMaxTags</code><span class="sig-paren">(</span><em>$max = 5</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Api\Article::setMaxTags" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$max</strong> (<em>int</em>) &#8211; The number of tags to generate and return</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p>Set the maximum number of automatically-generated tags to return. By default a maximum of five tags will be returned. Tags are a built-in feature of Diffbot, and <em>could</em> generate different results on two different calls to the same URL provided enough time has passed, due to Diffbot&#8217;s engine evolving over time as it processed more and more content.</p>
+<p>For an example of what the tags might look like, run the demo example at <a class="reference external" href="https://diffbot.com">https://diffbot.com</a> or see <a class="reference internal" href="#Swader\Diffbot\Entity\Article::getTags" title="Swader\Diffbot\Entity\Article::getTags"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Entity\Article::getTags</span></code></a>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="setdiscussion">
+<h3><span class="hidden">setDiscussion</span><a class="headerlink" href="#setdiscussion" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Api\Article::setDiscussion">
+<code class="descclassname">Swader\Diffbot\Api\Article::</code><code class="descname">setDiscussion</code><span class="sig-paren">(</span><em>$bool = true</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Api\Article::setDiscussion" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first simple">
+<li><strong>$param</strong> (<em>bool</em>) &#8211; Either <code class="docutils literal"><span class="pre">true</span></code> or <code class="docutils literal"><span class="pre">false</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Vraća:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p>Whether or not to use the Discussion API to additionally process any detected comment or review threads in the article. Behaves as if the <a class="reference internal" href="api-discussion.html#Swader\Diffbot\Api\Discussion" title="Swader\Diffbot\Api\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Discussion</span></code></a> was set to process the page, and merges the returned data with the Article API&#8217;s results by means of a <code class="docutils literal"><span class="pre">discussion</span></code> field in the result. The field will have all the sub-fields of the usual <a class="reference internal" href="api-discussion.html#Swader\Diffbot\Api\Discussion" title="Swader\Diffbot\Api\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Discussion</span></code></a> call; i.e. you will be able to access the <code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\Discussion</span></code> entity and all its sub entities via the <a class="reference internal" href="#Swader\Diffbot\Entity\Article::getDiscussion" title="Swader\Diffbot\Entity\Article::getDiscussion"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Entity\Article::getDiscussion</span></code></a> method.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="article-entity-class">
+<h2>Article Entity Class<a class="headerlink" href="#article-entity-class" title="Link na taj naslov">¶</a></h2>
+<p>When the Article API is done processing an article (or several) the result will be an Article Entity (i.e. a collection of <em>one</em> Article Entities inside an instance of <a class="reference internal" href="class-entityiterator.html#Swader\Diffbot\Entity\EntityIterator" title="Swader\Diffbot\Entity\EntityIterator"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\EntityIterator</span></code></a>.</p>
+<p>For an overview of the abstract class all Entities build on, see <a class="reference internal" href="abstract-entity.html#Swader\Diffbot\Abstracts\Entity" title="Swader\Diffbot\Abstracts\Entity"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Abstracts\Entity</span></code></a>.</p>
+<p>Note that the Article entity can also be returned by the <a class="reference internal" href="api-analyze.html#Swader\Diffbot\Api\Analyze" title="Swader\Diffbot\Api\Analyze"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Analyze</span></code></a> API in &#8220;article&#8221; mode, or in default mode when processing a URL that contains an article (auto-determined).</p>
+<span class="target" id="namespace-Swader\Diffbot\Entity"></span><dl class="class">
+<dt id="Swader\Diffbot\Entity\Article">
+<em class="property">class </em><code class="descclassname">Swader\Diffbot\Entity\</code><code class="descname">Article</code><a class="headerlink" href="#Swader\Diffbot\Entity\Article" title="Link na tu definiciju">¶</a></dt>
+<dd></dd></dl>
+
+<div class="section" id="id1">
+<h3><span class="hidden">__construct</span><a class="headerlink" href="#id1" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Article::__construct">
+<code class="descclassname">Swader\Diffbot\Entity\Article::</code><code class="descname">__construct</code><span class="sig-paren">(</span><em>array $data</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Article::__construct" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parametri:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$data</strong> (<em>array</em>) &#8211; The data from which to build the Article entity</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The Article entity&#8217;s constructor needs the data to populate its properties (see getters below). This class is automatically instantiated after an <a class="reference internal" href="#Swader\Diffbot\Api\Article" title="Swader\Diffbot\Api\Article"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Article</span></code></a> or <a class="reference internal" href="api-analyze.html#Swader\Diffbot\Api\Analyze" title="Swader\Diffbot\Api\Analyze"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Analyze</span></code></a> call. You probably won&#8217;t ever need to manually create an instance of this class.</p>
+<p>In the case of the Article entity, the constructor differs from the abstract one (<a class="reference internal" href="abstract-api.html#Swader\Diffbot\Abstracts\Api::__construct" title="Swader\Diffbot\Abstracts\Api::__construct"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Abstracts\Api::__construct</span></code></a>) in that it also looks for the <cite>discussion</cite> key in the result, in order to build a <code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\Discussion</span></code> sub-entity (see <a class="reference internal" href="#Swader\Diffbot\Entity\Article::getDiscussion" title="Swader\Diffbot\Entity\Article::getDiscussion"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Entity\Article::getDiscussion</span></code></a>).</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="gettype">
+<h3><span class="hidden">getType</span><a class="headerlink" href="#gettype" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Article::getType">
+<code class="descclassname">Swader\Diffbot\Entity\Article::</code><code class="descname">getType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Article::getType" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+<p>Will always return &#8220;article&#8221; for articles:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ... API setup ... //</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getType</span><span class="p">();</span> <span class="c1">// &quot;article&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="gettext">
+<h3><span class="hidden">getText</span><a class="headerlink" href="#gettext" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Article::getText">
+<code class="descclassname">Swader\Diffbot\Entity\Article::</code><code class="descname">getText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Article::getText" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">string | null</td>
+</tr>
+</tbody>
+</table>
+<p>Returns the plaintext content of the processed article. HTML tags are stripped completely, images are removed. If the text property is missing in the result, returns <code class="docutils literal"><span class="pre">null</span></code>.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="gethtml">
+<h3><span class="hidden">getHtml</span><a class="headerlink" href="#gethtml" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Article::getHtml">
+<code class="descclassname">Swader\Diffbot\Entity\Article::</code><code class="descname">getHtml</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Article::getHtml" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+<p>Returns the full HTML content of the article. If the HTML property is missing in the result, returns <code class="docutils literal"><span class="pre">null</span></code>.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getdate">
+<h3><span class="hidden">getDate</span><a class="headerlink" href="#getdate" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Article::getDate">
+<code class="descclassname">Swader\Diffbot\Entity\Article::</code><code class="descname">getDate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Article::getDate" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+<p>Returns date as per <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3">RFC 2616</a>. Example date: &#8220;Wed, 18 Dec 2013 00:00:00 GMT&#8221;. Note that this is <a class="reference external" href="http://php.net/manual/en/function.strtotime.php">strtotime</a> friendly for further conversions.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getauthor">
+<h3><span class="hidden">getAuthor</span><a class="headerlink" href="#getauthor" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Article::getAuthor">
+<code class="descclassname">Swader\Diffbot\Entity\Article::</code><code class="descname">getAuthor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Article::getAuthor" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">string | null</td>
+</tr>
+</tbody>
+</table>
+<p>Returns the name of the author as written on the page. If Diffbot was unable to figure out who the author is, <code class="docutils literal"><span class="pre">null</span></code> is returned.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="gettags">
+<h3><span class="hidden">getTags</span><a class="headerlink" href="#gettags" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Article::getTags">
+<code class="descclassname">Swader\Diffbot\Entity\Article::</code><code class="descname">getTags</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Article::getTags" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+<p>Returns an array of tags/entities, generated from analysis of the extracted text and cross-referenced with DBpedia and other data sources. Note that these are <em>not</em> the meta tags as defined by the author, but machine learned ones:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ... API setup ... //</span>
+
+<span class="c1">// URL: &quot;http://www.sitepoint.com/diffbot-crawling-visual-machine-learning&quot; //</span>
+
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$result</span><span class="o">-&gt;</span><span class="na">tags</span><span class="p">);</span> <span class="c1">// 5</span>
+
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$result</span><span class="o">-&gt;</span><span class="na">tags</span><span class="p">);</span>
+
+<span class="sd">/** Output:</span>
+<span class="sd">array (size=5)</span>
+<span class="sd">  0 =&gt;</span>
+<span class="sd">    array (size=4)</span>
+<span class="sd">      &#39;count&#39; =&gt; int 1</span>
+<span class="sd">      &#39;score&#39; =&gt; float 0.62</span>
+<span class="sd">      &#39;label&#39; =&gt; string &#39;Machine learning&#39; (length=16)</span>
+<span class="sd">      &#39;uri&#39; =&gt; string &#39;http://dbpedia.org/resource/Machine_learning&#39; (length=44)</span>
+<span class="sd">  1 =&gt;</span>
+<span class="sd">    array (size=4)</span>
+<span class="sd">      &#39;count&#39; =&gt; int 4</span>
+<span class="sd">      &#39;score&#39; =&gt; float 0.61</span>
+<span class="sd">      &#39;label&#39; =&gt; string &#39;Web crawler&#39; (length=11)</span>
+<span class="sd">      &#39;uri&#39; =&gt; string &#39;http://dbpedia.org/resource/Web_crawler&#39; (length=39)</span>
+<span class="sd">  2 =&gt;</span>
+<span class="sd">    array (size=4)</span>
+<span class="sd">      &#39;count&#39; =&gt; int 4</span>
+<span class="sd">      &#39;score&#39; =&gt; float 0.59</span>
+<span class="sd">      &#39;label&#39; =&gt; string &#39;Lexical analysis&#39; (length=16)</span>
+<span class="sd">      &#39;uri&#39; =&gt; string &#39;http://dbpedia.org/resource/Lexical_analysis&#39; (length=44)</span>
+<span class="sd">  3 =&gt;</span>
+<span class="sd">    array (size=4)</span>
+<span class="sd">      &#39;count&#39; =&gt; int 7</span>
+<span class="sd">      &#39;score&#39; =&gt; float 0.54</span>
+<span class="sd">      &#39;label&#39; =&gt; string &#39;Uniform resource locator&#39; (length=24)</span>
+<span class="sd">      &#39;uri&#39; =&gt; string &#39;http://dbpedia.org/resource/Uniform_resource_locator&#39; (length=52)</span>
+<span class="sd">  4 =&gt;</span>
+<span class="sd">    array (size=5)</span>
+<span class="sd">      &#39;count&#39; =&gt; int 2</span>
+<span class="sd">      &#39;score&#39; =&gt; float 0.52</span>
+<span class="sd">      &#39;label&#39; =&gt; string &#39;JavaScript&#39; (length=10)</span>
+<span class="sd">      &#39;rdfTypes&#39; =&gt;</span>
+<span class="sd">        array (size=3)</span>
+<span class="sd">          0 =&gt; string &#39;http://dbpedia.org/ontology/ProgrammingLanguage&#39; (length=47)</span>
+<span class="sd">          1 =&gt; string &#39;http://dbpedia.org/ontology/Software&#39; (length=36)</span>
+<span class="sd">          2 =&gt; string &#39;http://dbpedia.org/ontology/Work&#39; (length=32)</span>
+<span class="sd">      &#39;uri&#39; =&gt; string &#39;http://dbpedia.org/resource/JavaScript&#39; (length=38)</span>
+<span class="sd">**/</span>
+</pre></div>
+</div>
+<p>Returns a maximum of 5 by default, though this can be changed in <a class="reference internal" href="#Swader\Diffbot\Api\Article::setMaxTags" title="Swader\Diffbot\Api\Article::setMaxTags"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Api\Article::setMaxTags</span></code></a>.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getnumpages">
+<h3><span class="hidden">getNumPages</span><a class="headerlink" href="#getnumpages" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Article::getNumPages">
+<code class="descclassname">Swader\Diffbot\Entity\Article::</code><code class="descname">getNumPages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Article::getNumPages" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+<p>Returns the number of pages if the article is a multi-page one. Read about auto-concatenation <a class="reference external" href="http://support.diffbot.com/automatic-apis/handling-multiple-page-articles/">here</a> and study the <a class="reference internal" href="#Swader\Diffbot\Api\Article::setPaging" title="Swader\Diffbot\Api\Article::setPaging"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Api\Article::setPaging</span></code></a> method for more details.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getnextpages">
+<h3><span class="hidden">getNextPages</span><a class="headerlink" href="#getnextpages" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Article::getNextPages">
+<code class="descclassname">Swader\Diffbot\Entity\Article::</code><code class="descname">getNextPages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Article::getNextPages" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+<p>If the article is a multi-page one, returns the list of URLs of the pages that follow after the one that was processed. If the article is a single-page one, an empty array is returned.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getsentiment">
+<h3><span class="hidden">getSentiment</span><a class="headerlink" href="#getsentiment" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Article::getSentiment">
+<code class="descclassname">Swader\Diffbot\Entity\Article::</code><code class="descname">getSentiment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Article::getSentiment" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">float | null</td>
+</tr>
+</tbody>
+</table>
+<p>Returns the sentiment score of the analyzed article text, a value ranging from -1.0 (very negative) to 1.0 (very positive). If sentiment score is absent (due to Diffbot being unable to determine it, or due to <a class="reference internal" href="#Swader\Diffbot\Api\Article::setSentiment" title="Swader\Diffbot\Api\Article::setSentiment"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Api\Article::setSentiment</span></code></a> being set to <code class="docutils literal"><span class="pre">false</span></code>, returns <code class="docutils literal"><span class="pre">null</span></code>.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getdiscussion">
+<h3><span class="hidden">getDiscussion</span><a class="headerlink" href="#getdiscussion" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Article::getDiscussion">
+<code class="descclassname">Swader\Diffbot\Entity\Article::</code><code class="descname">getDiscussion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Article::getDiscussion" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\Discussion</span></code> | null</td>
+</tr>
+</tbody>
+</table>
+<p>Returns the <code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\Discussion</span></code> found on the article&#8217;s page (comments section). See <a class="reference internal" href="#Swader\Diffbot\Api\Article::setDiscussion" title="Swader\Diffbot\Api\Article::setDiscussion"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Api\Article::setDiscussion</span></code></a> for details and below for usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Swader\Diffbot\Diffbot</span><span class="p">;</span>
+
+<span class="nv">$url</span> <span class="o">=</span> <span class="s2">&quot;www.sitepoint.com/quick-tip-get-homestead-vagrant-vm-running/&quot;</span><span class="p">;</span>
+
+<span class="nv">$diffbot</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Diffbot</span><span class="p">(</span><span class="s2">&quot;my_token&quot;</span><span class="p">);</span>
+<span class="nv">$api</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createArticleApi</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
+
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getDiscussion</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getNumPosts</span><span class="p">();</span> <span class="c1">// 7</span>
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getDiscussion</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getProvider</span><span class="p">();</span> <span class="c1">// Disqus</span>
+</pre></div>
+</div>
+<p>For other methods exposed on the <code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\Discussion</span></code> entity, see its documentation.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getimages">
+<h3><span class="hidden">getImages</span><a class="headerlink" href="#getimages" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Article::getImages">
+<code class="descclassname">Swader\Diffbot\Entity\Article::</code><code class="descname">getImages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Article::getImages" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+<p>An array of images found in the article, with their details. The elements of the array are arrays like this one:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="sd">/**</span>
+
+<span class="sd">array (size=7)</span>
+<span class="sd">  &#39;height&#39; =&gt; int 512</span>
+<span class="sd">  &#39;diffbotUri&#39; =&gt; string &#39;image|3|-851701004&#39; (length=18)</span>
+<span class="sd">  &#39;naturalHeight&#39; =&gt; int 727</span>
+<span class="sd">  &#39;width&#39; =&gt; int 749</span>
+<span class="sd">  &#39;primary&#39; =&gt; boolean true</span>
+<span class="sd">  &#39;naturalWidth&#39; =&gt; int 1063</span>
+<span class="sd">  &#39;url&#39; =&gt; string &#39;http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2014/07/140624455201.png&#39; (length=79)</span>
+
+<span class="sd">**/</span>
+</pre></div>
+</div>
+<p>Unlike the <a class="reference internal" href="api-discussion.html#Swader\Diffbot\Api\Discussion" title="Swader\Diffbot\Api\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Discussion</span></code></a> API which returns details about discussion posts even when used with the <a class="reference internal" href="#Swader\Diffbot\Api\Article" title="Swader\Diffbot\Api\Article"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Article</span></code></a> API, the image data returned with this method is minimal. For fuller details about images, use the <a class="reference internal" href="api-image.html#Swader\Diffbot\Api\Image" title="Swader\Diffbot\Api\Image"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Image</span></code></a> API.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getvideos">
+<h3><span class="hidden">getVideos</span><a class="headerlink" href="#getvideos" title="Link na taj naslov">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Article::getVideos">
+<code class="descclassname">Swader\Diffbot\Entity\Article::</code><code class="descname">getVideos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Article::getVideos" title="Link na tu definiciju">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Vraća:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+<p>Essentially identical to the above <code class="docutils literal"><span class="pre">getImages</span></code>, but for videos. Arrays in the resulting array will look like this:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="sd">/**</span>
+<span class="sd">[</span>
+<span class="sd">    &quot;diffbotUri&quot;: &quot;video|3|-1138675744&quot;,</span>
+<span class="sd">    &quot;primary&quot;: true,</span>
+<span class="sd">    &quot;url&quot;: &quot;http://player.vimeo.com/video/22439234&quot;</span>
+<span class="sd">]</span>
+<span class="sd">**/</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
 </div>
 
 
@@ -162,7 +802,7 @@
         <a href="api-product.html" class="btn btn-neutral float-right" title="Product API" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="01-diffbot.html" class="btn btn-neutral" title="Diffbot klasa" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="abstract-entity.html" class="btn btn-neutral" title="Entity Abstract" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

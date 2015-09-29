@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../class-exceptions.rst:11
 msgid "Exceptions"
-msgstr ""
+msgstr "Exceptions (iznimke)"
 
 #: ../../class-exceptions.rst:13
 msgid ""
@@ -21,20 +21,30 @@ msgid ""
 "in the client. Use this reference when you're unsure why you may have gotten"
 " an exception."
 msgstr ""
+"Ovaj dokument sadrzi opise *exception* klasa i situacije u kojima mogu biti "
+"bacene. Popis koji slijedi moze biti koristan u slucaju potrebe saznavanja "
+"zasto je neki exception bacen."
 
 #: ../../class-exceptions.rst:16
 msgid "DiffbotException"
 msgstr ""
 
-#: ../../class-exceptions.rst:18
+#: ../../class-exceptions.rst:22
 msgid ""
 "The DiffbotException is an empty exception class that extends the base PHP "
 "``\\Exception``. It is the base for all other Diffbot exceptions - though "
 "currently, it is the only one."
 msgstr ""
+"DiffbotException je prazna exception klasa koja extenda osnovnu PHP "
+"``\\Exception`` klasu. DiffbotException je temelj za sva daljnje Diffbot "
+"exceptione. Trenutno je to jedina Diffbot exception klasa koja moze biti "
+"bacena."
 
-#: ../../class-exceptions.rst:20
+#: ../../class-exceptions.rst:24
 msgid ""
 "Its main current purpose is to let the user know that something went wrong "
 "with the client, not its dependencies or the application consuming it."
 msgstr ""
+"Njen trenutni glavni cilj je obavijestiti korisnika da je nesto poslo po zlu"
+" s klijentom, a ne njegovim popratnim bibiliotekama ili aplikacijom koja ga "
+"koristi."

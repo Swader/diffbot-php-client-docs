@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Bruno Skvorc
+# This file is distributed under the same license as the Diffbot PHP Client Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Diffbot PHP Client Documentation 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-26 21:06+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../class-interfaces.rst:11
+msgid "Interfaces"
+msgstr ""
+
+#: ../../class-interfaces.rst:13
+msgid "This document contains the descriptions for all interfaces used in the client."
+msgstr ""
+
+#: ../../class-interfaces.rst:18
+msgid "Api"
+msgstr ""
+
+#: ../../class-interfaces.rst:22
+msgid "The API interface is there as a contract for developing custom APIs, not unlike the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Custom` class."
+msgstr ""
+
+#: ../../class-interfaces.rst:25
+msgid ":hidden:`setTimeout`"
+msgstr ""
+
+#: ../../class-interfaces.rst:29
+msgid "The timeout value in milliseconds. Defaults to 30000 (30 seconds)"
+msgstr ""
+
+#: ../../class-interfaces.rst:30
+msgid "$this"
+msgstr ""
+
+#: ../../class-interfaces.rst:32
+msgid "All Diffbot API endpoints support a timeout parameter which tells them after how many milliseconds to stop expecting a response from the page being processed."
+msgstr ""
+
+#: ../../class-interfaces.rst:35
+msgid ":hidden:`call`"
+msgstr ""
+
+#: ../../class-interfaces.rst:39
+#: ../../class-interfaces.rst:67
+msgid ":php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`"
+msgstr ""
+
+#: ../../class-interfaces.rst:41
+msgid "The call method should execute the remote call to the API. It must return an instance of :php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator` containing the set of appropriate entities for the return value of said API. In custom APIs, these are usually :php:class:`Swader\\\\Diffbot\\\\Entity\\\\Wildcard` entities, unless otherwise specified via a custom implementation of :php:interface:`Swader\\\\Diffbot\\\\Interfaces\\\\EntityFactory`."
+msgstr ""
+
+#: ../../class-interfaces.rst:44
+msgid ":hidden:`buildUrl`"
+msgstr ""
+
+#: ../../class-interfaces.rst:48
+msgid "string"
+msgstr ""
+
+#: ../../class-interfaces.rst:50
+msgid "This method is called automatically when :php:meth:`Swader\\\\Diffbot\\\\Interfaces\\\\Api::call` is called. It builds the URL which is to be called by the HTTPClient in :php:meth:`Swader\\\\Diffbot\\\\Diffbot::setHttpClient`, and returns it. This method can be used to get the URL for the purposes of testing in third party API clients like Postman."
+msgstr ""
+
+#: ../../class-interfaces.rst:53
+msgid "EntityFactory"
+msgstr ""
+
+#: ../../class-interfaces.rst:57
+msgid "The EntityFactory interface is there as a contract for developing custom Entity Factories. For example, you may want to make sure that a call to an API returns specific entities rather than :php:class:`Swader\\\\Diffbot\\\\Entity\\\\Wildcard`, or some of the predefined ones like :php:class:`Swader\\\\Diffbot\\\\Entity\\\\Product`. A specific example would be having a custom API which processes a site with board game cards. Each card has a specific value at a specific location, and these values may correspond. Rather than manually process data in :php:class:`Swader\\\\Diffbot\\\\Entity\\\\Wildcard` entities after a call to this custom API, you might want to define a ``GameCard`` entity and give it fields and methods specific to the context. A custom entity factory is then used to bind the newly defined entity with the custom API."
+msgstr ""
+
+#: ../../class-interfaces.rst:62
+msgid ":hidden:`createAppropriateIterator`"
+msgstr ""
+
+#: ../../class-interfaces.rst:66
+msgid "The response received from the API call. Must be of the GuzzleHttp v5 type. Automatic if the Guzzle client is used, but version 5 only."
+msgstr ""
+
+#: ../../class-interfaces.rst:69
+msgid "Returns the entity iterator containing the appropriate entities as built by the contents of ``$response``."
+msgstr ""
+

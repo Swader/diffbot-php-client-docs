@@ -11,6 +11,10 @@ This document contains the descriptions and throw cases for all exceptions in th
 DiffbotException
 ================
 
+.. php:namespace:: Swader\Diffbot\Exceptions
+
+.. php:exception:: DiffbotException
+
 The DiffbotException is an empty exception class that extends the base PHP ``\Exception``. It is the base for all other Diffbot exceptions - though currently, it is the only one.
 
 Its main current purpose is to let the user know that something went wrong with the client, not its dependencies or the application consuming it.

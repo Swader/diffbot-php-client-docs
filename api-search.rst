@@ -7,3 +7,17 @@ Search API
 ==========
 
 Description goes here.
+
+Search API Class
+================
+
+.. php:namespace:: Swader\Diffbot\Api
+
+.. php:class:: Search
+
+SearchInfo Entity Class
+=======================
+
+.. php:namespace:: Swader\Diffbot\Entity
+
+.. php:class:: SearchInfo

@@ -15,11 +15,11 @@ msgstr ""
 msgid "Diffbot Class"
 msgstr "Diffbot klasa"
 
-#: ../../01-diffbot.rst:36
+#: ../../01-diffbot.rst:39
 msgid "Useful for setting a default token for all future instances."
 msgstr "Koristi se za podesiti token za sve buduce instance Diffbot klase."
 
-#: ../../01-diffbot.rst:38
+#: ../../01-diffbot.rst:36
 msgid "The token."
 msgstr "Token."
 
@@ -38,7 +38,7 @@ msgstr ""
 msgid "Usage::"
 msgstr "Koristenje::"
 
-#: ../../01-diffbot.rst:51
+#: ../../01-diffbot.rst:53
 msgid ""
 "Returns either the instance token, or the globally defined one - or null if "
 "neither is defined"
@@ -46,7 +46,7 @@ msgstr ""
 "Vraca ili token zadane instance, ili globalno definirani token, ili null "
 "ukoliko nijedan ne postoji"
 
-#: ../../01-diffbot.rst:53
+#: ../../01-diffbot.rst:51
 msgid "null or string"
 msgstr "null ili string"
 
@@ -62,11 +62,11 @@ msgstr ""
 msgid ":hidden:`setHttpClient`"
 msgstr ""
 
-#: ../../01-diffbot.rst:68 ../../01-diffbot.rst:94
+#: ../../01-diffbot.rst:66 ../../01-diffbot.rst:90
 msgid "$this"
 msgstr ""
 
-#: ../../01-diffbot.rst:65
+#: ../../01-diffbot.rst:68
 msgid ""
 "Allows changing of HTTP clients used to send requests to the Diffbot API. "
 "Generally useful only during testing, but some edge cases may arise. This "
@@ -86,14 +86,6 @@ msgstr ""
 msgid "GuzzleHttp\\\\Client"
 msgstr ""
 
-#: ../../01-diffbot.rst:80
-msgid ""
-"Returns the currently set HTTP client. Can be changed via `setHttpClient "
-"<#setHttpClient>`_."
-msgstr ""
-"Vraca trenutno odabrani HTTP klijent. Isti se moze mijenjati putem metode "
-"`setHttpClient <#setHttpClient>`_."
-
 #: ../../01-diffbot.rst:85
 msgid ":hidden:`setEntityFactory`"
 msgstr ""
@@ -112,37 +104,21 @@ msgstr ""
 "koristenja ovog klijenta. Sluzi kao globalni spremnik za konfiguraciju, te "
 "kao tvornica klasa raznih API-ja."
 
-#: ../../01-diffbot.rst:112
-msgid "Swader\\\\Diffbot\\\\Interfaces\\\\EntityFactory"
-msgstr ""
-
-#: ../../01-diffbot.rst:67
+#: ../../01-diffbot.rst:65
 msgid "The HTTP client."
 msgstr "HTTP klijent."
-
-#: ../../01-diffbot.rst:93
-msgid "An EntityFactory implementation."
-msgstr "Implementacija EntityFactory interfacea."
 
 #: ../../01-diffbot.rst:115
 msgid ":hidden:`createProductApi`"
 msgstr ""
 
-#: ../../01-diffbot.rst:121 ../../01-diffbot.rst:139 ../../01-diffbot.rst:158
-#: ../../01-diffbot.rst:180 ../../01-diffbot.rst:199 ../../01-diffbot.rst:222
+#: ../../01-diffbot.rst:119 ../../01-diffbot.rst:137 ../../01-diffbot.rst:156
+#: ../../01-diffbot.rst:178 ../../01-diffbot.rst:197 ../../01-diffbot.rst:220
 msgid "URL which is to be processed, or the word \"crawl\""
 msgstr "URL koji bi se trebao obraditi, ili rijec \"crawl\""
 
-#: ../../01-diffbot.rst:122
-msgid "Swader\\\\Diffbot\\\\Api\\\\Product"
-msgstr ""
-
 #: ../../01-diffbot.rst:133
 msgid ":hidden:`createArticleApi`"
-msgstr ""
-
-#: ../../01-diffbot.rst:140
-msgid "Swader\\\\Diffbot\\\\Api\\\\Article"
 msgstr ""
 
 #: ../../01-diffbot.rst:152
@@ -169,7 +145,7 @@ msgstr ""
 msgid ":hidden:`search`"
 msgstr ""
 
-#: ../../01-diffbot.rst:89
+#: ../../01-diffbot.rst:92
 msgid ""
 "Allows for changing the entity factory in use when returning and processing "
 "Diffbot-provided data. A custom Entity Factory might, for example, return "
@@ -185,19 +161,7 @@ msgstr ""
 "direktno iskoristivi podaci iz poziva Diffbotu, te nema potrebe za dodatnom "
 "obradom."
 
-#: ../../01-diffbot.rst:159
-msgid "Swader\\\\Diffbot\\\\Api\\\\Image"
-msgstr ""
-
-#: ../../01-diffbot.rst:181
-msgid "Swader\\\\Diffbot\\\\Api\\\\Analyze"
-msgstr ""
-
-#: ../../01-diffbot.rst:200
-msgid "Swader\\\\Diffbot\\\\Api\\\\Discussion"
-msgstr ""
-
-#: ../../01-diffbot.rst:223
+#: ../../01-diffbot.rst:221
 msgid ""
 "Name of the custom API as defined in the `Diffbot UI "
 "<https://diffbot.com/dev>`_"
@@ -205,29 +169,7 @@ msgstr ""
 "Ime Custom API-ja kao sto je prikazano u `Diffbot sucelju "
 "<https://diffbot.com/dev>`_"
 
-#: ../../01-diffbot.rst:224
-msgid "Swader\\\\Diffbot\\\\Api\\\\Custom"
-msgstr ""
-
-#: ../../01-diffbot.rst:240
-msgid ""
-"In a nutshell, the Crawlbot crawls a set of seed URLs for links (even if a "
-"subdomain is passed to it as seed URL, it still looks through the entire "
-"main domain and all other subdomains it can find) and then processes all the"
-" pages it can find using the API you define (or opting for Analyze API by "
-"default). The result of the call is a collection of :doc:`JobCrawl <api-"
-"crawl>` objects, each with details about a defined job. To actually get data"
-" obtained by crawling and processing, use the `search API <#search>`_."
-msgstr ""
-"Crawlbot uzima pocetni (seed) URL od kojeg sam dalje trazi povezane URLove, "
-"te ih obradjuje koristeci zadani API. Procesuiraju se i linkovi na "
-"poddomenama zadane domene. Ukoliko API nije eksplicitno definiran, po "
-"defaultu se koristi Analyze API. Rezultat poziva je kolekcija :doc:`JobCrawl"
-" <api-crawl>` objekata, svaki s detaljima o crawljobu o kojem se radi. Da bi"
-" se dobili podaci, tj. rezultati obrade postignuti crawlanjem, treba se "
-"koristiti `search API <#search>`_."
-
-#: ../../01-diffbot.rst:242
+#: ../../01-diffbot.rst:238
 msgid ""
 "Name of the new crawljob. If omitted, activates read only mode and returns "
 "joint data about all defined crawljobs for the current Diffbot token."
@@ -236,51 +178,11 @@ msgstr ""
 "nacin rada koji vraca podatke o svim crawljobovima na zadanom Diffbot "
 "tokenu."
 
-#: ../../01-diffbot.rst:243
-msgid ""
-"Instance of the API to process the crawled URLs. If omitted, defaults to "
-":doc:`Analyze API <api-analyze>`."
-msgstr ""
-"Instanca API-ja koji treba obraditi crawlane URLove. Default je Analyze "
-"API, ukoliko se neki izricito ne zada."
-
-#: ../../01-diffbot.rst:244
-msgid "Swader\\\\Diffbot\\\\Api\\\\Crawl"
-msgstr ""
-
-#: ../../01-diffbot.rst:246
-msgid ""
-"Here's how you can create a crawljob (see detailed :doc:`crawl docs <api-"
-"crawl>` for a step by step guide with explanations)::"
-msgstr ""
-"Ovako se kreira crawljob (za detalje, vidi :doc:`crawl dokumentaciju <api-"
-"crawl>` koja sadrzi korak-po-korak uputstva)::"
-
 #: ../../01-diffbot.rst:265
-msgid ""
-"The Search API is used to search through sets of crawled and processed data "
-"obtained through the use of the Crawl or Bulk API. It accepts a simple "
-"string query, and returns an array of all matching entities. For a live "
-"example of crawl + search implemenation, see `here "
-"<http://search.sitepoint.tools>`_, and for a full walkthrough of the Search "
-"API, see the :doc:`Search API docs <api-search>`."
-msgstr ""
-"Search API je API za pretragu podataka dobivenih pomocu Crawl ili Bulk API-"
-"ja. Kao parametar prima string koji predstavlja upit na Diffbot bazu, te "
-"vraca array svih entiteta koji odgovaraju upitu. Za aktualni i funkcionalni "
-"primjer koristenja Crawl API-ja i Search API-ja, vidi `ovdje "
-"<http://search.sitepoint.tools>`_, a za detaljno pojasnjenje Search API-ja, "
-"vidi :doc:`Search API dokumentaciju <api-search>`."
-
-#: ../../01-diffbot.rst:267
 msgid "The query to execute against the Search API"
 msgstr "Upit kojeg Search API treba izvrsiti na Diffbot bazi"
 
-#: ../../01-diffbot.rst:268
-msgid "Swader\\\\Diffbot\\\\Api\\\\Search"
-msgstr ""
-
-#: ../../01-diffbot.rst:39
+#: ../../01-diffbot.rst:37
 msgid ""
 "void, or throws an `\\\\InvalidArgumentException "
 "<http://php.net/manual/en/class.invalidargumentexception.php>`_ if the token"
@@ -290,94 +192,155 @@ msgstr ""
 "<http://php.net/manual/en/class.invalidargumentexception.php>`_ ako token "
 "nije dobrog formata"
 
-#: ../../01-diffbot.rst:119
-msgid ""
-"The product API turns web shops, catalogs, etc. into structured JSON (think "
-"eBay, Amazon...). This method creates an instance of the :doc:`Product API "
-"class <api-product>`. The method accepts a single string as a parameter: "
-"either a URL which to process, or the word \"crawl\" if used in conjunction "
-"with the `crawl <#id9>`_ method (see below). For a detailed directory of "
-"available methods and in depth usage examples, see the :doc:`Product API "
-"<api-product>` documentation."
-msgstr ""
-"Product API pretvara web shopove, kataloge i slicno u strukturirani JSON "
-"(npr. eBay, Amazon, itd.). Ova metoda kreira novu instancu :doc:`Product API "
-"klase <api-product>`. Metoda prima jedan parametar - URL stranice koju treba "
-"obraditi, ili rijec \"crawl\" ako se koristi sa `crawl <#id9>`_ metodom "
-"(vidi dolje). Za detaljni popis dostupnih metoda i specificne primjere "
-"koristenja, vidi :doc:`Product API <api-product>` dokumentaciju."
-
-#: ../../01-diffbot.rst:137
-msgid ""
-"The article API turns online news posts, blog articles, etc. into structured"
-" JSON. This method creates an instance of the :doc:`Article API class <api-"
-"article>`. The method accepts a single string as a parameter: either a URL "
-"which to process, or the word \"crawl\" if used in conjunction with the "
-"`crawl <#id9>`_ method (see below). For a detailed directory of available "
-"methods and in depth usage examples, see the :doc:`Article API <api-"
-"article>` documentation."
-msgstr ""
-"Article API pretvara novosti, clanke, blog postove i slicno u strukturirani "
-"JSON. Ova metoda kreira novu instancu :doc:`Article API klase <api-"
-"article>`. Metoda prima jedan parametar - URL stranice koju treba obraditi, "
-"ili rijec \"crawl\" ako se koristi sa `crawl <#id9>`_ metodom (vidi "
-"dolje). Za detaljni popis dostupnih metoda i specificne primjere koristenja, "
-"vidi :doc:`Article API <api-article>` dokumentaciju."
-
-#: ../../01-diffbot.rst:178
-msgid ""
-"The analyze API tries to autodetect the content it's dealing with (image, "
-"product, article...) and extracts it into structured JSON. This method "
-"creates an instance of the :doc:`Analyze API class <api-analyze>`. The "
-"method accepts a single string as a parameter: either a URL which to "
-"process, or the word \"crawl\" if used in conjunction with the `crawl "
-"<#id9>`_ method (see below). The Analyze API is the default API used during "
-"`crawl <#id9>`_ mode."
-msgstr ""
-"Analyze API sam dokucuje o kojem se tipu sadrzaja radi (product, article, image...) te vraca strukturirani "
-"JSON nakon primjene odgovarajuceg API-ja. Ova metoda kreira novu instancu :doc:`Analyze API klase <api-"
-"analyze>`. Metoda prima jedan parametar - URL stranice koju treba obraditi, "
-"ili rijec \"crawl\" ako se koristi sa `crawl <#id9>`_ metodom (vidi "
-"dolje). Za detaljni popis dostupnih metoda i specificne primjere koristenja, "
-"vidi :doc:`Analyze API <api-analyze>` dokumentaciju. Analyze API je default tip API-ja prilikom koristenja "
-"`crawl <#id9>`_ nacina rada."
-
-#: ../../01-diffbot.rst:197
-msgid ""
-"The discussion API turns online comments, forum topics or pages of reviews "
-"into structured JSON. Think Amazon review section, Youtube comments, article"
-" Disqus comments, etc. This method creates an instance of the "
-":doc:`Discussion API class <api-discussion>`. The method accepts a single "
-"string as a parameter: either a URL which to process, or the word \"crawl\" "
-"if used in conjunction with the `crawl <#id9>`_ method (see below). Like the"
-" Image API above, this one also returns several :doc:`Post <api-discussion>`"
-" entities per call, if available, along with other data - see usage below."
-msgstr ""
-"Discussion API pretvara online komentare, teme na forumima ili stranice s osvrtima u strukturirani JSON. Primjeri su osvrti na Amazonu, komentari ispod Youtube videa, Disqus komentari na clancima i novostima, itd. Ova metoda kreira instancu :doc:`Discussion API klase <api-discussion>`. Metoda prima jedan parametar - URL stranice koju treba obraditi, ili rijec \"crawl\" ako se koristi sa `crawl <#id9>_ metodom (vidi dolje). Kao i Image API, Discussion API vraca kolekciju od vise entiteta po jednom pozivu, ukoliko je to moguce, uz neke ostale podatke - vidi koristenje dolje, ili u detaljnoj dokumentaciji.`"
-
-#: ../../01-diffbot.rst:91
-msgid ""
-"If not explicitly set, defaults to built-in :doc:`EntityFactory <class-"
-"entityfactory>`."
-msgstr "Ako nije izricito zadano, default je :doc:`EntityFactory klasa <class-"
-"entityfactory>` koja dolazi s klijentom."
-
-#: ../../01-diffbot.rst:110
-msgid ""
-"Returns the currently defined :doc:`EntityFactory <class-entityfactory>` "
-"instance. This method generally isn't needed outside of testing scenarios. "
-"See above for usage of the setter."
-msgstr "Vraca instancu trenutno definirane :doc:`EntityFactory klase <class-entityfactory>`. Ova metoda je obicno nepotrebna osim u situacijama testiranja. Vidi gore za koristenje settera radi izmjene EntityFactory instance."
-
 #: ../../01-diffbot.rst:19
 msgid ""
 "The Diffbot class takes a single optional argument, the ``$token``, which "
 "can be obtained `here <https://diffbot.com/pricing>`__. Instantiate like "
 "so::"
 msgstr ""
-"Diffbot klasa prima jedan neobavezni parametar - ``$token`` - koji se dobiva `ovdje <https://diffbot.com/pricing>`__. Instancira se ovako::"
+"Diffbot klasa prima jedan neobavezni parametar - ``$token`` - koji se dobiva"
+" `ovdje <https://diffbot.com/pricing>`__. Instancira se ovako::"
 
-#: ../../01-diffbot.rst:220
+#: ../../01-diffbot.rst:242
+msgid ""
+"The crawl method is used to create new Crawlbot job (crawljob). To find out "
+"more about Crawlbot and what, how and why it does what it does, see `here "
+"<https://www.diffbot.com/dev/docs/crawl/>`__. I also recommend reading the "
+"`Crawlbot API docs <https://www.diffbot.com/dev/docs/crawl/api.jsp>`_ and "
+"the `Crawlbot support topics <http://support.diffbot.com/topics/crawlbot/>`_"
+" just so you can dive right in without being too confused by the code below."
+msgstr ""
+"Crawl metoda se koristi za kreiranje novog Crawlbot zadatka (crawljoba). Za "
+"vise informacija o Crawlbotu, te svemu sto, zasto i kako radi, vidi `ovdje "
+"<https://www.diffbot.com/dev/docs/crawl/>`__. Radi izbjegavanja nejasnoca, "
+"korisno je procitati i `Crawlbot API dokumentaciju "
+"<https://www.diffbot.com/dev/docs/crawl/api.jsp>`_, kao i `Crawlbot podrsku "
+"<http://support.diffbot.com/topics/crawlbot/>`_."
+
+#: ../../01-diffbot.rst:28
+msgid ""
+"Note that if you instantiate without a global token set, and don't pass in a"
+" token while instantiating either, you'll get a "
+":php:exc:`Swader\\\\Diffbot\\\\Exceptions\\\\DiffbotException` thrown."
+msgstr ""
+
+#: ../../01-diffbot.rst:94
+msgid ""
+"If not explicitly set, defaults to built-in "
+":php:class:`Swader\\\\Diffbot\\\\Factory\\\\Entity`."
+msgstr ""
+
+#: ../../01-diffbot.rst:138
+msgid ":php:class:`Swader\\\\Diffbot\\\\Api\\\\Article`"
+msgstr ""
+
+#: ../../01-diffbot.rst:89
+msgid "A :php:class:`Swader\\\\Diffbot\\\\Interfaces\\\\EntityFactory` implementation."
+msgstr ""
+
+#: ../../01-diffbot.rst:80
+msgid ""
+"Returns the currently set HTTP client. Can be changed via "
+":php:meth:`Swader\\\\Diffbot\\\\Diffbot::setHttpClient`."
+msgstr ""
+
+#: ../../01-diffbot.rst:110
+msgid ":php:interface:`Swader\\\\Diffbot\\\\Interfaces\\\\EntityFactory`"
+msgstr ""
+
+#: ../../01-diffbot.rst:112
+msgid ""
+"Returns the currently defined "
+":php:interface:`Swader\\\\Diffbot\\\\Interfaces\\\\EntityFactory` instance. "
+"This method generally isn't needed outside of testing scenarios. See above "
+"for usage of the setter."
+msgstr ""
+
+#: ../../01-diffbot.rst:120
+msgid ":php:class:`Swader\\\\Diffbot\\\\Api\\\\Product`"
+msgstr ""
+
+#: ../../01-diffbot.rst:122
+msgid ""
+"The product API turns web shops, catalogs, etc. into structured JSON (think "
+"eBay, Amazon...). This method creates an instance of the "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Product` class. The method accepts a"
+" single string as a parameter: either a URL which to process, or the word "
+"\"crawl\" if used in conjunction with the "
+":php:meth:`Swader\\\\Diffbot\\\\Diffbot::crawl` method (see below). For a "
+"detailed directory of available methods and in depth usage examples, see the"
+" :php:class:`Swader\\\\Diffbot\\\\Api\\\\Product` documentation."
+msgstr ""
+
+#: ../../01-diffbot.rst:140
+msgid ""
+"The article API turns online news posts, blog articles, etc. into structured"
+" JSON. This method creates an instance of the "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Article` class. The method accepts a"
+" single string as a parameter: either a URL which to process, or the word "
+"\"crawl\" if used in conjunction with the "
+":php:meth:`Swader\\\\Diffbot\\\\Diffbot::crawl` method (see below). For a "
+"detailed directory of available methods and in depth usage examples, see the"
+" :php:class:`Swader\\\\Diffbot\\\\Api\\\\Article` documentation."
+msgstr ""
+
+#: ../../01-diffbot.rst:157
+msgid ":php:class:`Swader\\\\Diffbot\\\\Api\\\\Image`"
+msgstr ""
+
+#: ../../01-diffbot.rst:159
+msgid ""
+"The image API finds images in a post and returns them as JSON. This method "
+"creates an instance of the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Image` "
+"class. The method accepts a single string as a parameter: either a URL which"
+" to process for images, or the word \"crawl\" if used in conjunction with "
+"the :php:meth:`Swader\\\\Diffbot\\\\Diffbot::crawl` method (see below). For "
+"a detailed directory of available methods and in depth usage examples, see "
+"the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Image` documentation. Note that "
+"unlike Product and Article, the Image API can return several Image entities "
+"(see usage below). If not iterated through, the result refers to the first "
+"image only."
+msgstr ""
+
+#: ../../01-diffbot.rst:179
+msgid ":php:class:`Swader\\\\Diffbot\\\\Api\\\\Analyze`"
+msgstr ""
+
+#: ../../01-diffbot.rst:181
+msgid ""
+"The analyze API tries to autodetect the content it's dealing with (image, "
+"product, article...) and extracts it into structured JSON. This method "
+"creates an instance of the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Analyze` "
+"class. The method accepts a single string as a parameter: either a URL which"
+" to process, or the word \"crawl\" if used in conjunction with the "
+":php:meth:`Swader\\\\Diffbot\\\\Diffbot::crawl` method (see below). The "
+"Analyze API is the default API used during "
+":php:meth:`Swader\\\\Diffbot\\\\Diffbot::crawl` mode."
+msgstr ""
+
+#: ../../01-diffbot.rst:198
+msgid ":php:class:`Swader\\\\Diffbot\\\\Api\\\\Discussion`"
+msgstr ""
+
+#: ../../01-diffbot.rst:200
+msgid ""
+"The discussion API turns online comments, forum topics or pages of reviews "
+"into structured JSON. Think Amazon review section, Youtube comments, article"
+" Disqus comments, etc. This method creates an instance of the "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Discussion`. The method accepts a "
+"single string as a parameter: either a URL which to process, or the word "
+"\"crawl\" if used in conjunction with the "
+":php:meth:`Swader\\\\Diffbot\\\\Diffbot::crawl` method (see below). Like the"
+" Image API above, this one also returns several "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Discussion` entities per call, if "
+"available, along with other data - see usage below."
+msgstr ""
+
+#: ../../01-diffbot.rst:222
+msgid ":php:class:`Swader\\\\Diffbot\\\\Api\\\\Custom`"
+msgstr ""
+
+#: ../../01-diffbot.rst:224
 msgid ""
 "Diffbot customers can define Custom APIs. For a tutorial on doing this, see "
 "`here <http://www.sitepoint.com/analyze-sitepoint-author-portfolios-"
@@ -386,42 +349,305 @@ msgid ""
 "for you if none of the standard APIs do the trick. This allows for much more"
 " lightweight and specific calls, resulting in a quicker turnaround and "
 "(usually) more precise data. This method creates an instance of the "
-":doc:`Custom API class <api-custom>`. The method accepts two parameters: "
-"either a URL which to process, or the word \"crawl\" if used in conjunction "
-"with the `crawl <#id9>`_ method (see below), and the name of the custom API "
-"to use. Unlike other APIs, this one has no specific entity to return and "
-"instead returns a :doc:`Wildcard Entity <api-custom>` which matches "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Custom`. The method accepts two "
+"parameters: either a URL which to process, or the word \"crawl\" if used in "
+"conjunction with the :php:meth:`Swader\\\\Diffbot\\\\Diffbot::crawl` method "
+"(see below), and the name of the custom API to use. Unlike other APIs, this "
+"one has no specific entity to return and instead returns a "
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Wildcard` entity which matches "
 "*anything*."
-msgstr "Diffbotovi korisnici mogu definirati Custom API, proizvoljnih oblika i funkcionalnosti. Za vodic kroz kreiranje Custom API-ja, vidi "
-"`ovdje <http://www.sitepoint.com/analyze-sitepoint-author-portfolios-"
-"diffbot/>`__. Stvar se svodi na to da se Diffbot moze istrenirati da vidi pojedine dijelove stranice kao podatke s posebnim znacenjem, i prevede ih u JSON ukoliko nijedan od standardnih API-ja to ne radi uspjesno. Time se postizu mnogo brza vremena obrade, te (obicno) precizniji rezultati. Ova metoda kreira novu instancu :doc:`Custom API klase <api-custom>`, prilikom cega prima dva parametra - ili URL koji se treba obraditi, ili rijec \"crawl\" ukoliko se API koristi zajedno s `crawl <#id9>`_ metodom (vidi dolje), te ime Custom API-ja kao sto je ono definirano u korisnickom web sucelju Diffbota. Za razliku od ostalih API-ja, Custom API uvijek vraca :doc:`Wildcard entitete <api-custom>`, koji odgovaraju *svim* vrstama obradjenih podataka."
+msgstr ""
 
-#: ../../01-diffbot.rst:238
+#: ../../01-diffbot.rst:239
 msgid ""
-"The crawl method is used to create new Crawlbot job (crawljob). To find out "
-"more about Crawlbot and what, how and why it does what it does, see `here "
-"<https://www.diffbot.com/dev/docs/crawl/>`__. I also recommend reading the "
-"`Crawlbot API docs <https://www.diffbot.com/dev/docs/crawl/api.jsp>`_ and "
-"the `Crawlbot support topics <http://support.diffbot.com/topics/crawlbot/>`_"
-" just so you can dive right in without being too confused by the code below."
-msgstr "Crawl metoda se koristi za kreiranje novog Crawlbot zadatka (crawljoba). Za vise informacija o Crawlbotu, te svemu sto, zasto i kako radi, vidi `ovdje <https://www.diffbot.com/dev/docs/crawl/>`__. Radi izbjegavanja nejasnoca, korisno je procitati i `Crawlbot API dokumentaciju <https://www.diffbot.com/dev/docs/crawl/api.jsp>`_, kao i `Crawlbot podrsku <http://support.diffbot.com/topics/crawlbot/>`_."
+"Instance of the API to process the crawled URLs. If omitted, defaults to "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Analyze`."
+msgstr ""
 
-#: ../../01-diffbot.rst:28
-msgid ""
-"Note that if you instantiate without a global token set, and don't pass in a"
-" token while instantiating either, you'll get a :doc:`DiffbotException "
-"<class-exceptions>`."
-msgstr "Ukoliko se Diffbot instancira bez podesenog globalnog tokena, a konstruktoru se takodjer ne da token argument, Diffbot ce baciti :doc:`DiffbotException <class-exceptions>`."
+#: ../../01-diffbot.rst:240
+msgid ":php:class:`Swader\\\\Diffbot\\\\Api\\\\Crawl`"
+msgstr ""
 
-#: ../../01-diffbot.rst:156
+#: ../../01-diffbot.rst:244
 msgid ""
-"The image API finds images in a post and returns them as JSON. This method "
-"creates an instance of the :doc:`Image API class <api-image>`. The method "
-"accepts a single string as a parameter: either a URL which to process for "
-"images, or the word \"crawl\" if used in conjunction with the `crawl "
-"<#id9>`_ method (see below). For a detailed directory of available methods "
-"and in depth usage examples, see the :doc:`Image API <api-image>` "
-"documentation. Note that unlike Product and Article, the Image API can "
-"return several Image entities (see usage below). If not iterated through, "
-"the result refers to the first image only."
-msgstr "Image API pronalazi slike na stranici te ih vraca u JSON obliku. Ova metoda kreira instancu :doc:`Image API klase <api-image>`, te prima jedan string argument - URL stranice koju treba obraditi, ili rijec \"crawl\" ukoliko se koristi zajedno s `crawl <#id9>`_ metodom (vidi dolje). Za detaljni popis dostupnih metoda, te specificne primjere koristenja, vidi :doc:`Image API dokumentaciju <api-image>`. Vrijedi napomenuti da, za razliku od Product i Article API, Image API vraca vise Image entiteta - ovisno o tome koliko slika je pronadjeno na stranici. Ukoliko se pristupa rezultatu direktno bez petlje, rezultat pretpostavlja da korisnik zeli prvu sliku koja je nadjena."
+"In a nutshell, the Crawlbot crawls a set of seed URLs for links (even if a "
+"subdomain is passed to it as seed URL, it still looks through the entire "
+"main domain and all other subdomains it can find) and then processes all the"
+" pages it can find using the API you define (or opting for Analyze API by "
+"default). The result of the call is a collection of "
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\JobCrawl` objects, each with "
+"details about a defined job. To actually get data obtained by crawling and "
+"processing, use the :php:meth:`Swader\\\\Diffbot\\\\Diffbot::search` API."
+msgstr ""
+
+#: ../../01-diffbot.rst:246
+msgid ""
+"Here's how you can create a crawljob (see detailed "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Search` for a step by step guide "
+"with explanations)::"
+msgstr ""
+
+#: ../../01-diffbot.rst:266
+msgid ":php:class:`Swader\\\\Diffbot\\\\Api\\\\Search`"
+msgstr ""
+
+#: ../../01-diffbot.rst:268
+msgid ""
+"The Search API is used to search through sets of crawled and processed data "
+"obtained through the use of the Crawl or Bulk API. It accepts a simple "
+"string query, and returns an array of all matching entities. For a live "
+"example of crawl + search implemenation, see `here "
+"<http://search.sitepoint.tools>`_, and for a full walkthrough of the Search "
+"API, see the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Search` docs."
+msgstr ""
+
+#~ msgid ""
+#~ "Returns the currently set HTTP client. Can be changed via `setHttpClient "
+#~ "<#setHttpClient>`_."
+#~ msgstr ""
+#~ "Vraca trenutno odabrani HTTP klijent. Isti se moze mijenjati putem metode "
+#~ "`setHttpClient <#setHttpClient>`_."
+
+#~ msgid "Swader\\\\Diffbot\\\\Interfaces\\\\EntityFactory"
+#~ msgstr ""
+
+#~ msgid "Swader\\\\Diffbot\\\\Api\\\\Product"
+#~ msgstr ""
+
+#~ msgid "Swader\\\\Diffbot\\\\Api\\\\Image"
+#~ msgstr ""
+
+#~ msgid "Swader\\\\Diffbot\\\\Api\\\\Analyze"
+#~ msgstr ""
+
+#~ msgid "Swader\\\\Diffbot\\\\Api\\\\Discussion"
+#~ msgstr ""
+
+#~ msgid "Swader\\\\Diffbot\\\\Api\\\\Custom"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In a nutshell, the Crawlbot crawls a set of seed URLs for links (even if a "
+#~ "subdomain is passed to it as seed URL, it still looks through the entire "
+#~ "main domain and all other subdomains it can find) and then processes all the"
+#~ " pages it can find using the API you define (or opting for Analyze API by "
+#~ "default). The result of the call is a collection of :doc:`JobCrawl <api-"
+#~ "crawl>` objects, each with details about a defined job. To actually get data"
+#~ " obtained by crawling and processing, use the `search API <#search>`_."
+#~ msgstr ""
+#~ "Crawlbot uzima pocetni (seed) URL od kojeg sam dalje trazi povezane URLove, "
+#~ "te ih obradjuje koristeci zadani API. Procesuiraju se i linkovi na "
+#~ "poddomenama zadane domene. Ukoliko API nije eksplicitno definiran, po "
+#~ "defaultu se koristi Analyze API. Rezultat poziva je kolekcija :doc:`JobCrawl"
+#~ " <api-crawl>` objekata, svaki s detaljima o crawljobu o kojem se radi. Da bi"
+#~ " se dobili podaci, tj. rezultati obrade postignuti crawlanjem, treba se "
+#~ "koristiti `search API <#search>`_."
+
+#~ msgid ""
+#~ "Instance of the API to process the crawled URLs. If omitted, defaults to "
+#~ ":doc:`Analyze API <api-analyze>`."
+#~ msgstr ""
+#~ "Instanca API-ja koji treba obraditi crawlane URLove. Default je Analyze API,"
+#~ " ukoliko se neki izricito ne zada."
+
+#~ msgid "Swader\\\\Diffbot\\\\Api\\\\Crawl"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here's how you can create a crawljob (see detailed :doc:`crawl docs <api-"
+#~ "crawl>` for a step by step guide with explanations)::"
+#~ msgstr ""
+#~ "Ovako se kreira crawljob (za detalje, vidi :doc:`crawl dokumentaciju <api-"
+#~ "crawl>` koja sadrzi korak-po-korak uputstva)::"
+
+#~ msgid ""
+#~ "The Search API is used to search through sets of crawled and processed data "
+#~ "obtained through the use of the Crawl or Bulk API. It accepts a simple "
+#~ "string query, and returns an array of all matching entities. For a live "
+#~ "example of crawl + search implemenation, see `here "
+#~ "<http://search.sitepoint.tools>`_, and for a full walkthrough of the Search "
+#~ "API, see the :doc:`Search API docs <api-search>`."
+#~ msgstr ""
+#~ "Search API je API za pretragu podataka dobivenih pomocu Crawl ili Bulk API-"
+#~ "ja. Kao parametar prima string koji predstavlja upit na Diffbot bazu, te "
+#~ "vraca array svih entiteta koji odgovaraju upitu. Za aktualni i funkcionalni "
+#~ "primjer koristenja Crawl API-ja i Search API-ja, vidi `ovdje "
+#~ "<http://search.sitepoint.tools>`_, a za detaljno pojasnjenje Search API-ja, "
+#~ "vidi :doc:`Search API dokumentaciju <api-search>`."
+
+#~ msgid "Swader\\\\Diffbot\\\\Api\\\\Search"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The product API turns web shops, catalogs, etc. into structured JSON (think "
+#~ "eBay, Amazon...). This method creates an instance of the :doc:`Product API "
+#~ "class <api-product>`. The method accepts a single string as a parameter: "
+#~ "either a URL which to process, or the word \"crawl\" if used in conjunction "
+#~ "with the `crawl <#id9>`_ method (see below). For a detailed directory of "
+#~ "available methods and in depth usage examples, see the :doc:`Product API "
+#~ "<api-product>` documentation."
+#~ msgstr ""
+#~ "Product API pretvara web shopove, kataloge i slicno u strukturirani JSON "
+#~ "(npr. eBay, Amazon, itd.). Ova metoda kreira novu instancu :doc:`Product API"
+#~ " klase <api-product>`. Metoda prima jedan parametar - URL stranice koju "
+#~ "treba obraditi, ili rijec \"crawl\" ako se koristi sa `crawl <#id9>`_ "
+#~ "metodom (vidi dolje). Za detaljni popis dostupnih metoda i specificne "
+#~ "primjere koristenja, vidi :doc:`Product API <api-product>` dokumentaciju."
+
+#~ msgid ""
+#~ "The article API turns online news posts, blog articles, etc. into structured"
+#~ " JSON. This method creates an instance of the :doc:`Article API class <api-"
+#~ "article>`. The method accepts a single string as a parameter: either a URL "
+#~ "which to process, or the word \"crawl\" if used in conjunction with the "
+#~ "`crawl <#id9>`_ method (see below). For a detailed directory of available "
+#~ "methods and in depth usage examples, see the :doc:`Article API <api-"
+#~ "article>` documentation."
+#~ msgstr ""
+#~ "Article API pretvara novosti, clanke, blog postove i slicno u strukturirani "
+#~ "JSON. Ova metoda kreira novu instancu :doc:`Article API klase <api-"
+#~ "article>`. Metoda prima jedan parametar - URL stranice koju treba obraditi, "
+#~ "ili rijec \"crawl\" ako se koristi sa `crawl <#id9>`_ metodom (vidi dolje). "
+#~ "Za detaljni popis dostupnih metoda i specificne primjere koristenja, vidi "
+#~ ":doc:`Article API <api-article>` dokumentaciju."
+
+#~ msgid ""
+#~ "The analyze API tries to autodetect the content it's dealing with (image, "
+#~ "product, article...) and extracts it into structured JSON. This method "
+#~ "creates an instance of the :doc:`Analyze API class <api-analyze>`. The "
+#~ "method accepts a single string as a parameter: either a URL which to "
+#~ "process, or the word \"crawl\" if used in conjunction with the `crawl "
+#~ "<#id9>`_ method (see below). The Analyze API is the default API used during "
+#~ "`crawl <#id9>`_ mode."
+#~ msgstr ""
+#~ "Analyze API sam dokucuje o kojem se tipu sadrzaja radi (product, article, "
+#~ "image...) te vraca strukturirani JSON nakon primjene odgovarajuceg API-ja. "
+#~ "Ova metoda kreira novu instancu :doc:`Analyze API klase <api-analyze>`. "
+#~ "Metoda prima jedan parametar - URL stranice koju treba obraditi, ili rijec "
+#~ "\"crawl\" ako se koristi sa `crawl <#id9>`_ metodom (vidi dolje). Za "
+#~ "detaljni popis dostupnih metoda i specificne primjere koristenja, vidi "
+#~ ":doc:`Analyze API <api-analyze>` dokumentaciju. Analyze API je default tip "
+#~ "API-ja prilikom koristenja `crawl <#id9>`_ nacina rada."
+
+#~ msgid ""
+#~ "The discussion API turns online comments, forum topics or pages of reviews "
+#~ "into structured JSON. Think Amazon review section, Youtube comments, article"
+#~ " Disqus comments, etc. This method creates an instance of the "
+#~ ":doc:`Discussion API class <api-discussion>`. The method accepts a single "
+#~ "string as a parameter: either a URL which to process, or the word \"crawl\" "
+#~ "if used in conjunction with the `crawl <#id9>`_ method (see below). Like the"
+#~ " Image API above, this one also returns several :doc:`Post <api-discussion>`"
+#~ " entities per call, if available, along with other data - see usage below."
+#~ msgstr ""
+#~ "Discussion API pretvara online komentare, teme na forumima ili stranice s "
+#~ "osvrtima u strukturirani JSON. Primjeri su osvrti na Amazonu, komentari "
+#~ "ispod Youtube videa, Disqus komentari na clancima i novostima, itd. Ova "
+#~ "metoda kreira instancu :doc:`Discussion API klase <api-discussion>`. Metoda "
+#~ "prima jedan parametar - URL stranice koju treba obraditi, ili rijec "
+#~ "\"crawl\" ako se koristi sa `crawl <#id9>_ metodom (vidi dolje). Kao i Image"
+#~ " API, Discussion API vraca kolekciju od vise entiteta po jednom pozivu, "
+#~ "ukoliko je to moguce, uz neke ostale podatke - vidi koristenje dolje, ili u "
+#~ "detaljnoj dokumentaciji.`"
+
+#~ msgid ""
+#~ "Returns the currently defined :doc:`EntityFactory <class-entityfactory>` "
+#~ "instance. This method generally isn't needed outside of testing scenarios. "
+#~ "See above for usage of the setter."
+#~ msgstr ""
+#~ "Vraca instancu trenutno definirane :doc:`EntityFactory klase <class-"
+#~ "entityfactory>`. Ova metoda je obicno nepotrebna osim u situacijama "
+#~ "testiranja. Vidi gore za koristenje settera radi izmjene EntityFactory "
+#~ "instance."
+
+#~ msgid ""
+#~ "Diffbot customers can define Custom APIs. For a tutorial on doing this, see "
+#~ "`here <http://www.sitepoint.com/analyze-sitepoint-author-portfolios-"
+#~ "diffbot/>`__. What it comes down to, is that you can tell Diffbot how to "
+#~ "recognize certain areas of a web page, and have it translate that into JSON "
+#~ "for you if none of the standard APIs do the trick. This allows for much more"
+#~ " lightweight and specific calls, resulting in a quicker turnaround and "
+#~ "(usually) more precise data. This method creates an instance of the "
+#~ ":doc:`Custom API class <api-custom>`. The method accepts two parameters: "
+#~ "either a URL which to process, or the word \"crawl\" if used in conjunction "
+#~ "with the `crawl <#id9>`_ method (see below), and the name of the custom API "
+#~ "to use. Unlike other APIs, this one has no specific entity to return and "
+#~ "instead returns a :doc:`Wildcard Entity <api-custom>` which matches "
+#~ "*anything*."
+#~ msgstr ""
+#~ "Diffbotovi korisnici mogu definirati Custom API, proizvoljnih oblika i "
+#~ "funkcionalnosti. Za vodic kroz kreiranje Custom API-ja, vidi `ovdje "
+#~ "<http://www.sitepoint.com/analyze-sitepoint-author-portfolios-diffbot/>`__. "
+#~ "Stvar se svodi na to da se Diffbot moze istrenirati da vidi pojedine "
+#~ "dijelove stranice kao podatke s posebnim znacenjem, i prevede ih u JSON "
+#~ "ukoliko nijedan od standardnih API-ja to ne radi uspjesno. Time se postizu "
+#~ "mnogo brza vremena obrade, te (obicno) precizniji rezultati. Ova metoda "
+#~ "kreira novu instancu :doc:`Custom API klase <api-custom>`, prilikom cega "
+#~ "prima dva parametra - ili URL koji se treba obraditi, ili rijec \"crawl\" "
+#~ "ukoliko se API koristi zajedno s `crawl <#id9>`_ metodom (vidi dolje), te "
+#~ "ime Custom API-ja kao sto je ono definirano u korisnickom web sucelju "
+#~ "Diffbota. Za razliku od ostalih API-ja, Custom API uvijek vraca "
+#~ ":doc:`Wildcard entitete <api-custom>`, koji odgovaraju *svim* vrstama "
+#~ "obradjenih podataka."
+
+#~ msgid ""
+#~ "The image API finds images in a post and returns them as JSON. This method "
+#~ "creates an instance of the :doc:`Image API class <api-image>`. The method "
+#~ "accepts a single string as a parameter: either a URL which to process for "
+#~ "images, or the word \"crawl\" if used in conjunction with the `crawl "
+#~ "<#id9>`_ method (see below). For a detailed directory of available methods "
+#~ "and in depth usage examples, see the :doc:`Image API <api-image>` "
+#~ "documentation. Note that unlike Product and Article, the Image API can "
+#~ "return several Image entities (see usage below). If not iterated through, "
+#~ "the result refers to the first image only."
+#~ msgstr ""
+#~ "Image API pronalazi slike na stranici te ih vraca u JSON obliku. Ova metoda "
+#~ "kreira instancu :doc:`Image API klase <api-image>`, te prima jedan string "
+#~ "argument - URL stranice koju treba obraditi, ili rijec \"crawl\" ukoliko se "
+#~ "koristi zajedno s `crawl <#id9>`_ metodom (vidi dolje). Za detaljni popis "
+#~ "dostupnih metoda, te specificne primjere koristenja, vidi :doc:`Image API "
+#~ "dokumentaciju <api-image>`. Vrijedi napomenuti da, za razliku od Product i "
+#~ "Article API, Image API vraca vise Image entiteta - ovisno o tome koliko "
+#~ "slika je pronadjeno na stranici. Ukoliko se pristupa rezultatu direktno bez "
+#~ "petlje, rezultat pretpostavlja da korisnik zeli prvu sliku koja je nadjena."
+
+#~ msgid ""
+#~ ":param :php:class:`Swader\\\\Diffbot\\\\Interfaces\\\\EntityFactory` $token:"
+#~ " An EntityFactory implementation. :returns: $this"
+#~ msgstr ""
+
+#~ msgid "An EntityFactory implementation."
+#~ msgstr "Implementacija EntityFactory interfacea."
+
+#~ msgid "Swader\\\\Diffbot\\\\Api\\\\Article"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Swader\\\\Diffbot\\\\Api\\\\Custom  Diffbot customers can define Custom "
+#~ "APIs. For a tutorial on doing this, see `here <http://www.sitepoint.com"
+#~ "/analyze-sitepoint-author-portfolios-diffbot/>`__. What it comes down to, is"
+#~ " that you can tell Diffbot how to recognize certain areas of a web page, and"
+#~ " have it translate that into JSON for you if none of the standard APIs do "
+#~ "the trick. This allows for much more lightweight and specific calls, "
+#~ "resulting in a quicker turnaround and (usually) more precise data. This "
+#~ "method creates an instance of the :doc:`Custom API class <api-custom>`. The "
+#~ "method accepts two parameters: either a URL which to process, or the word "
+#~ "\"crawl\" if used in conjunction with the `crawl <#id9>`_ method (see "
+#~ "below), and the name of the custom API to use. Unlike other APIs, this one "
+#~ "has no specific entity to return and instead returns a :doc:`Wildcard Entity"
+#~ " <api-custom>` which matches *anything*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If not explicitly set, defaults to built-in :doc:`EntityFactory <class-"
+#~ "entityfactory>`."
+#~ msgstr ""
+#~ "Ako nije izricito zadano, default je :doc:`EntityFactory klasa <class-"
+#~ "entityfactory>` koja dolazi s klijentom."
+
+#~ msgid ""
+#~ "Note that if you instantiate without a global token set, and don't pass in a"
+#~ " token while instantiating either, you'll get a :doc:`DiffbotException "
+#~ "<class-exceptions>`."
+#~ msgstr ""
+#~ "Ukoliko se Diffbot instancira bez podesenog globalnog tokena, a konstruktoru"
+#~ " se takodjer ne da token argument, Diffbot ce baciti :doc:`DiffbotException "
+#~ "<class-exceptions>`."
