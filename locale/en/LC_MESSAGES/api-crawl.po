@@ -15,25 +15,665 @@ msgstr ""
 msgid "Crawl API"
 msgstr ""
 
-#: ../../api-crawl.rst:13
-msgid "Description goes here."
-msgstr ""
-
-#: ../../api-crawl.rst:16
+#: ../../api-crawl.rst:22
 msgid "Crawl API Class"
 msgstr ""
 
-#: ../../api-crawl.rst:18
-msgid "The Crawl API is used"
-msgstr ""
-
-#: ../../api-crawl.rst:26
+#: ../../api-crawl.rst:326
 msgid "JobCrawl Class"
 msgstr ""
 
-#: ../../api-crawl.rst:28
-msgid "The JobCrawl class is a container of information about a crawljob."
+#: ../../api-crawl.rst:13
+msgid ""
+"Diffbot has the ability to crawl entire domains and process all crawled "
+"pages. For a difference between crawling and processing `see here "
+"<http://support.diffbot.com/crawlbot/whats-the-difference-between-crawling-"
+"and-processing/>`__."
 msgstr ""
+
+#: ../../api-crawl.rst:15
+msgid "To programmatically create or update crawljobs, use this API."
+msgstr ""
+
+#: ../../api-crawl.rst:17
+msgid ""
+"A full tutorial on using this API can be found `here "
+"<http://www.sitepoint.com/crawling-searching-entire-domains-diffbot>`__, and"
+" a working app powered by it at http://search.sitepoint.tools."
+msgstr ""
+
+#: ../../api-crawl.rst:28
+msgid ""
+"The Crawl API is used to create new crawljobs or modify existing ones. The "
+"Crawl API is atypical, and as such does not extend "
+":php:class:`Swader\\\\Diffbot\\\\Abstracts\\\\Api` unlike the more entity-"
+"specific APIs."
+msgstr ""
+
+#: ../../api-crawl.rst:30
+msgid ""
+"Note that everything you can do with the Crawl API can also be done in the "
+"Diffbot UI."
+msgstr ""
+
+#: ../../api-crawl.rst:33
+msgid ":hidden:`__construct`"
+msgstr ""
+
+#: ../../api-crawl.rst:37
+msgid "[Optional] The name of crawljob to be created or modified."
+msgstr ""
+
+#: ../../api-crawl.rst:38
+msgid "[Optional] The API to use while processing the crawled links."
+msgstr ""
+
+#: ../../api-crawl.rst:40
+msgid ""
+"The ``$name`` argument is optional. If omitted, the second argument is "
+"ignored and the :php:meth:`Swader\\\\Diffbot\\\\Api\\\\Crawl::call` will "
+"return a list of all crawljobs on a given Diffbot token, with their "
+"information, in a :php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`"
+" collection of :php:class:`Swader\\\\Diffbot\\\\Entity\\\\JobCrawl` "
+"instances."
+msgstr ""
+
+#: ../../api-crawl.rst:42
+msgid ""
+"The ``$api`` argument is also optional, but must be an instance of "
+":php:class:`Swader\\\\Diffbot\\\\Interfaces\\\\Api` if provided::"
+msgstr ""
+
+#: ../../api-crawl.rst:57
+msgid ":hidden:`getName`"
+msgstr ""
+
+#: ../../api-crawl.rst:61 ../../api-crawl.rst:307
+msgid "string"
+msgstr ""
+
+#: ../../api-crawl.rst:63
+msgid ""
+"Returns the unique name of the crawljob. This name is later used to download"
+" datasets, or to modify the job."
+msgstr ""
+
+#: ../../api-crawl.rst:66
+msgid ":hidden:`setApi`"
+msgstr ""
+
+#: ../../api-crawl.rst:70
+msgid ""
+"An instance of :php:class:`Swader\\\\Diffbot\\\\Interfaces\\\\Api` to "
+"process all crawled links."
+msgstr ""
+
+#: ../../api-crawl.rst:71 ../../api-crawl.rst:89 ../../api-crawl.rst:103
+#: ../../api-crawl.rst:119 ../../api-crawl.rst:131 ../../api-crawl.rst:141
+#: ../../api-crawl.rst:151 ../../api-crawl.rst:161 ../../api-crawl.rst:171
+#: ../../api-crawl.rst:181 ../../api-crawl.rst:191 ../../api-crawl.rst:206
+#: ../../api-crawl.rst:217 ../../api-crawl.rst:246
+msgid "$this"
+msgstr ""
+
+#: ../../api-crawl.rst:73
+msgid ""
+"The API cannot be modified after a crawljob has been created. This method is"
+" useless on existing crawljobs (see "
+"https://www.diffbot.com/dev/docs/crawl/api.jsp)"
+msgstr ""
+
+#: ../../api-crawl.rst:75
+msgid ""
+"The ``$api`` passed into this class will be used on Diffbot's end to process"
+" all the pages the crawljob provides. For example, if you set "
+"http://sitepoint.com as the seed URL (see "
+":php:meth:`Swader\\\\Diffbot\\\\Api\\\\Crawl::setSeeds`), and an instance of"
+" the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Article` API as the ``$api`` "
+"argument, all pages found on http://sitepoint.com will be processed with the"
+" Article API. The results won't be returned - rather, they'll be saved on "
+"Diffbot's servers for searching later (see "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Search`)."
+msgstr ""
+
+#: ../../api-crawl.rst:77
+msgid ""
+"The other APIs require a URL parameter in their constructor, but when "
+"crawling, it is crawlbot who is providing the URLs. To get around this "
+"requirement, use the string \"crawl\" instead of a URL when instantiating a "
+"new API for use with the Crawl API::"
+msgstr ""
+
+#: ../../api-crawl.rst:84
+msgid ":hidden:`setSeeds`"
+msgstr ""
+
+#: ../../api-crawl.rst:88
+msgid "An array of URLs (seeds) which to crawl for matching links"
+msgstr ""
+
+#: ../../api-crawl.rst:91
+msgid ""
+"By default Crawlbot will restrict spidering to the entire domain "
+"(\"http://blog.diffbot.com\" will include URLs at "
+"\"http://www.diffbot.com\")::"
+msgstr ""
+
+#: ../../api-crawl.rst:98
+msgid ":hidden:`setUrlCrawlPatterns`"
+msgstr ""
+
+#: ../../api-crawl.rst:102
+msgid ""
+"[Optional] Array of strings to limit pages crawled to those whose URLs "
+"contain any of the content strings."
+msgstr ""
+
+#: ../../api-crawl.rst:105
+msgid ""
+"You can use the exclamation point to specify a negative string, e.g. "
+"!product to exclude URLs containing the string \"product,\" and the ^ and $ "
+"characters to limit matches to the beginning or end of the URL."
+msgstr ""
+
+#: ../../api-crawl.rst:107
+msgid ""
+"The use of a urlCrawlPattern will allow Crawlbot to spider outside of the "
+"seed domain(s); it will follow all matching URLs regardless of domain::"
+msgstr ""
+
+#: ../../api-crawl.rst:114
+msgid ":hidden:`setUrlCrawlRegex`"
+msgstr ""
+
+#: ../../api-crawl.rst:118
+msgid "a regular expression string"
+msgstr ""
+
+#: ../../api-crawl.rst:121
+msgid ""
+"Specify a regular expression to limit pages crawled to those URLs that match"
+" your expression. This will override any urlCrawlPattern value."
+msgstr ""
+
+#: ../../api-crawl.rst:123
+msgid ""
+"The use of a urlCrawlRegEx will allow Crawlbot to spider outside of the seed"
+" domain; it will follow all matching URLs regardless of domain."
+msgstr ""
+
+#: ../../api-crawl.rst:126
+msgid ":hidden:`setUrlProcessPatterns`"
+msgstr ""
+
+#: ../../api-crawl.rst:130
+msgid "[Optional] array of strings to search for in URLs"
+msgstr ""
+
+#: ../../api-crawl.rst:133
+msgid ""
+"Only URLs containing one or more of the strings specified will be processed "
+"by Diffbot. You can use the exclamation point to specify a negative string, "
+"e.g. !/category to exclude URLs containing the string \"/category,\" and the"
+" ^ and $ characters to limit matches to the beginning or end of the URL."
+msgstr ""
+
+#: ../../api-crawl.rst:136
+msgid ":hidden:`setUrlProcessRegex`"
+msgstr ""
+
+#: ../../api-crawl.rst:140
+msgid "Regular expression string"
+msgstr ""
+
+#: ../../api-crawl.rst:143
+msgid ""
+"Specify a regular expression to limit pages processed to those URLs that "
+"match your expression. This will override any urlProcessPattern value."
+msgstr ""
+
+#: ../../api-crawl.rst:146
+msgid ":hidden:`setPageProcessPatterns`"
+msgstr ""
+
+#: ../../api-crawl.rst:150
+msgid "[Optional] Array of strings"
+msgstr ""
+
+#: ../../api-crawl.rst:153
+msgid ""
+"Specify strings to look for in the HTML of the pages of the crawled URLs. "
+"Only pages containing one or more of those strings will be processed by the "
+"designated API. Very useful for limiting processing to pages with a certain "
+"class present (e.g. ``class=article``) to further narrow down processing "
+"scope and reduce expenses (fewer API calls)."
+msgstr ""
+
+#: ../../api-crawl.rst:156
+msgid ":hidden:`setMaxHops`"
+msgstr ""
+
+#: ../../api-crawl.rst:160
+msgid "[Optional] Maximum number of hops"
+msgstr ""
+
+#: ../../api-crawl.rst:163
+msgid ""
+"Specify the depth of your crawl. A maxHops=0 will limit processing to the "
+"seed URL(s) only -- no other links will be processed; maxHops=1 will  "
+"process all (otherwise matching) pages whose links appear on seed URL(s); "
+"maxHops=2 will process pages whose links appear on those pages; and so on. "
+"By default, Crawlbot will crawl and process links at any depth."
+msgstr ""
+
+#: ../../api-crawl.rst:166
+msgid ":hidden:`setMaxToCrawl`"
+msgstr ""
+
+#: ../../api-crawl.rst:170
+msgid "[Optional] Maximum number of URLs to spider"
+msgstr ""
+
+#: ../../api-crawl.rst:173
+msgid ""
+"Note that spidering (crawling) does not affect the API quota, and reducing "
+"this will only contribute to the length of a crawljob (it will be done "
+"faster if the limit is reached sooner). For a difference between crawling "
+"and processing `see here <http://support.diffbot.com/crawlbot/whats-the-"
+"difference-between-crawling-and-processing/>`__."
+msgstr ""
+
+#: ../../api-crawl.rst:176
+msgid ":hidden:`setMaxToProcess`"
+msgstr ""
+
+#: ../../api-crawl.rst:180
+msgid "[Optional] Maximum number of URLs to process"
+msgstr ""
+
+#: ../../api-crawl.rst:183
+msgid ""
+"Useful for limiting the number of API calls made, thus reducing / limiting "
+"expenses. For a difference between crawling and processing `see here "
+"<http://support.diffbot.com/crawlbot/whats-the-difference-between-crawling-"
+"and-processing/>`__."
+msgstr ""
+
+#: ../../api-crawl.rst:186
+msgid ":hidden:`notify`"
+msgstr ""
+
+#: ../../api-crawl.rst:190
+msgid "Email or URL"
+msgstr ""
+
+#: ../../api-crawl.rst:194
+msgid ""
+"If input is email address, end a message to this email address when the "
+"crawl hits the maxToCrawl or maxToProcess limit, or when the crawl "
+"completes."
+msgstr ""
+
+#: ../../api-crawl.rst:196
+msgid ""
+"If input is URL, you will receive a POST with X-Crawl-Name and X-Crawl-"
+"Status in the headers, and the full JSON response in the POST body."
+msgstr ""
+
+#: ../../api-crawl.rst:198
+msgid ""
+"This method can be called once with an email and another time with a URL in "
+"order to define both an email notification hook and a URL notification hook."
+" An InvalidArgumentException will be thrown if the argument isn't a valid "
+"string (neither a URL nor an email address)."
+msgstr ""
+
+#: ../../api-crawl.rst:201
+msgid ":hidden:`setCrawlDelay`"
+msgstr ""
+
+#: ../../api-crawl.rst:19
+msgid "The Crawl API is also known as the Crawlbot."
+msgstr ""
+
+#: ../../api-crawl.rst:192 ../../api-crawl.rst:207 ../../api-crawl.rst:218
+msgid "``InvalidArgumentException`` if the input parameter is not a number"
+msgstr ""
+
+#: ../../api-crawl.rst:205
+msgid ""
+"[Optional] delay between crawljob repeat executions, in floating point "
+"seconds. Defaults to 0.25 seconds."
+msgstr ""
+
+#: ../../api-crawl.rst:209
+msgid ""
+"Wait this many seconds between each URL crawled from a single IP address. "
+"Specify the number of seconds as an integer or floating-point number."
+msgstr ""
+
+#: ../../api-crawl.rst:212
+msgid ":hidden:`setRepeat`"
+msgstr ""
+
+#: ../../api-crawl.rst:216
+msgid ""
+"The wait period between crawljob restarts, expressed in floating point days."
+" E.g. 0.5 is 12 hours, 7 is a week, 14.5 is 2 weeks and 12 hours, etc. By "
+"default, crawls will not be repeated."
+msgstr ""
+
+#: ../../api-crawl.rst:221
+msgid ":hidden:`setOnlyProcessIfNew`"
+msgstr ""
+
+#: ../../api-crawl.rst:225
+msgid "[Optional] a boolean flag represented as an integer"
+msgstr ""
+
+#: ../../api-crawl.rst:226 ../../api-crawl.rst:236
+msgid "return value"
+msgstr ""
+
+#: ../../api-crawl.rst:228
+msgid ""
+"By default repeat crawls will only process new (previously unprocessed) "
+"pages. Set to 0 to process all content on repeat crawls."
+msgstr ""
+
+#: ../../api-crawl.rst:231
+msgid ":hidden:`setMaxRounds`"
+msgstr ""
+
+#: ../../api-crawl.rst:235
+msgid "[Optional] The param's description"
+msgstr ""
+
+#: ../../api-crawl.rst:238
+msgid ""
+"Specify the maximum number of crawl repeats. By default (maxRounds=0) "
+"repeating crawls will continue indefinitely."
+msgstr ""
+
+#: ../../api-crawl.rst:241
+msgid ":hidden:`setObeyRobots`"
+msgstr ""
+
+#: ../../api-crawl.rst:245 ../../api-crawl.rst:255 ../../api-crawl.rst:265
+#: ../../api-crawl.rst:275 ../../api-crawl.rst:286 ../../api-crawl.rst:297
+msgid "[Optional] Either ``true`` or ``false``"
+msgstr ""
+
+#: ../../api-crawl.rst:248
+msgid "Ignores robots.txt if set to ``false``"
+msgstr ""
+
+#: ../../api-crawl.rst:251
+msgid ":hidden:`roundStart`"
+msgstr ""
+
+#: ../../api-crawl.rst:256 ../../api-crawl.rst:266 ../../api-crawl.rst:276
+#: ../../api-crawl.rst:287 ../../api-crawl.rst:298
+msgid "$this | :php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`"
+msgstr ""
+
+#: ../../api-crawl.rst:258
+msgid ""
+"Force the start of a new crawl \"round\" (manually repeat the crawl). If "
+"onlyProcessIfNew is set to 1 (default), only newly-created pages will be "
+"processed. The method returns the result of the search if activated, or the "
+"current instance of the API class if called without having a *truthy* value "
+"passed in."
+msgstr ""
+
+#: ../../api-crawl.rst:261
+msgid ":hidden:`pause`"
+msgstr ""
+
+#: ../../api-crawl.rst:268
+msgid ""
+"Pause a crawljob. The method returns the result of the search if activated, "
+"or the current instance of the API class if called without having a *truthy*"
+" value passed in."
+msgstr ""
+
+#: ../../api-crawl.rst:271
+msgid ":hidden:`unpause`"
+msgstr ""
+
+#: ../../api-crawl.rst:278
+msgid ""
+"Unpause a crawljob. The method returns the result of the search if "
+"activated, or the current instance of the API class if called without having"
+" a *truthy* value passed in."
+msgstr ""
+
+#: ../../api-crawl.rst:282
+msgid ":hidden:`restart`"
+msgstr ""
+
+#: ../../api-crawl.rst:289
+msgid ""
+"Restart a crawljob. The method returns the result of the search if "
+"activated, or the current instance of the API class if called without having"
+" a *truthy* value passed in."
+msgstr ""
+
+#: ../../api-crawl.rst:293
+msgid ":hidden:`delete`"
+msgstr ""
+
+#: ../../api-crawl.rst:300
+msgid ""
+"Delete a crawljob. The method returns the result of the search if activated,"
+" or the current instance of the API class if called without having a "
+"*truthy* value passed in."
+msgstr ""
+
+#: ../../api-crawl.rst:303
+msgid ":hidden:`buildUrl`"
+msgstr ""
+
+#: ../../api-crawl.rst:309
+msgid ""
+"This method is called automatically when "
+":php:meth:`Swader\\\\Diffbot\\\\Abstracts\\\\Api::call` is called. It builds"
+" the URL which is to be called by the HTTPClient in "
+":php:meth:`Swader\\\\Diffbot\\\\Diffbot::setHttpClient`, and returns it. "
+"This method can be used to get the URL for the purposes of testing in third "
+"party API clients like `Postman <https://www.getpostman.com/>`_."
+msgstr ""
+
+#: ../../api-crawl.rst:311
+msgid "Usage::"
+msgstr ""
+
+#: ../../api-crawl.rst:317
+msgid ":hidden:`call`"
+msgstr ""
+
+#: ../../api-crawl.rst:321
+msgid ":php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`"
+msgstr ""
+
+#: ../../api-crawl.rst:323
+msgid ""
+"When the API instance has been fully configured, this method executes the "
+"call. If all went well, will return a collection of "
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\JobCrawl` objects, each with "
+"information about a job under the current Diffbot token. How many get "
+"returned depends on the action that was performed - see below."
+msgstr ""
+
+#: ../../api-crawl.rst:328
+msgid ""
+"The JobCrawl class is a container of information about a crawljob. If a "
+"crawljob is being created with the Crawl API, the Crawl API will return a "
+"single instance of JobCrawl with the information about the created job. If "
+"the Crawl API is being called without settings, returns all the token's "
+"crawljobs - each in a separate instance. If the crawl job is being deleted, "
+"restarted, paused, etc, only the instance pertaining to the relevant "
+"crawljob is returned."
+msgstr ""
+
+#: ../../api-crawl.rst:335
+msgid ":hidden:`getMaxToCrawl`"
+msgstr ""
+
+#: ../../api-crawl.rst:339 ../../api-crawl.rst:348
+msgid "int"
+msgstr ""
+
+#: ../../api-crawl.rst:341
+msgid "Maximum number of pages to crawl with this crawljob"
+msgstr ""
+
+#: ../../api-crawl.rst:344
+msgid ":hidden:`getMaxToProcess`"
+msgstr ""
+
+#: ../../api-crawl.rst:350
+msgid "Maximum number of pages to process with this crawljob"
+msgstr ""
+
+#: ../../api-crawl.rst:353
+msgid ":hidden:`getOnlyProcessIfNew`"
+msgstr ""
+
+#: ../../api-crawl.rst:357
+msgid "bool"
+msgstr ""
+
+#: ../../api-crawl.rst:359
+msgid ""
+"Whether or not the job was set to only process newly found links, ignoring "
+"old but potentially updated ones"
+msgstr ""
+
+#: ../../api-crawl.rst:362
+msgid ":hidden:`getSeeds`"
+msgstr ""
+
+#: ../../api-crawl.rst:366
+msgid "array"
+msgstr ""
+
+#: ../../api-crawl.rst:368
+msgid ""
+"Seeds as given to the crawljob on creation. Returned as an array, suitable "
+"for direct insertion into a new crawljob via "
+":php:meth:`Swader\\\\Diffbot\\\\Api\\\\Crawl::setSeeds`"
+msgstr ""
+
+#~ msgid "The JobCrawl class is a container of information about a crawljob."
+#~ msgstr ""
+
+#~ msgid "InvalidArgumentException"
+#~ msgstr ""
+
+#~ msgid "delay between crawljob repeat executions, in floating point days"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "$this  The API cannot be modified after a crawljob has been created. This "
+#~ "method is useless on existing crawljobs (see "
+#~ "https://www.diffbot.com/dev/docs/crawl/api.jsp)  The ``$api`` passed into "
+#~ "this class will be used on Diffbot's end to process all the pages the "
+#~ "crawljob provides. For example, if you set http://sitepoint.com as the seed "
+#~ "URL (see :php:meth:`Swader\\\\Diffbot\\\\Api\\\\Crawl::setSeeds`), and an "
+#~ "instance of the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Article` API as the "
+#~ "``$api`` argument, all pages found on http://sitepoint.com will be processed"
+#~ " with the Article API. The results won't be returned - rather, they'll be "
+#~ "saved on Diffbot's servers for searching later (see "
+#~ ":php:class:`Swader\\\\Diffbot\\\\Api\\\\Search`).  The other APIs require a "
+#~ "URL parameter in their constructor, but when crawling, it is crawlbot who is"
+#~ " providing the URLs. To get around this requirement, use the string "
+#~ "\"crawl\" instead of a URL when instantiating a new API for use with the "
+#~ "Crawl API::      // ...     $api = $diffbot->createArticleApi('crawl');     "
+#~ "// ..."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "$this  By default Crawlbot will restrict spidering to the entire domain "
+#~ "(\"http://blog.diffbot.com\" will include URLs at "
+#~ "\"http://www.diffbot.com\")::  // ... "
+#~ "$crawljob->setSeeds(['http://sitepoint.com', 'http://blog.diffbot.com']); //"
+#~ " ..."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "$crawljob->setSeeds(['http://sitepoint.com', 'http://blog.diffbot.com']); //"
+#~ " ..."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "$this  You can use the exclamation point to specify a negative string, e.g. "
+#~ "!product to exclude URLs containing the string \"product,\" and the ^ and $ "
+#~ "characters to limit matches to the beginning or end of the URL.  The use of "
+#~ "a urlCrawlPattern will allow Crawlbot to spider outside of the seed "
+#~ "domain(s); it will follow all matching URLs regardless of domain::  // ... "
+#~ "$crawljob->setUrlCrawlPatterns(['!author', '!page']); // ..."
+#~ msgstr ""
+
+#~ msgid "$crawljob->setUrlCrawlPatterns(['!author', '!page']); // ..."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "$this  Specify a regular expression to limit pages crawled to those URLs "
+#~ "that match your expression. This will override any urlCrawlPattern value.  "
+#~ "The use of a urlCrawlRegEx will allow Crawlbot to spider outside of the seed"
+#~ " domain; it will follow all matching URLs regardless of domain."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "$this  Only URLs containing one or more of the strings specified will be "
+#~ "processed by Diffbot. You can use the exclamation point to specify a "
+#~ "negative string, e.g. !/category to exclude URLs containing the string "
+#~ "\"/category,\" and the ^ and $ characters to limit matches to the beginning "
+#~ "or end of the URL."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "$this  Specify a regular expression to limit pages processed to those URLs "
+#~ "that match your expression. This will override any urlProcessPattern value."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "$this  Specify strings to look for in the HTML of the pages of the crawled "
+#~ "URLs. Only pages containing one or more of those strings will be processed "
+#~ "by the designated API. Very useful for limiting processing to pages with a "
+#~ "certain class present (e.g. ``class=article``) to further narrow down "
+#~ "processing scope and reduce expenses (fewer API calls)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "$this  Specify the depth of your crawl. A maxHops=0 will limit processing to"
+#~ " the seed URL(s) only -- no other links will be processed; maxHops=1 will  "
+#~ "process all (otherwise matching) pages whose links appear on seed URL(s); "
+#~ "maxHops=2 will process pages whose links appear on those pages; and so on. "
+#~ "By default, Crawlbot will crawl and process links at any depth."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "$this  Note that spidering (crawling) does not affect the API quota, and "
+#~ "reducing this will only contribute to the length of a crawljob (it will be "
+#~ "done faster if the limit is reached sooner). For a difference between "
+#~ "crawling and processing `see here <http://support.diffbot.com/crawlbot"
+#~ "/whats-the-difference-between-crawling-and-processing/>`__."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "$this  Useful for limiting the number of API calls made, thus reducing / "
+#~ "limiting expenses. For a difference between crawling and processing `see "
+#~ "here <http://support.diffbot.com/crawlbot/whats-the-difference-between-"
+#~ "crawling-and-processing/>`__."
+#~ msgstr ""
+
+#~ msgid "Description goes here."
+#~ msgstr ""
+
+#~ msgid "The Crawl API is used"
+#~ msgstr ""
 
 #~ msgid "Added: September 7th, 2015 Author: Bruno Skvorc <bruno@skvorc.me>"
 #~ msgstr ""

@@ -30,11 +30,11 @@ msgstr ""
 msgid ":hidden:`__construct`"
 msgstr ""
 
-#: ../../abstract-api.rst:37
+#: ../../abstract-api.rst:35
 msgid "$this"
 msgstr ""
 
-#: ../../abstract-api.rst:26
+#: ../../abstract-api.rst:24
 msgid "The URL of the page to process"
 msgstr "URL web stranice koju treba obraditi"
 
@@ -42,7 +42,7 @@ msgstr "URL web stranice koju treba obraditi"
 msgid ":hidden:`setTimeout`"
 msgstr ""
 
-#: ../../abstract-api.rst:34
+#: ../../abstract-api.rst:38
 msgid ""
 "Setting the timeout will define how long Diffbot will keep trying to fetch "
 "the API results. A timeout can happen for various reasons, from Diffbot's "
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Usage::"
 msgstr "Koristenje::"
 
-#: ../../abstract-api.rst:36
+#: ../../abstract-api.rst:34
 msgid ""
 "Optional. The timeout, in milliseconds. Defaults to 30,000, a.k.a. 30 "
 "seconds"
@@ -69,41 +69,31 @@ msgstr ""
 msgid ":hidden:`call`"
 msgstr ""
 
-#: ../../abstract-api.rst:49
+#: ../../abstract-api.rst:51
 msgid ""
 "When the API instance has been fully configured, this method executes the "
 "call."
 msgstr "Kad je API instanca podesena, ova metoda izvrsava poziv na server."
 
-#: ../../abstract-api.rst:51
-msgid ""
-"\\\\Swader\\\\Diffbot\\\\Entity\\\\EntityIterator The return value will be "
-"an iterable collection of appropriate entities. Refer to each API's "
-"documentation for details on entites returned from each API call."
-msgstr ""
-"\\\\Swader\\\\Diffbot\\\\Entity\\\\EntityIterator Povratna vrijednost ce "
-"biti kolekcija odgovarajucih entiteta kroz koju se moze iterirati obicnim "
-"petljama. Svaka API klasa zasebno dokumentira tip entiteta koji vraca."
-
 #: ../../abstract-api.rst:60
 msgid ":hidden:`buildUrl`"
 msgstr ""
 
-#: ../../abstract-api.rst:66
+#: ../../abstract-api.rst:64
 msgid "string"
 msgstr ""
 
-#: ../../abstract-api.rst:27
+#: ../../abstract-api.rst:25
 msgid "InvalidArgumentException if the URL is invalid AND not the word \"crawl\""
 msgstr ""
 
-#: ../../abstract-api.rst:38
+#: ../../abstract-api.rst:36
 msgid ""
 "InvalidArgumentException if the timeout value is invalid (negative or not an"
 " integer)"
 msgstr ""
 
-#: ../../abstract-api.rst:24
+#: ../../abstract-api.rst:27
 msgid ""
 "This class takes a single argument during construction, the URL of the page "
 "to process. Alternatively, the argument can be \"crawl\", if the API is to "
@@ -111,7 +101,7 @@ msgid ""
 ":php:class:`Swader\\\\Diffbot\\\\Api\\\\Crawl` API."
 msgstr ""
 
-#: ../../abstract-api.rst:64
+#: ../../abstract-api.rst:66
 msgid ""
 "This method is called automatically when "
 ":php:meth:`Swader\\\\Diffbot\\\\Abstracts\\\\Api::call` is called. It builds"
@@ -120,6 +110,22 @@ msgid ""
 "This method can be used to get the URL for the purposes of testing in third "
 "party API clients like `Postman <https://www.getpostman.com/>`_."
 msgstr ""
+
+#: ../../abstract-api.rst:49
+msgid ""
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator` The return value "
+"will be an iterable collection of appropriate entities. Refer to each API's "
+"documentation for details on entities returned from each API call."
+msgstr ""
+
+#~ msgid ""
+#~ "\\\\Swader\\\\Diffbot\\\\Entity\\\\EntityIterator The return value will be "
+#~ "an iterable collection of appropriate entities. Refer to each API's "
+#~ "documentation for details on entites returned from each API call."
+#~ msgstr ""
+#~ "\\\\Swader\\\\Diffbot\\\\Entity\\\\EntityIterator Povratna vrijednost ce "
+#~ "biti kolekcija odgovarajucih entiteta kroz koju se moze iterirati obicnim "
+#~ "petljama. Svaka API klasa zasebno dokumentira tip entiteta koji vraca."
 
 #~ msgid ""
 #~ "This method is called automatically when "

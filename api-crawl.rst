@@ -12,6 +12,8 @@ To programmatically create or update crawljobs, use this API.
 
 A full tutorial on using this API can be found `here <http://www.sitepoint.com/crawling-searching-entire-domains-diffbot>`__, and a working app powered by it at http://search.sitepoint.tools.
 
+The Crawl API is also known as the Crawlbot.
+
 Crawl API Class
 ===============
 
@@ -19,9 +21,9 @@ Crawl API Class
 
 .. php:class:: Crawl
 
-    The Crawl API is used to create new crawljobs or modify existing ones. The Crawl API is atypical, and as such does not extend :php:class:`Swader\\Diffbot\\Abstracts\\Api` unlike the more entity-specific APIs.
+The Crawl API is used to create new crawljobs or modify existing ones. The Crawl API is atypical, and as such does not extend :php:class:`Swader\\Diffbot\\Abstracts\\Api` unlike the more entity-specific APIs.
 
-    Note that everything you can do with the Crawl API can also be done in the Diffbot UI.
+Note that everything you can do with the Crawl API can also be done in the Diffbot UI.
 
 :hidden:`__construct`
 """""""""""""""""""""
@@ -64,11 +66,11 @@ Crawl API Class
         :param Swader\\Diffbot\\Interfaces\\Api $api: An instance of :php:class:`Swader\\Diffbot\\Interfaces\\Api` to process all crawled links.
         :returns: $this
 
-            The API cannot be modified after a crawljob has been created. This method is useless on existing crawljobs (see https://www.diffbot.com/dev/docs/crawl/api.jsp)
+        The API cannot be modified after a crawljob has been created. This method is useless on existing crawljobs (see https://www.diffbot.com/dev/docs/crawl/api.jsp)
 
-            The ``$api`` passed into this class will be used on Diffbot's end to process all the pages the crawljob provides. For example, if you set http://sitepoint.com as the seed URL (see :php:meth:`Swader\\Diffbot\\Api\\Crawl::setSeeds`), and an instance of the :php:class:`Swader\\Diffbot\\Api\\Article` API as the ``$api`` argument, all pages found on http://sitepoint.com will be processed with the Article API. The results won't be returned - rather, they'll be saved on Diffbot's servers for searching later (see :php:class:`Swader\\Diffbot\\Api\\Search`).
+        The ``$api`` passed into this class will be used on Diffbot's end to process all the pages the crawljob provides. For example, if you set http://sitepoint.com as the seed URL (see :php:meth:`Swader\\Diffbot\\Api\\Crawl::setSeeds`), and an instance of the :php:class:`Swader\\Diffbot\\Api\\Article` API as the ``$api`` argument, all pages found on http://sitepoint.com will be processed with the Article API. The results won't be returned - rather, they'll be saved on Diffbot's servers for searching later (see :php:class:`Swader\\Diffbot\\Api\\Search`).
 
-            The other APIs require a URL parameter in their constructor, but when crawling, it is crawlbot who is providing the URLs. To get around this requirement, use the string "crawl" instead of a URL when instantiating a new API for use with the Crawl API::
+        The other APIs require a URL parameter in their constructor, but when crawling, it is crawlbot who is providing the URLs. To get around this requirement, use the string "crawl" instead of a URL when instantiating a new API for use with the Crawl API::
 
                 // ...
                 $api = $diffbot->createArticleApi('crawl');
@@ -82,7 +84,7 @@ Crawl API Class
         :param array $seeds: An array of URLs (seeds) which to crawl for matching links
         :returns: $this
 
-            By default Crawlbot will restrict spidering to the entire domain ("http://blog.diffbot.com" will include URLs at "http://www.diffbot.com")::
+        By default Crawlbot will restrict spidering to the entire domain ("http://blog.diffbot.com" will include URLs at "http://www.diffbot.com")::
 
             // ...
             $crawljob->setSeeds(['http://sitepoint.com', 'http://blog.diffbot.com']);
@@ -96,9 +98,9 @@ Crawl API Class
         :param array $pattern: [Optional] Array of strings to limit pages crawled to those whose URLs contain any of the content strings.
         :returns: $this
 
-            You can use the exclamation point to specify a negative string, e.g. !product to exclude URLs containing the string "product," and the ^ and $ characters to limit matches to the beginning or end of the URL.
+        You can use the exclamation point to specify a negative string, e.g. !product to exclude URLs containing the string "product," and the ^ and $ characters to limit matches to the beginning or end of the URL.
 
-            The use of a urlCrawlPattern will allow Crawlbot to spider outside of the seed domain(s); it will follow all matching URLs regardless of domain::
+        The use of a urlCrawlPattern will allow Crawlbot to spider outside of the seed domain(s); it will follow all matching URLs regardless of domain::
 
             // ...
             $crawljob->setUrlCrawlPatterns(['!author', '!page']);
@@ -112,9 +114,9 @@ Crawl API Class
         :param string $regex: a regular expression string
         :returns: $this
 
-            Specify a regular expression to limit pages crawled to those URLs that match your expression. This will override any urlCrawlPattern value.
+        Specify a regular expression to limit pages crawled to those URLs that match your expression. This will override any urlCrawlPattern value.
 
-            The use of a urlCrawlRegEx will allow Crawlbot to spider outside of the seed domain; it will follow all matching URLs regardless of domain.
+        The use of a urlCrawlRegEx will allow Crawlbot to spider outside of the seed domain; it will follow all matching URLs regardless of domain.
 
 :hidden:`setUrlProcessPatterns`
 """""""""""""""""""""""""""""""
@@ -124,7 +126,7 @@ Crawl API Class
         :param array $pattern: [Optional] array of strings to search for in URLs
         :returns: $this
 
-            Only URLs containing one or more of the strings specified will be processed by Diffbot. You can use the exclamation point to specify a negative string, e.g. !/category to exclude URLs containing the string "/category," and the ^ and $ characters to limit matches to the beginning or end of the URL.
+        Only URLs containing one or more of the strings specified will be processed by Diffbot. You can use the exclamation point to specify a negative string, e.g. !/category to exclude URLs containing the string "/category," and the ^ and $ characters to limit matches to the beginning or end of the URL.
 
 :hidden:`setUrlProcessRegex`
 """"""""""""""""""""""""""""
@@ -134,7 +136,7 @@ Crawl API Class
         :param string $regex: Regular expression string
         :returns: $this
 
-            Specify a regular expression to limit pages processed to those URLs that match your expression. This will override any urlProcessPattern value.
+        Specify a regular expression to limit pages processed to those URLs that match your expression. This will override any urlProcessPattern value.
 
 :hidden:`setPageProcessPatterns`
 """"""""""""""""""""""""""""""""
@@ -144,7 +146,7 @@ Crawl API Class
         :param array $pattern: [Optional] Array of strings
         :returns: $this
 
-            Specify strings to look for in the HTML of the pages of the crawled URLs. Only pages containing one or more of those strings will be processed by the designated API. Very useful for limiting processing to pages with a certain class present (e.g. ``class=article``) to further narrow down processing scope and reduce expenses (fewer API calls).
+        Specify strings to look for in the HTML of the pages of the crawled URLs. Only pages containing one or more of those strings will be processed by the designated API. Very useful for limiting processing to pages with a certain class present (e.g. ``class=article``) to further narrow down processing scope and reduce expenses (fewer API calls).
 
 :hidden:`setMaxHops`
 """"""""""""""""""""
@@ -154,27 +156,27 @@ Crawl API Class
         :param int $input: [Optional] Maximum number of hops
         :returns: $this
 
-            Specify the depth of your crawl. A maxHops=0 will limit processing to the seed URL(s) only -- no other links will be processed; maxHops=1 will  process all (otherwise matching) pages whose links appear on seed URL(s); maxHops=2 will process pages whose links appear on those pages; and so on. By default, Crawlbot will crawl and process links at any depth.
+        Specify the depth of your crawl. A maxHops=0 will limit processing to the seed URL(s) only -- no other links will be processed; maxHops=1 will  process all (otherwise matching) pages whose links appear on seed URL(s); maxHops=2 will process pages whose links appear on those pages; and so on. By default, Crawlbot will crawl and process links at any depth.
 
 :hidden:`setMaxToCrawl`
 """""""""""""""""""""""
 
     .. php:method:: setMaxToCrawl($input = 100000)
 
-        :param type $param: [Optional] Maximum number of URLs to spider
+        :param type $input: [Optional] Maximum number of URLs to spider
         :returns: $this
 
-            Note that spidering (crawling) does not affect the API quota, and reducing this will only contribute to the length of a crawljob (it will be done faster if the limit is reached sooner). For a difference between crawling and processing `see here <http://support.diffbot.com/crawlbot/whats-the-difference-between-crawling-and-processing/>`__.
+        Note that spidering (crawling) does not affect the API quota, and reducing this will only contribute to the length of a crawljob (it will be done faster if the limit is reached sooner). For a difference between crawling and processing `see here <http://support.diffbot.com/crawlbot/whats-the-difference-between-crawling-and-processing/>`__.
 
 :hidden:`setMaxToProcess`
 """""""""""""""""""""""""
 
     .. php:method:: setMaxToProcess($input = 100000)
 
-        :param type $param: [Optional] Maximum number of URLs to process
+        :param type $input: [Optional] Maximum number of URLs to process
         :returns: $this
 
-            Useful for limiting the number of API calls made, thus reducing / limiting expenses. For a difference between crawling and processing `see here <http://support.diffbot.com/crawlbot/whats-the-difference-between-crawling-and-processing/>`__.
+        Useful for limiting the number of API calls made, thus reducing / limiting expenses. For a difference between crawling and processing `see here <http://support.diffbot.com/crawlbot/whats-the-difference-between-crawling-and-processing/>`__.
 
 :hidden:`notify`
 """"""""""""""""
@@ -183,32 +185,184 @@ Crawl API Class
 
         :param string $string: Email or URL
         :returns: $this
-        :throws: InvalidArgumentException
+        :throws: ``InvalidArgumentException`` if the input parameter is not a number
 
-            If input is email address, end a message to this email address when the crawl hits the maxToCrawl or maxToProcess limit, or when the crawl completes.
+        If input is email address, end a message to this email address when the crawl hits the maxToCrawl or maxToProcess limit, or when the crawl completes.
 
-            If input is URL, you will receive a POST with X-Crawl-Name and X-Crawl-Status in the headers, and the full JSON response in the POST body.
+        If input is URL, you will receive a POST with X-Crawl-Name and X-Crawl-Status in the headers, and the full JSON response in the POST body.
 
-            This method can be called once with an email and another time with a URL in order to define both an email notification hook and a URL notification hook. An InvalidArgumentException will be thrown if the argument isn't a valid string (neither a URL nor an email address).
+        This method can be called once with an email and another time with a URL in order to define both an email notification hook and a URL notification hook. An InvalidArgumentException will be thrown if the argument isn't a valid string (neither a URL nor an email address).
 
 :hidden:`setCrawlDelay`
 """""""""""""""""""""""
 
     .. php:method:: setCrawlDelay($input = 0.25)
 
-        :param float $input: delay between crawljob repeat executions, in floating point days
+        :param float $input: [Optional] delay between crawljob repeat executions, in floating point seconds. Defaults to 0.25 seconds.
+        :returns: $this
+        :throws: ``InvalidArgumentException`` if the input parameter is not a number
+
+        Wait this many seconds between each URL crawled from a single IP address. Specify the number of seconds as an integer or floating-point number.
+
+:hidden:`setRepeat`
+"""""""""""""""""""
+
+    .. php:method:: setRepeat($input)
+
+        :param float $input: The wait period between crawljob restarts, expressed in floating point days. E.g. 0.5 is 12 hours, 7 is a week, 14.5 is 2 weeks and 12 hours, etc. By default, crawls will not be repeated.
+        :returns: $this
+        :throws: ``InvalidArgumentException`` if the input parameter is not a number
+
+:hidden:`setOnlyProcessIfNew`
+"""""""""""""""""""""""""""""
+
+    .. php:method:: setOnlyProcessIfNew($int = 1)
+
+        :param int $int: [Optional] a boolean flag represented as an integer
+        :returns: return value
+
+        By default repeat crawls will only process new (previously unprocessed) pages. Set to 0 to process all content on repeat crawls.
+
+:hidden:`setMaxRounds`
+""""""""""""""""""""""
+
+    .. php:method:: setMaxRounds($input = 0)
+
+        :param type $input: [Optional] The param's description
+        :returns: return value
+
+        Specify the maximum number of crawl repeats. By default (maxRounds=0) repeating crawls will continue indefinitely.
+
+:hidden:`setObeyRobots`
+"""""""""""""""""""""""
+
+    .. php:method:: setObeyRobots($bool = true)
+
+        :param bool $bool: [Optional] Either ``true`` or ``false``
         :returns: $this
 
+        Ignores robots.txt if set to ``false``
+
+:hidden:`roundStart`
+""""""""""""""""""""
+
+    .. php:method:: roundStart($commit = true)
+
+        :param bool $commit: [Optional] Either ``true`` or ``false``
+        :returns: $this | :php:class:`Swader\\Diffbot\\Entity\\EntityIterator`
+
+        Force the start of a new crawl "round" (manually repeat the crawl). If onlyProcessIfNew is set to 1 (default), only newly-created pages will be processed. The method returns the result of the search if activated, or the current instance of the API class if called without having a *truthy* value passed in.
+
+:hidden:`pause`
+"""""""""""""""
+
+    .. php:method:: pause($commit = true)
+
+        :param bool $commit: [Optional] Either ``true`` or ``false``
+        :returns: $this | :php:class:`Swader\\Diffbot\\Entity\\EntityIterator`
+
+        Pause a crawljob. The method returns the result of the search if activated, or the current instance of the API class if called without having a *truthy* value passed in.
+
+:hidden:`unpause`
+"""""""""""""""""
+
+    .. php:method:: unpause($commit = true)
+
+        :param bool $commit: [Optional] Either ``true`` or ``false``
+        :returns: $this | :php:class:`Swader\\Diffbot\\Entity\\EntityIterator`
+
+        Unpause a crawljob. The method returns the result of the search if activated, or the current instance of the API class if called without having a *truthy* value passed in.
 
 
+:hidden:`restart`
+"""""""""""""""""
 
+    .. php:method:: restart($commit = true)
+
+        :param bool $commit: [Optional] Either ``true`` or ``false``
+        :returns: $this | :php:class:`Swader\\Diffbot\\Entity\\EntityIterator`
+
+        Restart a crawljob. The method returns the result of the search if activated, or the current instance of the API class if called without having a *truthy* value passed in.
+
+
+:hidden:`delete`
+""""""""""""""""
+
+    .. php:method:: delete($commit = true)
+
+        :param bool $commit: [Optional] Either ``true`` or ``false``
+        :returns: $this | :php:class:`Swader\\Diffbot\\Entity\\EntityIterator`
+
+        Delete a crawljob. The method returns the result of the search if activated, or the current instance of the API class if called without having a *truthy* value passed in.
+
+:hidden:`buildUrl`
+""""""""""""""""""
+
+    .. php:method:: buildUrl()
+
+        :returns: string
+
+        This method is called automatically when :php:meth:`Swader\\Diffbot\\Abstracts\\Api::call` is called. It builds the URL which is to be called by the HTTPClient in :php:meth:`Swader\\Diffbot\\Diffbot::setHttpClient`, and returns it. This method can be used to get the URL for the purposes of testing in third party API clients like `Postman <https://www.getpostman.com/>`_.
+
+    Usage::
+
+        $api-> // ... set up API
+        $myUrl = $api->buildUrl();
+
+:hidden:`call`
+""""""""""""""
+
+    .. php:method:: call()
+
+        :returns: :php:class:`Swader\\Diffbot\\Entity\\EntityIterator`
+
+        When the API instance has been fully configured, this method executes the call. If all went well, will return a collection of :php:class:`Swader\\Diffbot\\Entity\\JobCrawl` objects, each with information about a job under the current Diffbot token. How many get returned depends on the action that was performed - see below.
 
 JobCrawl Class
 ==============
 
-    The JobCrawl class is a container of information about a crawljob.
+    The JobCrawl class is a container of information about a crawljob. If a crawljob is being created with the Crawl API, the Crawl API will return a single instance of JobCrawl with the information about the created job. If the Crawl API is being called without settings, returns all the token's crawljobs - each in a separate instance. If the crawl job is being deleted, restarted, paused, etc, only the instance pertaining to the relevant crawljob is returned.
 
 .. php:namespace:: Swader\Diffbot\Entity
 
 .. php:class:: JobCrawl
+
+:hidden:`getMaxToCrawl`
+"""""""""""""""""""""""
+
+    .. php:method:: getMaxToCrawl()
+
+        :returns: int
+
+        Maximum number of pages to crawl with this crawljob
+
+:hidden:`getMaxToProcess`
+"""""""""""""""""""""""""
+
+    .. php:method:: getMaxToProcess()
+
+        :returns: int
+
+        Maximum number of pages to process with this crawljob
+
+:hidden:`getOnlyProcessIfNew`
+"""""""""""""""""""""""""""""
+
+    .. php:method:: getOnlyProcessIfNew()
+
+        :returns: bool
+
+        Whether or not the job was set to only process newly found links, ignoring old but potentially updated ones
+
+:hidden:`getSeeds`
+""""""""""""""""""
+
+    .. php:method:: getSeeds()
+
+        :returns: array
+
+        Seeds as given to the crawljob on creation. Returned as an array, suitable for direct insertion into a new crawljob via :php:meth:`Swader\\Diffbot\\Api\\Crawl::setSeeds`
+
+
+
 

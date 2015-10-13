@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Diffbot PHP Client Documentation 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-26 21:06+0000\n"
+"POT-Creation-Date: 2015-10-13 20:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,10 +21,227 @@ msgid "Search API"
 msgstr ""
 
 #: ../../api-search.rst:13
-msgid "Description goes here."
+msgid "Diffbot's Search API allows you to search the extracted content of one or all of your Diffbot \"collections.\" A collection is a discrete Crawlbot (:php:class:`Swader\\\\Diffbot\\\\Api\\\\Crawl`) or Bulk API job, and includes all of the web pages processed within that job."
 msgstr ""
 
-#: ../../api-search.rst:16
+#: ../../api-search.rst:15
+msgid "In order to search a collection, you must first create that collection using either Crawlbot or the Bulk API. A collection can be searched before a crawl or bulk job is finished."
+msgstr ""
+
+#: ../../api-search.rst:17
+msgid "Whereas Crawlbot returns information about a specific crawljob, the Search API returns sets of matching documents from Diffbot's database, depending on provided query parameters."
+msgstr ""
+
+#: ../../api-search.rst:19
+msgid "The API consists of two parts: the API class used to make the call and return the results, and the SearchInfo class as an alternative result, providing metadata about the query and the complete resultset. We'll describe both, in order."
+msgstr ""
+
+#: ../../api-search.rst:21
+msgid "Note that the API class extends :php:class:`Swader\\\\Diffbot\\\\Abstracts\\\\Api`, so be sure to read that first if you haven't already."
+msgstr ""
+
+#: ../../api-search.rst:24
 msgid "Search API Class"
+msgstr ""
+
+#: ../../api-search.rst:30
+msgid "This API class is a bit specific in that it only extends :php:class:`Swader\\\\Diffbot\\\\Abstracts\\\\Api` to inherit part of a single function - almost everything else is custom implemented, due to the highly specific nature of the API."
+msgstr ""
+
+#: ../../api-search.rst:32
+msgid "Basic usage::"
+msgstr ""
+
+#: ../../api-search.rst:49
+msgid ":hidden:`__construct`"
+msgstr ""
+
+#: ../../api-search.rst:53
+msgid "Query string to run on the collection(s)"
+msgstr ""
+
+#: ../../api-search.rst:55
+msgid "The constructor takes a string like \"foo AND bar AND title:baz\". This would make the API search for documents containing both \"foo\" and \"bar\" in any of the fields, and \"baz\" in the title field."
+msgstr ""
+
+#: ../../api-search.rst:58
+msgid ":hidden:`setCol`"
+msgstr ""
+
+#: ../../api-search.rst:62
+msgid "[Optional] Name of collection to search"
+msgstr ""
+
+#: ../../api-search.rst:63
+#: ../../api-search.rst:73
+#: ../../api-search.rst:83
+msgid "$this"
+msgstr ""
+
+#: ../../api-search.rst:65
+msgid "If collection name is not provided, Search API will search all the collections under the currently active token."
+msgstr ""
+
+#: ../../api-search.rst:68
+msgid ":hidden:`setNum`"
+msgstr ""
+
+#: ../../api-search.rst:72
+msgid "Number of results to return"
+msgstr ""
+
+#: ../../api-search.rst:75
+msgid "The ``$num`` param should either be a number, or the string \"all\" if you want the API to return all the results. Note that this may be quite a large payload if the search terms are broad, and you'd likely be better off paginating the result (see below)."
+msgstr ""
+
+#: ../../api-search.rst:78
+msgid ":hidden:`setStart`"
+msgstr ""
+
+#: ../../api-search.rst:82
+msgid "The starting result number. Used during pagination."
+msgstr ""
+
+#: ../../api-search.rst:87
+msgid ":hidden:`buildUrl`"
+msgstr ""
+
+#: ../../api-search.rst:91
+#: ../../api-search.rst:135
+msgid "string"
+msgstr ""
+
+#: ../../api-search.rst:93
+msgid "This method is called automatically when :php:meth:`Swader\\\\Diffbot\\\\Abstracts\\\\Api::call` is called. It builds the URL which is to be called by the HTTPClient in :php:meth:`Swader\\\\Diffbot\\\\Diffbot::setHttpClient`, and returns it. This method can be used to get the URL for the purposes of testing in third party API clients like `Postman <https://www.getpostman.com/>`_."
+msgstr ""
+
+#: ../../api-search.rst:95
+msgid "Usage::"
+msgstr ""
+
+#: ../../api-search.rst:101
+msgid ":hidden:`call`"
+msgstr ""
+
+#: ../../api-search.rst:105
+msgid "Either ``true`` or ``false``"
+msgstr ""
+
+#: ../../api-search.rst:106
+msgid ":php:class:`Swader\\\\Diffbot\\\\Entity\\\\SearchInfo` | :php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`"
+msgstr ""
+
+#: ../../api-search.rst:108
+msgid "When the API instance has been fully configured, this method executes the call."
+msgstr ""
+
+#: ../../api-search.rst:110
+msgid "If the ``$info`` parameter passed into the method is ``false``, the return value will be an iterable collection (:php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`) of appropriate entities. Refer to each API's documentation for details on entities returned from each API call."
+msgstr ""
+
+#: ../../api-search.rst:112
+msgid "If you pass in ``true``, you force info mode and get back a :php:class:`Swader\\\\Diffbot\\\\Entity\\\\SearchInfo` object related to the last call. Keep in mind that passing in ``true`` before calling a default ``call()`` will implicitly call the ``call()``, and then get the SearchInfo."
+msgstr ""
+
+#: ../../api-search.rst:114
+msgid "So::"
+msgstr ""
+
+#: ../../api-search.rst:122
+msgid "SearchInfo Entity Class"
+msgstr ""
+
+#: ../../api-search.rst:124
+msgid "When the Search API is called with *info* mode forced, the API will return an info object, containing various properties useful for pagination and metadata."
+msgstr ""
+
+#: ../../api-search.rst:131
+msgid ":hidden:`getType`"
+msgstr ""
+
+#: ../../api-search.rst:137
+msgid "Will always return \"searchInfo\"::"
+msgstr ""
+
+#: ../../api-search.rst:146
+msgid ":hidden:`getCurrentTimeUTC`"
+msgstr ""
+
+#: ../../api-search.rst:150
+#: ../../api-search.rst:159
+#: ../../api-search.rst:168
+#: ../../api-search.rst:177
+#: ../../api-search.rst:186
+#: ../../api-search.rst:195
+#: ../../api-search.rst:204
+msgid "int"
+msgstr ""
+
+#: ../../api-search.rst:152
+msgid "Current UTC time as timestamp"
+msgstr ""
+
+#: ../../api-search.rst:155
+msgid ":hidden:`getResponseTimeMS`"
+msgstr ""
+
+#: ../../api-search.rst:161
+msgid "Response time in milliseconds. Time it took to process the query on Diffbot's end."
+msgstr ""
+
+#: ../../api-search.rst:164
+msgid ":hidden:`getNumResultsOmitted`"
+msgstr ""
+
+#: ../../api-search.rst:170
+msgid "Number of results skipped for any reason"
+msgstr ""
+
+#: ../../api-search.rst:173
+msgid ":hidden:`getNumShardsSkipped`"
+msgstr ""
+
+#: ../../api-search.rst:179
+msgid "Number of skipped shards (@todo find out what those are)"
+msgstr ""
+
+#: ../../api-search.rst:182
+msgid ":hidden:`getTotalShards`"
+msgstr ""
+
+#: ../../api-search.rst:188
+msgid "Total number of shards (@todo find out what those are)"
+msgstr ""
+
+#: ../../api-search.rst:191
+msgid ":hidden:`getDocsIncollection`"
+msgstr ""
+
+#: ../../api-search.rst:197
+msgid "Total number of documents in collection. Should resemble the total number you got on the crawl job. (@todo: find out why not identical)"
+msgstr ""
+
+#: ../../api-search.rst:200
+msgid ":hidden:`getHits`"
+msgstr ""
+
+#: ../../api-search.rst:206
+msgid "Number of results that match - NOT the number of *returned* results! Use this for pagination as a total result count."
+msgstr ""
+
+#: ../../api-search.rst:209
+msgid ":hidden:`getQueryInfo`"
+msgstr ""
+
+#: ../../api-search.rst:213
+msgid "array"
+msgstr ""
+
+#: ../../api-search.rst:215
+msgid "Returns an assoc. array containing the following keys and example values::"
+msgstr ""
+
+#: ../../api-search.rst:251
+msgid "@todo: find out what hashes are, and to what the freq is relative"
 msgstr ""
 

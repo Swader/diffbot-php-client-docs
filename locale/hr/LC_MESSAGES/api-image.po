@@ -15,13 +15,225 @@ msgstr ""
 msgid "Image API"
 msgstr ""
 
-#: ../../api-image.rst:13
-msgid "Description goes here."
-msgstr ""
-
-#: ../../api-image.rst:16
+#: ../../api-image.rst:20
 msgid "Image API Class"
 msgstr ""
+
+#: ../../api-image.rst:66
+msgid "Image Entity Class"
+msgstr ""
+
+#: ../../api-image.rst:13
+msgid ""
+"This API is used to turn content like image galleries, Instagram posts, or "
+"image-rich articles into JSON."
+msgstr ""
+
+#: ../../api-image.rst:15
+msgid ""
+"For examples of data that might be returned, please see http://diffbot.com "
+"and run the Image API demo."
+msgstr ""
+
+#: ../../api-image.rst:17
+msgid ""
+"The Image API part of the Diffbot PHP client consists of two main classes: "
+"the API class, and the Image Entity class. We'll describe them in order. "
+"Note that the API class extends "
+":php:class:`Swader\\\\Diffbot\\\\Abstracts\\\\Api`, so be sure to read that "
+"first if you haven't already."
+msgstr ""
+
+#: ../../api-image.rst:26
+msgid "Basic Usage::"
+msgstr ""
+
+#: ../../api-image.rst:36
+msgid ":hidden:`setMentions`"
+msgstr ""
+
+#: ../../api-image.rst:40 ../../api-image.rst:50 ../../api-image.rst:60
+msgid "Either ``true`` or ``false``"
+msgstr ""
+
+#: ../../api-image.rst:41 ../../api-image.rst:51 ../../api-image.rst:61
+msgid "$this"
+msgstr ""
+
+#: ../../api-image.rst:43
+msgid ""
+"If set to true, the Image API will attempt to identify other locations "
+"online where the image was used - similar to Google Image reverse search."
+msgstr ""
+
+#: ../../api-image.rst:46
+msgid ":hidden:`setFaces`"
+msgstr ""
+
+#: ../../api-image.rst:53
+msgid ""
+"Highly experimental. Finds the x, y, height and width of coordinates of "
+"human faces."
+msgstr ""
+
+#: ../../api-image.rst:56
+msgid ":hidden:`setOcr`"
+msgstr ""
+
+#: ../../api-image.rst:63
+msgid ""
+"Highly experimental. If set, attempts to recognize and read text in the "
+"images."
+msgstr ""
+
+#: ../../api-image.rst:68
+msgid ""
+"When the Image API is done processing a URL, the result will be an instance "
+"of :php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator` containing one"
+" Image Entity instance for every image found."
+msgstr ""
+
+#: ../../api-image.rst:70
+msgid ""
+"For an overview of the abstract class all Entities (including Image) build "
+"on, see :php:class:`Swader\\\\Diffbot\\\\Abstracts\\\\Entity`."
+msgstr ""
+
+#: ../../api-image.rst:72
+msgid ""
+"Note that the Image entities can also be returned by the "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Analyze` API in \"image\" mode, or "
+"in default mode when processing a URL that is essentially an image."
+msgstr ""
+
+#: ../../api-image.rst:79
+msgid ":hidden:`getType`"
+msgstr ""
+
+#: ../../api-image.rst:83 ../../api-image.rst:134 ../../api-image.rst:152
+#: ../../api-image.rst:179
+msgid "string"
+msgstr ""
+
+#: ../../api-image.rst:85
+msgid "Will always return \"image\" for images::"
+msgstr ""
+
+#: ../../api-image.rst:94
+msgid ":hidden:`getHeight`"
+msgstr ""
+
+#: ../../api-image.rst:98 ../../api-image.rst:107 ../../api-image.rst:116
+#: ../../api-image.rst:125
+msgid "int"
+msgstr ""
+
+#: ../../api-image.rst:100
+msgid ""
+"Height of image if resized by browser via CSS / JS. If not resized, serves "
+"as alias for "
+":php:meth:`Swader\\\\Diffbot\\\\Entity\\\\Image::getNaturalHeight`."
+msgstr ""
+
+#: ../../api-image.rst:103
+msgid ":hidden:`getWidth`"
+msgstr ""
+
+#: ../../api-image.rst:109
+msgid ""
+"Width of image if resized by browser via CSS / JS. If not resized, serves as"
+" alias for "
+":php:meth:`Swader\\\\Diffbot\\\\Entity\\\\Image::getNaturalWidth`."
+msgstr ""
+
+#: ../../api-image.rst:112
+msgid ":hidden:`getNaturalHeight`"
+msgstr ""
+
+#: ../../api-image.rst:118
+msgid "Raw image height, in pixels."
+msgstr ""
+
+#: ../../api-image.rst:121
+msgid ":hidden:`getNaturalWidth`"
+msgstr ""
+
+#: ../../api-image.rst:127
+msgid "Raw image width, in pixels."
+msgstr ""
+
+#: ../../api-image.rst:130
+msgid ":hidden:`getUrl`"
+msgstr ""
+
+#: ../../api-image.rst:136
+msgid "URL of the image"
+msgstr ""
+
+#: ../../api-image.rst:139
+msgid ":hidden:`getAnchorUrl`"
+msgstr ""
+
+#: ../../api-image.rst:143
+msgid "string | null"
+msgstr ""
+
+#: ../../api-image.rst:145
+msgid "URL the image links to, if any. Null if image isn't linked."
+msgstr ""
+
+#: ../../api-image.rst:148
+msgid ":hidden:`getXPath`"
+msgstr ""
+
+#: ../../api-image.rst:154
+msgid "The XPath expression of the position of the image node in the DOM."
+msgstr ""
+
+#: ../../api-image.rst:157
+msgid ":hidden:`getMentions`"
+msgstr ""
+
+#: ../../api-image.rst:161
+msgid "array"
+msgstr ""
+
+#: ../../api-image.rst:163
+msgid ""
+"Returns an array of [title => \"title\", link => \"link\"] arrays for all "
+"posts where this image, or a similar one, was found. If not found, returns "
+"empty array."
+msgstr ""
+
+#: ../../api-image.rst:166
+msgid ":hidden:`getFaces`"
+msgstr ""
+
+#: ../../api-image.rst:170
+msgid "array | string"
+msgstr ""
+
+#: ../../api-image.rst:172
+msgid ""
+"Finds the x, y, height and width of coordinates of human faces, returns "
+"array of arrays with those keys. In most cases, does not work at all and is "
+"in heavy alpha mode. Do not rely on this method for anything. Returns empty "
+"string if nothing found."
+msgstr ""
+
+#: ../../api-image.rst:175
+msgid ":hidden:`getOcr`"
+msgstr ""
+
+#: ../../api-image.rst:181
+msgid ""
+"The text recognized in the picture. In most cases, does not work at all and "
+"is in heavy alpha mode. Do not rely on this method for anything. Returns "
+"empty string if nothing found."
+msgstr ""
+
+#~ msgid "Description goes here."
+#~ msgstr ""
 
 #~ msgid "Added: September 7th, 2015 Author: Bruno Skvorc <bruno@skvorc.me>"
 #~ msgstr ""

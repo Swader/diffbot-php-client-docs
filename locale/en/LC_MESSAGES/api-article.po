@@ -31,53 +31,49 @@ msgstr ""
 msgid "Article API Class"
 msgstr ""
 
-#: ../../api-article.rst:114
+#: ../../api-article.rst:112
 msgid "Article Entity Class"
 msgstr ""
 
-#: ../../api-article.rst:28 ../../api-article.rst:128
+#: ../../api-article.rst:126
 msgid ":hidden:`__construct`"
 msgstr ""
 
-#: ../../api-article.rst:32
-msgid "The URL of the page to process or the string \"crawl\""
-msgstr ""
-
-#: ../../api-article.rst:33 ../../api-article.rst:43 ../../api-article.rst:66
-#: ../../api-article.rst:97 ../../api-article.rst:109
+#: ../../api-article.rst:41 ../../api-article.rst:64 ../../api-article.rst:95
+#: ../../api-article.rst:107
 msgid "$this"
 msgstr ""
 
-#: ../../api-article.rst:38
+#: ../../api-article.rst:36
 msgid ":hidden:`setSentiment`"
 msgstr ""
 
-#: ../../api-article.rst:42 ../../api-article.rst:65 ../../api-article.rst:108
+#: ../../api-article.rst:40 ../../api-article.rst:63 ../../api-article.rst:106
 msgid "Either ``true`` or ``false``"
 msgstr ""
 
-#: ../../api-article.rst:47 ../../api-article.rst:77
+#: ../../api-article.rst:45 ../../api-article.rst:75
 msgid "Usage::"
 msgstr ""
 
-#: ../../api-article.rst:61
+#: ../../api-article.rst:59
 msgid ":hidden:`setPaging`"
 msgstr ""
 
-#: ../../api-article.rst:68
+#: ../../api-article.rst:66
 msgid ""
 "If set to false, Diffbot will not auto-concatenate several pages of a multi-"
 "page article into one. Defaults to true, max 20 pages."
 msgstr ""
 
-#: ../../api-article.rst:70
+#: ../../api-article.rst:68
 msgid ""
 "For more info about auto-concatenation, see `here "
 "<http://support.diffbot.com/automatic-apis/handling-multiple-page-"
 "articles/>`__."
 msgstr ""
 
-#: ../../api-article.rst:72
+#: ../../api-article.rst:70
 msgid ""
 "While practical, this is a less reliable method of concatenating long posts "
 "than finding out the number of pages manually and processing them each one "
@@ -89,11 +85,11 @@ msgid ""
 "and less trivial."
 msgstr ""
 
-#: ../../api-article.rst:92
+#: ../../api-article.rst:90
 msgid ":hidden:`setMaxTags`"
 msgstr ""
 
-#: ../../api-article.rst:99
+#: ../../api-article.rst:97
 msgid ""
 "Set the maximum number of automatically-generated tags to return. By default"
 " a maximum of five tags will be returned. Tags are a built-in feature of "
@@ -102,15 +98,15 @@ msgid ""
 "evolving over time as it processed more and more content."
 msgstr ""
 
-#: ../../api-article.rst:96
+#: ../../api-article.rst:94
 msgid "The number of tags to generate and return"
 msgstr ""
 
-#: ../../api-article.rst:104
+#: ../../api-article.rst:102
 msgid ":hidden:`setDiscussion`"
 msgstr ""
 
-#: ../../api-article.rst:118
+#: ../../api-article.rst:116
 msgid ""
 "For an overview of the abstract class all Entities build on, see "
 ":php:class:`Swader\\\\Diffbot\\\\Abstracts\\\\Entity`."
@@ -125,15 +121,7 @@ msgid ""
 "first if you haven't already."
 msgstr ""
 
-#: ../../api-article.rst:35
-msgid ""
-"This class takes a single argument during construction, the URL of the page "
-"to process. Alternatively, the argument can be the string \"crawl\", if the "
-"API is to be used in conjunction with "
-":php:class:`Swader\\\\Diffbot\\\\Api\\\\Crawl`."
-msgstr ""
-
-#: ../../api-article.rst:45
+#: ../../api-article.rst:43
 msgid ""
 "This method sets the ``sentiment`` optional field value. This determines "
 "whether or not to return the sentiment score of the analyzed article text, a"
@@ -145,15 +133,7 @@ msgid ""
 "those without Semantria accounts."
 msgstr ""
 
-#: ../../api-article.rst:116
-msgid ""
-"When the Article API is done processing an article (or several) the result "
-"will be an Article Entity (i.e. a collection of *one* Article Entities "
-"inside an instance of "
-":php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`."
-msgstr ""
-
-#: ../../api-article.rst:74
+#: ../../api-article.rst:72
 msgid ""
 "If you need to process multiple pages of something, it is thus recommended "
 "you find out those links yourself, then pass them into Article API one by "
@@ -163,11 +143,11 @@ msgid ""
 "processing."
 msgstr ""
 
-#: ../../api-article.rst:132
+#: ../../api-article.rst:130
 msgid "The data from which to build the Article entity"
 msgstr ""
 
-#: ../../api-article.rst:134
+#: ../../api-article.rst:132
 msgid ""
 "The Article entity's constructor needs the data to populate its properties "
 "(see getters below). This class is automatically instantiated after an "
@@ -176,7 +156,7 @@ msgid ""
 "ever need to manually create an instance of this class."
 msgstr ""
 
-#: ../../api-article.rst:136
+#: ../../api-article.rst:134
 msgid ""
 "In the case of the Article entity, the constructor differs from the abstract"
 " one (:php:meth:`Swader\\\\Diffbot\\\\Abstracts\\\\Api::__construct`) in "
@@ -185,64 +165,64 @@ msgid ""
 ":php:meth:`Swader\\\\Diffbot\\\\Entity\\\\Article::getDiscussion`)."
 msgstr ""
 
-#: ../../api-article.rst:139
+#: ../../api-article.rst:137
 msgid ":hidden:`getType`"
 msgstr ""
 
-#: ../../api-article.rst:143 ../../api-article.rst:166
-#: ../../api-article.rst:175
+#: ../../api-article.rst:141 ../../api-article.rst:164
+#: ../../api-article.rst:173
 msgid "string"
 msgstr ""
 
-#: ../../api-article.rst:145
+#: ../../api-article.rst:143
 msgid "Will always return \"article\" for articles::"
 msgstr ""
 
-#: ../../api-article.rst:153
+#: ../../api-article.rst:151
 msgid ":hidden:`getText`"
 msgstr ""
 
-#: ../../api-article.rst:159
+#: ../../api-article.rst:157
 msgid ""
 "Returns the plaintext content of the processed article. HTML tags are "
 "stripped completely, images are removed. If the text property is missing in "
 "the result, returns ``null``."
 msgstr ""
 
-#: ../../api-article.rst:162
+#: ../../api-article.rst:160
 msgid ":hidden:`getHtml`"
 msgstr ""
 
-#: ../../api-article.rst:168
+#: ../../api-article.rst:166
 msgid ""
 "Returns the full HTML content of the article. If the HTML property is "
 "missing in the result, returns ``null``."
 msgstr ""
 
-#: ../../api-article.rst:171
+#: ../../api-article.rst:169
 msgid ":hidden:`getDate`"
 msgstr ""
 
-#: ../../api-article.rst:180
+#: ../../api-article.rst:178
 msgid ":hidden:`getAuthor`"
 msgstr ""
 
-#: ../../api-article.rst:186
+#: ../../api-article.rst:184
 msgid ""
 "Returns the name of the author as written on the page. If Diffbot was unable"
 " to figure out who the author is, ``null`` is returned."
 msgstr ""
 
-#: ../../api-article.rst:189
+#: ../../api-article.rst:187
 msgid ":hidden:`getTags`"
 msgstr ""
 
-#: ../../api-article.rst:193 ../../api-article.rst:262
-#: ../../api-article.rst:303 ../../api-article.rst:327
+#: ../../api-article.rst:191 ../../api-article.rst:260
+#: ../../api-article.rst:301 ../../api-article.rst:325
 msgid "array"
 msgstr ""
 
-#: ../../api-article.rst:195
+#: ../../api-article.rst:193
 msgid ""
 "Returns an array of tags/entities, generated from analysis of the extracted "
 "text and cross-referenced with DBpedia and other data sources. Note that "
@@ -250,30 +230,23 @@ msgid ""
 "ones::"
 msgstr ""
 
-#: ../../api-article.rst:249
+#: ../../api-article.rst:247
 msgid ":hidden:`getNumPages`"
 msgstr ""
 
-#: ../../api-article.rst:253
+#: ../../api-article.rst:251
 msgid "int"
 msgstr ""
 
-#: ../../api-article.rst:258
+#: ../../api-article.rst:256
 msgid ":hidden:`getNextPages`"
 msgstr ""
 
-#: ../../api-article.rst:264
-msgid ""
-"If the article is a multi-page one, returns the list of URLs of the pages "
-"that follow after the one that was processed. If the article is a single-"
-"page one, an empty array is returned."
-msgstr ""
-
-#: ../../api-article.rst:267
+#: ../../api-article.rst:265
 msgid ":hidden:`getSentiment`"
 msgstr ""
 
-#: ../../api-article.rst:273
+#: ../../api-article.rst:271
 msgid ""
 "Returns the sentiment score of the analyzed article text, a value ranging "
 "from -1.0 (very negative) to 1.0 (very positive). If sentiment score is "
@@ -282,11 +255,11 @@ msgid ""
 "``false``, returns ``null``."
 msgstr ""
 
-#: ../../api-article.rst:276
+#: ../../api-article.rst:274
 msgid ":hidden:`getDiscussion`"
 msgstr ""
 
-#: ../../api-article.rst:282
+#: ../../api-article.rst:280
 msgid ""
 "Returns the :php:class:`Swader\\\\Diffbot\\\\Entity\\\\Discussion` found on "
 "the article's page (comments section). See "
@@ -294,24 +267,24 @@ msgid ""
 "and below for usage::"
 msgstr ""
 
-#: ../../api-article.rst:296
+#: ../../api-article.rst:294
 msgid ""
 "For other methods exposed on the "
 ":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Discussion` entity, see its "
 "documentation."
 msgstr ""
 
-#: ../../api-article.rst:299
+#: ../../api-article.rst:297
 msgid ":hidden:`getImages`"
 msgstr ""
 
-#: ../../api-article.rst:305
+#: ../../api-article.rst:303
 msgid ""
 "An array of images found in the article, with their details. The elements of"
 " the array are arrays like this one::"
 msgstr ""
 
-#: ../../api-article.rst:320
+#: ../../api-article.rst:318
 msgid ""
 "Unlike the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Discussion` API which "
 "returns details about discussion posts even when used with the "
@@ -320,28 +293,28 @@ msgid ""
 "the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Image` API."
 msgstr ""
 
-#: ../../api-article.rst:323
+#: ../../api-article.rst:321
 msgid ":hidden:`getVideos`"
 msgstr ""
 
-#: ../../api-article.rst:329
+#: ../../api-article.rst:327
 msgid ""
 "Essentially identical to the above ``getImages``, but for videos. Arrays in "
 "the resulting array will look like this::"
 msgstr ""
 
-#: ../../api-article.rst:280
+#: ../../api-article.rst:278
 msgid ":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Discussion` | null"
 msgstr ""
 
-#: ../../api-article.rst:101
+#: ../../api-article.rst:99
 msgid ""
 "For an example of what the tags might look like, run the demo example at "
 "https://diffbot.com or see "
 ":php:meth:`Swader\\\\Diffbot\\\\Entity\\\\Article::getTags`."
 msgstr ""
 
-#: ../../api-article.rst:255
+#: ../../api-article.rst:253
 msgid ""
 "Returns the number of pages if the article is a multi-page one. Read about "
 "auto-concatenation `here <http://support.diffbot.com/automatic-apis"
@@ -350,7 +323,7 @@ msgid ""
 "details."
 msgstr ""
 
-#: ../../api-article.rst:111
+#: ../../api-article.rst:109
 msgid ""
 "Whether or not to use the Discussion API to additionally process any "
 "detected comment or review threads in the article. Behaves as if the "
@@ -364,7 +337,7 @@ msgid ""
 ":php:meth:`Swader\\\\Diffbot\\\\Entity\\\\Article::getDiscussion` method."
 msgstr ""
 
-#: ../../api-article.rst:120
+#: ../../api-article.rst:118
 msgid ""
 "Note that the Article entity can also be returned by the "
 ":php:class:`Swader\\\\Diffbot\\\\Api\\\\Analyze` API in \"article\" mode, or"
@@ -372,11 +345,11 @@ msgid ""
 "determined)."
 msgstr ""
 
-#: ../../api-article.rst:157 ../../api-article.rst:184
+#: ../../api-article.rst:155 ../../api-article.rst:182
 msgid "string | null"
 msgstr ""
 
-#: ../../api-article.rst:177
+#: ../../api-article.rst:175
 msgid ""
 "Returns date as per `RFC 2616 "
 "<http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3>`_. Example "
@@ -385,15 +358,57 @@ msgid ""
 "conversions."
 msgstr ""
 
-#: ../../api-article.rst:271
+#: ../../api-article.rst:269
 msgid "float | null"
 msgstr ""
 
-#: ../../api-article.rst:246
+#: ../../api-article.rst:244
 msgid ""
 "Returns a maximum of 5 by default, though this can be changed in "
 ":php:meth:`Swader\\\\Diffbot\\\\Api\\\\Article::setMaxTags`."
 msgstr ""
+
+#: ../../api-article.rst:26
+msgid "Basic Usage::"
+msgstr ""
+
+#: ../../api-article.rst:114
+msgid ""
+"When the Article API is done processing an article (or several) the result "
+"will be an Article Entity (i.e. a collection of *one* Article Entities "
+"inside an instance of "
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`)."
+msgstr ""
+
+#: ../../api-article.rst:262
+msgid ""
+"If the article is a multi-page one, returns the list of absolute URLs of the"
+" pages that follow after the one that was processed. If the article is a "
+"single-page one, an empty array is returned."
+msgstr ""
+
+#~ msgid ""
+#~ "When the Article API is done processing an article (or several) the result "
+#~ "will be an Article Entity (i.e. a collection of *one* Article Entities "
+#~ "inside an instance of "
+#~ ":php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If the article is a multi-page one, returns the list of URLs of the pages "
+#~ "that follow after the one that was processed. If the article is a single-"
+#~ "page one, an empty array is returned."
+#~ msgstr ""
+
+#~ msgid "The URL of the page to process or the string \"crawl\""
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This class takes a single argument during construction, the URL of the page "
+#~ "to process. Alternatively, the argument can be the string \"crawl\", if the "
+#~ "API is to be used in conjunction with "
+#~ ":php:class:`Swader\\\\Diffbot\\\\Api\\\\Crawl`."
+#~ msgstr ""
 
 #~ msgid "Article Entity"
 #~ msgstr ""

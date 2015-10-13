@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Diffbot PHP Client Documentation 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-26 21:06+0000\n"
+"POT-Creation-Date: 2015-10-13 20:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,6 +104,7 @@ msgstr ""
 #: ../../class-traits.rst:111
 #: ../../class-traits.rst:120
 #: ../../class-traits.rst:129
+#: ../../class-traits.rst:176
 msgid "string"
 msgstr ""
 
@@ -180,5 +181,13 @@ msgstr ""
 
 #: ../../class-traits.rst:169
 msgid "Returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as true. If the :php:meth:`Swader\\\\Diffbot\\\\Traits\\\\StandardApi::setQuerystring` method was not called, will return ``null``."
+msgstr ""
+
+#: ../../class-traits.rst:172
+msgid ":hidden:`getDiffbotUri`"
+msgstr ""
+
+#: ../../class-traits.rst:178
+msgid "A unique identifier of the entity in Diffbot's database. Useful for filtering out duplicates, caching, etc."
 msgstr ""
 

@@ -15,13 +15,569 @@ msgstr ""
 msgid "Discussion API"
 msgstr ""
 
-#: ../../api-discussion.rst:13
-msgid "Description goes here."
-msgstr ""
-
-#: ../../api-discussion.rst:16
+#: ../../api-discussion.rst:18
 msgid "Discussion API Class"
 msgstr ""
+
+#: ../../api-discussion.rst:69
+msgid "Discussion Entity Class"
+msgstr ""
+
+#: ../../api-discussion.rst:251
+msgid "Discussion Post Class"
+msgstr ""
+
+#: ../../api-discussion.rst:13
+msgid ""
+"This API is used to turn content like product reviews, comments on posts and"
+" forum threads into JSON. This API can be unleashed onto a forum / comment "
+"thread directly, or onto a product page / article page containing comments /"
+" reviews."
+msgstr ""
+
+#: ../../api-discussion.rst:15
+msgid ""
+"The Discussion API part of the Diffbot PHP client consists of three main "
+"classes: the API class, the Discussion Entity class, and the Post Entity "
+"class. We'll describe them in order. Note that the API class extends "
+":php:class:`Swader\\\\Diffbot\\\\Abstracts\\\\Api`, so be sure to read that "
+"first if you haven't already."
+msgstr ""
+
+#: ../../api-discussion.rst:24
+msgid "Basic Usage::"
+msgstr ""
+
+#: ../../api-discussion.rst:34
+msgid ":hidden:`setMaxPages`"
+msgstr ""
+
+#: ../../api-discussion.rst:38
+msgid "max number of pages to fetch"
+msgstr ""
+
+#: ../../api-discussion.rst:39 ../../api-discussion.rst:49
+msgid "$this"
+msgstr ""
+
+#: ../../api-discussion.rst:41
+msgid ""
+"Set the maximum number of pages in a thread to automatically concatenate in "
+"a single response. Default = 1 (no concatenation). Set maxPages=all to "
+"retrieve all pages of a thread regardless of length. Each individual page "
+"will count as a separate API call."
+msgstr ""
+
+#: ../../api-discussion.rst:44
+msgid ":hidden:`setSentiment`"
+msgstr ""
+
+#: ../../api-discussion.rst:48
+msgid "Either ``true`` or ``false``"
+msgstr ""
+
+#: ../../api-discussion.rst:49
+msgid ""
+"$this  This method sets the ``sentiment`` optional field value. This "
+"determines whether or not to return the sentiment score of the analyzed "
+"posts (each individual post gets one), a value ranging from -1.0 (very "
+"negative) to 1.0 (very positive). Sentiment analysis is powered by "
+"`Semantria <http://support.diffbot.com/automatic-apis/semantria-powered-"
+"sentiment-entity-extraction-and-other-text-analysis-features/>`__ for "
+"advanced features like keyword and entity extraction, but the basic "
+"sentiment analysis (score only) is enabled for everyone, even those without "
+"Semantria accounts."
+msgstr ""
+
+#: ../../api-discussion.rst:51
+msgid ""
+"This method sets the ``sentiment`` optional field value. This determines "
+"whether or not to return the sentiment score of the analyzed posts (each "
+"individual post gets one), a value ranging from -1.0 (very negative) to 1.0 "
+"(very positive). Sentiment analysis is powered by `Semantria "
+"<http://support.diffbot.com/automatic-apis/semantria-powered-sentiment-"
+"entity-extraction-and-other-text-analysis-features/>`__ for advanced "
+"features like keyword and entity extraction, but the basic sentiment "
+"analysis (score only) is enabled for everyone, even those without Semantria "
+"accounts."
+msgstr ""
+
+#: ../../api-discussion.rst:53
+msgid "Usage::"
+msgstr ""
+
+#: ../../api-discussion.rst:71
+msgid ""
+"When the Discussion API is done processing a URL, the result will be a "
+"Discussion Entity (i.e. a collection of *one* Discussion Entities inside an "
+"instance of :php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`)."
+msgstr ""
+
+#: ../../api-discussion.rst:73
+msgid ""
+"For an overview of the abstract class all Entities build on, see "
+":php:class:`Swader\\\\Diffbot\\\\Abstracts\\\\Entity`."
+msgstr ""
+
+#: ../../api-discussion.rst:81
+msgid ":hidden:`__construct`"
+msgstr ""
+
+#: ../../api-discussion.rst:85
+msgid "The data from which to build the Discussion object"
+msgstr ""
+
+#: ../../api-discussion.rst:87
+msgid ""
+"The Article entity's constructor needs the data to populate its properties "
+"(see getters below). This class is automatically instantiated after a "
+":php:class:`Swader\\\\Diffbot\\\\Api\\\\Discussion` call. You probably won't"
+" ever need to manually create an instance of this class."
+msgstr ""
+
+#: ../../api-discussion.rst:89
+msgid ""
+"Like :php:class:`Swader\\\\Diffbot\\\\Entity\\\\Product` and "
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Article`, the Discussion entity "
+"also has its own custom constructor, looking for the ``posts`` key inside of"
+" the return data, in order to create some nested "
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Post` objects."
+msgstr ""
+
+#: ../../api-discussion.rst:92 ../../api-discussion.rst:258
+msgid ":hidden:`getType`"
+msgstr ""
+
+#: ../../api-discussion.rst:96 ../../api-discussion.rst:262
+#: ../../api-discussion.rst:271 ../../api-discussion.rst:280
+#: ../../api-discussion.rst:298 ../../api-discussion.rst:307
+#: ../../api-discussion.rst:405
+msgid "string"
+msgstr ""
+
+#: ../../api-discussion.rst:98
+msgid "Will always return \"discussion\" for discussions::"
+msgstr ""
+
+#: ../../api-discussion.rst:106
+msgid ":hidden:`getNumPosts`"
+msgstr ""
+
+#: ../../api-discussion.rst:110 ../../api-discussion.rst:183
+#: ../../api-discussion.rst:192 ../../api-discussion.rst:353
+#: ../../api-discussion.rst:362
+msgid "int"
+msgstr ""
+
+#: ../../api-discussion.rst:112
+msgid ""
+"Returns the number of posts found in the discussion. Only returns the number"
+" of posts in the fetched page range, so even if there are 100 posts over 20 "
+"pages, this method will return 5 if "
+":php:meth:`Swader\\\\Diffbot\\\\Api\\\\Discussion::setMaxPages` is still set"
+" to 1."
+msgstr ""
+
+#: ../../api-discussion.rst:115 ../../api-discussion.rst:331
+msgid ":hidden:`getTags`"
+msgstr ""
+
+#: ../../api-discussion.rst:119 ../../api-discussion.rst:201
+#: ../../api-discussion.rst:246 ../../api-discussion.rst:335
+#: ../../api-discussion.rst:380
+msgid "array"
+msgstr ""
+
+#: ../../api-discussion.rst:121
+msgid ""
+"Returns an array of tags/entities, generated from analysis of the extracted "
+"text and cross-referenced with DBpedia and other data sources. Note that "
+"these are *not* the meta tags as defined in the page's ``<head>``, but "
+"machine learned ones::"
+msgstr ""
+
+#: ../../api-discussion.rst:176
+msgid "Returns a maximum of 5."
+msgstr ""
+
+#: ../../api-discussion.rst:179
+msgid ":hidden:`getParticipants`"
+msgstr ""
+
+#: ../../api-discussion.rst:185
+msgid "The number of unique participants in the discussion."
+msgstr ""
+
+#: ../../api-discussion.rst:188
+msgid ":hidden:`getNumPages`"
+msgstr ""
+
+#: ../../api-discussion.rst:194
+msgid ""
+"Returns the number of pages if the discussion is a multi-page one. Read "
+"about auto-concatenation `here <http://support.diffbot.com/automatic-apis"
+"/handling-multiple-page-articles/>`__ and study the "
+":php:meth:`Swader\\\\Diffbot\\\\Api\\\\Discussion::setMaxPages` method for "
+"more details."
+msgstr ""
+
+#: ../../api-discussion.rst:197
+msgid ":hidden:`getNextPages`"
+msgstr ""
+
+#: ../../api-discussion.rst:203
+msgid ""
+"If the discussion is a multi-page one, returns the list of absolute URLs of "
+"the pages that follow after the one that was processed. If the discussion is"
+" a single-page one, an empty array is returned."
+msgstr ""
+
+#: ../../api-discussion.rst:206
+msgid ":hidden:`getNextPage`"
+msgstr ""
+
+#: ../../api-discussion.rst:210 ../../api-discussion.rst:219
+#: ../../api-discussion.rst:228 ../../api-discussion.rst:289
+#: ../../api-discussion.rst:316 ../../api-discussion.rst:325
+msgid "string | null"
+msgstr ""
+
+#: ../../api-discussion.rst:212
+msgid ""
+"If the discussion is a multi-page one, returns the absolute subsequent page "
+"URL."
+msgstr ""
+
+#: ../../api-discussion.rst:215
+msgid ":hidden:`getProvider`"
+msgstr ""
+
+#: ../../api-discussion.rst:221
+msgid ""
+"Returns the provider of the comment / review system. This will be something "
+"like \"disqus\", \"facebook\", etc. In cases of forums and similar all-"
+"encompassing systems like Reddit, this method will return null."
+msgstr ""
+
+#: ../../api-discussion.rst:224
+msgid ":hidden:`getRssUrl`"
+msgstr ""
+
+#: ../../api-discussion.rst:230
+msgid "Returns the RSS feed URL for the discussion, if available."
+msgstr ""
+
+#: ../../api-discussion.rst:233
+msgid ":hidden:`getConfidence`"
+msgstr ""
+
+#: ../../api-discussion.rst:237 ../../api-discussion.rst:344
+msgid "float | null"
+msgstr ""
+
+#: ../../api-discussion.rst:239
+msgid ""
+"A number from -1 to 1. Not sure what it does. Waiting for feedback from HQ. "
+"@todo find out what this is."
+msgstr ""
+
+#: ../../api-discussion.rst:242
+msgid ":hidden:`getPosts`"
+msgstr ""
+
+#: ../../api-discussion.rst:248
+msgid ""
+"Returns an array of :php:class:`Swader\\\\Diffbot\\\\Entity\\\\Post` "
+"objects, each built around the data in every individual post of a "
+"discussion. For post accessor methods, see below."
+msgstr ""
+
+#: ../../api-discussion.rst:255
+msgid ""
+"Every Discussion entity has children - its posts. Every Post is its own "
+"entity, and very similar to "
+":php:class:`Swader\\\\Diffbot\\\\Entity\\\\Article`, sharing many of its "
+"methods."
+msgstr ""
+
+#: ../../api-discussion.rst:264
+msgid "Will always return \"post\" for posts."
+msgstr ""
+
+#: ../../api-discussion.rst:267
+msgid ":hidden:`getLang`"
+msgstr ""
+
+#: ../../api-discussion.rst:273
+msgid ""
+"Returns the language code of the detected language of the processed content."
+" The code returned is a two-character ISO 639-1 code: "
+"http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes"
+msgstr ""
+
+#: ../../api-discussion.rst:276
+msgid ":hidden:`getHumanLanguage`"
+msgstr ""
+
+#: ../../api-discussion.rst:282
+msgid "Alias method for ``getLang()`` above."
+msgstr ""
+
+#: ../../api-discussion.rst:285
+msgid ":hidden:`getText`"
+msgstr ""
+
+#: ../../api-discussion.rst:291
+msgid ""
+"Returns the plaintext content of the processed post. HTML tags are stripped "
+"completely, images are removed. If the text property is missing in the "
+"result, returns ``null``."
+msgstr ""
+
+#: ../../api-discussion.rst:294
+msgid ":hidden:`getHtml`"
+msgstr ""
+
+#: ../../api-discussion.rst:300
+msgid ""
+"Returns the full HTML content of the post. If the HTML property is missing "
+"in the result, returns ``null``."
+msgstr ""
+
+#: ../../api-discussion.rst:303
+msgid ":hidden:`getDate`"
+msgstr ""
+
+#: ../../api-discussion.rst:309
+msgid ""
+"Returns date as per `RFC 2616 "
+"<http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3>`_. Example "
+"date: \"Wed, 18 Dec 2013 00:00:00 GMT\". Note that this is `strtotime "
+"<http://php.net/manual/en/function.strtotime.php>`__ friendly for further "
+"conversions."
+msgstr ""
+
+#: ../../api-discussion.rst:312
+msgid ":hidden:`getAuthor`"
+msgstr ""
+
+#: ../../api-discussion.rst:318
+msgid ""
+"Returns the name of the author as written on the page. If Diffbot was unable"
+" to figure out who the author is, ``null`` is returned."
+msgstr ""
+
+#: ../../api-discussion.rst:321
+msgid ":hidden:`getAuthorUrl`"
+msgstr ""
+
+#: ../../api-discussion.rst:327
+msgid ""
+"If the author's profile URL could be determined, this method will return it."
+msgstr ""
+
+#: ../../api-discussion.rst:337
+msgid ""
+"Returns an array of tags/entities, generated from analysis of the extracted "
+"text and cross-referenced with DBpedia and other data sources. Note that "
+"these are *not* the meta tags as defined by the author, but machine learned "
+"ones. Same thing as "
+":php:meth:`Swader\\\\Diffbot\\\\Entity\\\\Article::getTags` and "
+":php:meth:`Swader\\\\Diffbot\\\\Entity\\\\Discussion::getTags`."
+msgstr ""
+
+#: ../../api-discussion.rst:340
+msgid ":hidden:`getSentiment`"
+msgstr ""
+
+#: ../../api-discussion.rst:346
+msgid ""
+"Returns the sentiment score of the analyzed post text, a value ranging from "
+"-1.0 (very negative) to 1.0 (very positive). If sentiment score is absent "
+"(due to Diffbot being unable to determine it, or due to "
+":php:meth:`Swader\\\\Diffbot\\\\Api\\\\Discussion::setSentiment` being set "
+"to ``false``, returns ``null``."
+msgstr ""
+
+#: ../../api-discussion.rst:349
+msgid ":hidden:`getVotes`"
+msgstr ""
+
+#: ../../api-discussion.rst:355
+msgid ""
+"If a voting system exists and is easily discernible, Diffbot returns the "
+"number of upvotes on the post."
+msgstr ""
+
+#: ../../api-discussion.rst:358
+msgid ":hidden:`getId`"
+msgstr ""
+
+#: ../../api-discussion.rst:364
+msgid ""
+"Returns the ID of the post (usually the ordinary number of the post in the "
+"list of all posts, starting with 0 for the first one."
+msgstr ""
+
+#: ../../api-discussion.rst:367
+msgid ":hidden:`getParentId`"
+msgstr ""
+
+#: ../../api-discussion.rst:371
+msgid "int | null"
+msgstr ""
+
+#: ../../api-discussion.rst:373
+msgid ""
+"If the post is a reply, this is the ID of the post it replies to. If not, "
+"null."
+msgstr ""
+
+#: ../../api-discussion.rst:376
+msgid ":hidden:`getImages`"
+msgstr ""
+
+#: ../../api-discussion.rst:382
+msgid ""
+"An array of images found in the post, with their details. The elements of "
+"the array are arrays like this one::"
+msgstr ""
+
+#: ../../api-discussion.rst:397
+msgid ""
+"The image data returned with this method is minimal. For fuller details "
+"about images, use the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Image` API."
+msgstr ""
+
+#: ../../api-discussion.rst:401
+msgid ":hidden:`getPageUrl`"
+msgstr ""
+
+#: ../../api-discussion.rst:407
+msgid "Returns the URL which was processed (thread URL in most cases)"
+msgstr ""
+
+#~ msgid ""
+#~ "string  Will always return \"discussion\" for discussions::  // ... API "
+#~ "setup ... // $result = $api->call();  echo $result->getType(); // "
+#~ "\"discussion\""
+#~ msgstr ""
+
+#~ msgid "$result = $api->call();"
+#~ msgstr ""
+
+#~ msgid "echo $result->getType(); // \"discussion\""
+#~ msgstr ""
+
+#~ msgid ""
+#~ "array  Returns an array of tags/entities, generated from analysis of the "
+#~ "extracted text and cross-referenced with DBpedia and other data sources. "
+#~ "Note that these are *not* the meta tags as defined in the page's ``<head>``,"
+#~ " but machine learned ones::  // ... API setup ... //  $url = "
+#~ "'https://www.reddit.com/r/PHP/comments/3nl7g1/authentication_flow_in_a_microservice_architecture/';"
+#~ "  // ...  $result = $api->call();  echo count($result->tags); // 5  "
+#~ "var_dump($result->getTags);  /**  Output:     array (size=5)       0 =>"
+#~ "         array (size=5)           'count' => int 5           'prevalence' =>"
+#~ " float 0.11           'score' => float 0.11           'label' => string "
+#~ "'User (computing)' (length=16)           'uri' => string "
+#~ "'http://dbpedia.org/resource/User_(computing)' (length=44)       1 =>"
+#~ "         array (size=5)           'count' => int 4           'prevalence' =>"
+#~ " float 0.09           'score' => float 0.09           'label' => string "
+#~ "'Hypertext Transfer Protocol' (length=27)           'uri' => string "
+#~ "'http://dbpedia.org/resource/Hypertext_Transfer_Protocol' (length=55)       "
+#~ "2 =>         array (size=5)           'count' => int 3           "
+#~ "'prevalence' => float 0.07           'score' => float 0.07           'label'"
+#~ " => string 'POST (HTTP)' (length=11)           'uri' => string "
+#~ "'http://dbpedia.org/resource/POST_(HTTP)' (length=39)       3 =>         "
+#~ "array (size=5)           'count' => int 2           'prevalence' => float "
+#~ "0.04           'score' => float 0.04           'label' => string 'Object "
+#~ "(computer science)' (length=25)           'uri' => string "
+#~ "'http://dbpedia.org/resource/Object_(computer_science)' (length=53)       4 "
+#~ "=>         array (size=5)           'count' => int 2           'prevalence' "
+#~ "=> float 0.04           'score' => float 0.04           'label' => string "
+#~ "'Coupling' (length=8)           'uri' => string "
+#~ "'http://dbpedia.org/resource/Coupling' (length=36) **/"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "$url = "
+#~ "'https://www.reddit.com/r/PHP/comments/3nl7g1/authentication_flow_in_a_microservice_architecture/';"
+#~ msgstr ""
+
+#~ msgid "// ..."
+#~ msgstr ""
+
+#~ msgid "echo count($result->tags); // 5"
+#~ msgstr ""
+
+#~ msgid "var_dump($result->getTags);"
+#~ msgstr ""
+
+#~ msgid "/**"
+#~ msgstr ""
+
+#~ msgid "Output:"
+#~ msgstr ""
+
+#~ msgid "array (size=5)"
+#~ msgstr ""
+
+#~ msgid "0 =>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "'count' => int 5 'prevalence' => float 0.11 'score' => float 0.11 'label' =>"
+#~ " string 'User (computing)' (length=16) 'uri' => string "
+#~ "'http://dbpedia.org/resource/User_(computing)' (length=44)"
+#~ msgstr ""
+
+#~ msgid "1 =>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "'count' => int 4 'prevalence' => float 0.09 'score' => float 0.09 'label' =>"
+#~ " string 'Hypertext Transfer Protocol' (length=27) 'uri' => string "
+#~ "'http://dbpedia.org/resource/Hypertext_Transfer_Protocol' (length=55)"
+#~ msgstr ""
+
+#~ msgid "2 =>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "'count' => int 3 'prevalence' => float 0.07 'score' => float 0.07 'label' =>"
+#~ " string 'POST (HTTP)' (length=11) 'uri' => string "
+#~ "'http://dbpedia.org/resource/POST_(HTTP)' (length=39)"
+#~ msgstr ""
+
+#~ msgid "3 =>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "'count' => int 2 'prevalence' => float 0.04 'score' => float 0.04 'label' =>"
+#~ " string 'Object (computer science)' (length=25) 'uri' => string "
+#~ "'http://dbpedia.org/resource/Object_(computer_science)' (length=53)"
+#~ msgstr ""
+
+#~ msgid "4 =>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "'count' => int 2 'prevalence' => float 0.04 'score' => float 0.04 'label' =>"
+#~ " string 'Coupling' (length=8) 'uri' => string "
+#~ "'http://dbpedia.org/resource/Coupling' (length=36)"
+#~ msgstr ""
+
+#~ msgid "**/"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "array  If the discussion is a multi-page one, returns the list of absolute "
+#~ "URLs of the pages that follow after the one that was processed. If the "
+#~ "discussion is a single-page one, an empty array is returned."
+#~ msgstr ""
+
+#~ msgid "Description goes here."
+#~ msgstr ""
 
 #~ msgid "Added: September 7th, 2015 Author: Bruno Skvorc <bruno@skvorc.me>"
 #~ msgstr ""

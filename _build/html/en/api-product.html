@@ -114,7 +114,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api-article.html">Article API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api-article.html#namespace-Swader\Diffbot\Api">Article API Class</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api-article.html#construct"><span class="hidden">__construct</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="api-article.html#setsentiment"><span class="hidden">setSentiment</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="api-article.html#setpaging"><span class="hidden">setPaging</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="api-article.html#setmaxtags"><span class="hidden">setMaxTags</span></a></li>
@@ -122,7 +121,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="api-article.html#article-entity-class">Article Entity Class</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api-article.html#id1"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-article.html#construct"><span class="hidden">__construct</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="api-article.html#gettype"><span class="hidden">getType</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="api-article.html#gettext"><span class="hidden">getText</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="api-article.html#gethtml"><span class="hidden">getHtml</span></a></li>
@@ -140,15 +139,106 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Product API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#namespace-Swader\Diffbot\Api">Product API Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#namespace-Swader\Diffbot\Api">Product API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setdiscussion"><span class="hidden">setDiscussion</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setcolors"><span class="hidden">setColors</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setavailability"><span class="hidden">setAvailability</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setsize"><span class="hidden">setSize</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#product-entity-class">Product Entity Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gettype"><span class="hidden">getType</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gettext"><span class="hidden">getText</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getregularprice"><span class="hidden">getRegularPrice</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getregularpricedetails"><span class="hidden">getRegularPriceDetails</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getshippingamount"><span class="hidden">getShippingAmount</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getsaveamount"><span class="hidden">getSaveAmount</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getsaveamountdetails"><span class="hidden">getSaveAmountDetails</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getproductid"><span class="hidden">getProductId</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getupc"><span class="hidden">getUpc</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getmpn"><span class="hidden">getMpn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getisbn"><span class="hidden">getIsbn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getsku"><span class="hidden">getSku</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getspecs"><span class="hidden">getSpecs</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getimages"><span class="hidden">getImages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getprefixcode"><span class="hidden">getPrefixCode</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getproductorigin"><span class="hidden">getProductOrigin</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getpricerange"><span class="hidden">getPriceRange</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getquantityprices"><span class="hidden">getQuantityPrices</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isavailable"><span class="hidden">isAvailable</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getofferprice"><span class="hidden">getOfferPrice</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getofferpricedetails"><span class="hidden">getOfferPriceDetails</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getsize"><span class="hidden">getSize</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getcolors"><span class="hidden">getColors</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getbrand"><span class="hidden">getBrand</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getdiscussion"><span class="hidden">getDiscussion</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api-discussion.html">Discussion API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api-discussion.html#namespace-Swader\Diffbot\Api">Discussion API Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-discussion.html#namespace-Swader\Diffbot\Api">Discussion API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#setmaxpages"><span class="hidden">setMaxPages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#setsentiment"><span class="hidden">setSentiment</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-discussion.html#discussion-entity-class">Discussion Entity Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#gettype"><span class="hidden">getType</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getnumposts"><span class="hidden">getNumPosts</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#gettags"><span class="hidden">getTags</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getparticipants"><span class="hidden">getParticipants</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getnumpages"><span class="hidden">getNumPages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getnextpages"><span class="hidden">getNextPages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getnextpage"><span class="hidden">getNextPage</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getprovider"><span class="hidden">getProvider</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getrssurl"><span class="hidden">getRssUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getconfidence"><span class="hidden">getConfidence</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getposts"><span class="hidden">getPosts</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-discussion.html#discussion-post-class">Discussion Post Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#id1"><span class="hidden">getType</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getlang"><span class="hidden">getLang</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#gethumanlanguage"><span class="hidden">getHumanLanguage</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#gettext"><span class="hidden">getText</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#gethtml"><span class="hidden">getHtml</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getdate"><span class="hidden">getDate</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getauthor"><span class="hidden">getAuthor</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getauthorurl"><span class="hidden">getAuthorUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#id2"><span class="hidden">getTags</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getsentiment"><span class="hidden">getSentiment</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getvotes"><span class="hidden">getVotes</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getid"><span class="hidden">getId</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getparentid"><span class="hidden">getParentId</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getimages"><span class="hidden">getImages</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-discussion.html#getpageurl"><span class="hidden">getPageUrl</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api-image.html">Image API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api-image.html#namespace-Swader\Diffbot\Api">Image API Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-image.html#namespace-Swader\Diffbot\Api">Image API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#setmentions"><span class="hidden">setMentions</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#setfaces"><span class="hidden">setFaces</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#setocr"><span class="hidden">setOcr</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-image.html#image-entity-class">Image Entity Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#gettype"><span class="hidden">getType</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#getheight"><span class="hidden">getHeight</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#getwidth"><span class="hidden">getWidth</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#getnaturalheight"><span class="hidden">getNaturalHeight</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#getnaturalwidth"><span class="hidden">getNaturalWidth</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#geturl"><span class="hidden">getUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#getanchorurl"><span class="hidden">getAnchorUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#getxpath"><span class="hidden">getXPath</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#getmentions"><span class="hidden">getMentions</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#getfaces"><span class="hidden">getFaces</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-image.html#getocr"><span class="hidden">getOcr</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api-analyze.html">Analyze API</a><ul>
@@ -168,20 +258,74 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api-crawl.html">Crawl API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#crawl-api-class">Crawl API Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#jobcrawl-class">JobCrawl Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#namespace-Swader\Diffbot\Api">Crawl API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#getname"><span class="hidden">getName</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#setapi"><span class="hidden">setApi</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#setseeds"><span class="hidden">setSeeds</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#seturlcrawlpatterns"><span class="hidden">setUrlCrawlPatterns</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#seturlcrawlregex"><span class="hidden">setUrlCrawlRegex</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#seturlprocesspatterns"><span class="hidden">setUrlProcessPatterns</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#seturlprocessregex"><span class="hidden">setUrlProcessRegex</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#setpageprocesspatterns"><span class="hidden">setPageProcessPatterns</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#setmaxhops"><span class="hidden">setMaxHops</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#setmaxtocrawl"><span class="hidden">setMaxToCrawl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#setmaxtoprocess"><span class="hidden">setMaxToProcess</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#notify"><span class="hidden">notify</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#setcrawldelay"><span class="hidden">setCrawlDelay</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#setrepeat"><span class="hidden">setRepeat</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#setonlyprocessifnew"><span class="hidden">setOnlyProcessIfNew</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#setmaxrounds"><span class="hidden">setMaxRounds</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#setobeyrobots"><span class="hidden">setObeyRobots</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#roundstart"><span class="hidden">roundStart</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#pause"><span class="hidden">pause</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#unpause"><span class="hidden">unpause</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#restart"><span class="hidden">restart</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#delete"><span class="hidden">delete</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#buildurl"><span class="hidden">buildUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#call"><span class="hidden">call</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-crawl.html#jobcrawl-class">JobCrawl Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#getmaxtocrawl"><span class="hidden">getMaxToCrawl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#getmaxtoprocess"><span class="hidden">getMaxToProcess</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#getonlyprocessifnew"><span class="hidden">getOnlyProcessIfNew</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-crawl.html#getseeds"><span class="hidden">getSeeds</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api-search.html">Search API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api-search.html#namespace-Swader\Diffbot\Api">Search API Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-search.html#namespace-Swader\Diffbot\Api">Search API Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#setcol"><span class="hidden">setCol</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#setnum"><span class="hidden">setNum</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#setstart"><span class="hidden">setStart</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#buildurl"><span class="hidden">buildUrl</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#call"><span class="hidden">call</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-search.html#searchinfo-entity-class">SearchInfo Entity Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#gettype"><span class="hidden">getType</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#getcurrenttimeutc"><span class="hidden">getCurrentTimeUTC</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#getresponsetimems"><span class="hidden">getResponseTimeMS</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#getnumresultsomitted"><span class="hidden">getNumResultsOmitted</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#getnumshardsskipped"><span class="hidden">getNumShardsSkipped</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#gettotalshards"><span class="hidden">getTotalShards</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#getdocsincollection"><span class="hidden">getDocsIncollection</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#gethits"><span class="hidden">getHits</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-search.html#getqueryinfo"><span class="hidden">getQueryInfo</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="class-entityfactory.html">EntityFactory</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="class-entityfactory.html#id1">EntityFactory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class-entityfactory.html#createappropriateiterator"><span class="hidden">createAppropriateIterator</span></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="class-entityiterator.html">EntityIterator</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="class-entityiterator.html#namespace-Swader\Diffbot\Entity">EntityIterator Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class-entityiterator.html#construct"><span class="hidden">__construct</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="class-entityiterator.html#getresponse"><span class="hidden">getResponse</span></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="class-exceptions.html">Exceptions</a><ul>
@@ -221,6 +365,7 @@
 <li class="toctree-l3"><a class="reference internal" href="class-traits.html#getmeta"><span class="hidden">getMeta</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="class-traits.html#getbreadcrumb"><span class="hidden">getBreadcrumb</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="class-traits.html#getquerystring"><span class="hidden">getQueryString</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-traits.html#getdiffboturi"><span class="hidden">getDiffbotUri</span></a></li>
 </ul>
 </li>
 </ul>
@@ -264,7 +409,20 @@
             
   <div class="section" id="product-api">
 <h1>Product API<a class="headerlink" href="#product-api" title="Permalink to this headline">¶</a></h1>
-<p>Description goes here.</p>
+<p>The Product API is used to parse pages representing products. These can be anything from eBay auction pages and books on Amazon, to leashes and collars in &#8220;mom and pop&#8217;s pet web shop&#8221;.</p>
+<p>The Product API will attempt to recognize some of the most popular product-related fields in any given product page, including but not limited to:</p>
+<ul class="simple">
+<li>price</li>
+<li>discount</li>
+<li>availability status</li>
+<li>stock level</li>
+<li>characteristics / stats (like smartphone capacity, battery life, network type...)</li>
+<li>reviews</li>
+<li>unique identification number like SKU / ISBN / MPN / UPC...</li>
+<li>and much more...</li>
+</ul>
+<p>For a more thorough walk through the product API, see the <a class="reference external" href="http://www.diffbot.com/products/automatic/product/">official docs and demo</a>.</p>
+<p>The Product API part of the Diffbot PHP client consists of two main classes: the API class, and the Product Entity class. We&#8217;ll describe them in order. Note that the API class extends <a class="reference internal" href="abstract-api.html#Swader\Diffbot\Abstracts\Api" title="Swader\Diffbot\Abstracts\Api"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Abstracts\Api</span></code></a>, so be sure to read that first if you haven&#8217;t already.</p>
 <div class="section" id="namespace-Swader\Diffbot\Api">
 <span id="product-api-class"></span><h2>Product API Class<a class="headerlink" href="#namespace-Swader\Diffbot\Api" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
@@ -272,6 +430,709 @@
 <em class="property">class </em><code class="descclassname">Swader\Diffbot\Api\</code><code class="descname">Product</code><a class="headerlink" href="#Swader\Diffbot\Api\Product" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<p>Basic Usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Swader\Diffbot\Diffbot</span><span class="p">;</span>
+
+<span class="nv">$url</span> <span class="o">=</span> <span class="s1">&#39;http://some-product-to-process.com&#39;</span><span class="p">;</span>
+
+<span class="nv">$diffbot</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Diffbot</span><span class="p">(</span><span class="s1">&#39;my_token&#39;</span><span class="p">);</span>
+<span class="nv">$api</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createProductApi</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="setdiscussion">
+<h3><span class="hidden">setDiscussion</span><a class="headerlink" href="#setdiscussion" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Api\Product::setDiscussion">
+<code class="descclassname">Swader\Diffbot\Api\Product::</code><code class="descname">setDiscussion</code><span class="sig-paren">(</span><em>$bool = true</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Api\Product::setDiscussion" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$bool</strong> (<em>bool</em>) &#8211; Either <code class="docutils literal"><span class="pre">true</span></code> or <code class="docutils literal"><span class="pre">false</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Whether or not to use the Discussion API to additionally process any detected comment or review threads on the product page. Behaves as if the <a class="reference internal" href="api-discussion.html#Swader\Diffbot\Api\Discussion" title="Swader\Diffbot\Api\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Discussion</span></code></a> was set to process the page, and merges the returned data with the Product API&#8217;s results by means of a <code class="docutils literal"><span class="pre">discussion</span></code> field in the result. The field will have all the sub-fields of the usual <a class="reference internal" href="api-discussion.html#Swader\Diffbot\Api\Discussion" title="Swader\Diffbot\Api\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Discussion</span></code></a> call; i.e. you will be able to access the <a class="reference internal" href="api-discussion.html#Swader\Diffbot\Entity\Discussion" title="Swader\Diffbot\Entity\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\Discussion</span></code></a> entity and all its sub entities via the <a class="reference internal" href="#Swader\Diffbot\Entity\Product::getDiscussion" title="Swader\Diffbot\Entity\Product::getDiscussion"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Entity\Product::getDiscussion</span></code></a> method.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="setcolors">
+<h3><span class="hidden">setColors</span><a class="headerlink" href="#setcolors" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Api\Product::setColors">
+<code class="descclassname">Swader\Diffbot\Api\Product::</code><code class="descname">setColors</code><span class="sig-paren">(</span><em>$bool</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Api\Product::setColors" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$bool</strong> (<em>bool</em>) &#8211; Either <code class="docutils literal"><span class="pre">true</span></code> or <code class="docutils literal"><span class="pre">false</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If set to <code class="docutils literal"><span class="pre">true</span></code>, the Product API will try to find out the color options of the product, if available. This feature is experimental and often fails even when color options are obvious.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="setavailability">
+<h3><span class="hidden">setAvailability</span><a class="headerlink" href="#setavailability" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Api\Product::setAvailability">
+<code class="descclassname">Swader\Diffbot\Api\Product::</code><code class="descname">setAvailability</code><span class="sig-paren">(</span><em>$bool</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Api\Product::setAvailability" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$bool</strong> (<em>bool</em>) &#8211; Either <code class="docutils literal"><span class="pre">true</span></code> or <code class="docutils literal"><span class="pre">false</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If set to <code class="docutils literal"><span class="pre">true</span></code>, Diffbot will attempt to find out whether or not the product in question is available / in stock.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="setsize">
+<h3><span class="hidden">setSize</span><a class="headerlink" href="#setsize" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Api\Product::setSize">
+<code class="descclassname">Swader\Diffbot\Api\Product::</code><code class="descname">setSize</code><span class="sig-paren">(</span><em>$bool</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Api\Product::setSize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$bool</strong> (<em>bool</em>) &#8211; Either <code class="docutils literal"><span class="pre">true</span></code> or <code class="docutils literal"><span class="pre">false</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If set to <code class="docutils literal"><span class="pre">true</span></code>, Diffbot will attempt to find out which sizes the product is offered in. Similar to <a class="reference internal" href="#Swader\Diffbot\Api\Product::setColors" title="Swader\Diffbot\Api\Product::setColors"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Api\Product::setColors</span></code></a>, this method is unreliable and highly experimental.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="product-entity-class">
+<h2>Product Entity Class<a class="headerlink" href="#product-entity-class" title="Permalink to this headline">¶</a></h2>
+<p>When the Product API is done processing a product (or several) the result will be a Product Entity (i.e. a collection of <em>one</em> Product Entities inside an instance of <a class="reference internal" href="class-entityiterator.html#Swader\Diffbot\Entity\EntityIterator" title="Swader\Diffbot\Entity\EntityIterator"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\EntityIterator</span></code></a>).</p>
+<p>For an overview of the abstract class all Entities build on, see <a class="reference internal" href="abstract-entity.html#Swader\Diffbot\Abstracts\Entity" title="Swader\Diffbot\Abstracts\Entity"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Abstracts\Entity</span></code></a>.</p>
+<p>Note that the Product entity can also be returned by the <a class="reference internal" href="api-analyze.html#Swader\Diffbot\Api\Analyze" title="Swader\Diffbot\Api\Analyze"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Analyze</span></code></a> API in &#8220;product&#8221; mode, or in default mode when processing a URL that contains a product (auto-determined).</p>
+<span class="target" id="namespace-Swader\Diffbot\Entity"></span><dl class="class">
+<dt id="Swader\Diffbot\Entity\Product">
+<em class="property">class </em><code class="descclassname">Swader\Diffbot\Entity\</code><code class="descname">Product</code><a class="headerlink" href="#Swader\Diffbot\Entity\Product" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="section" id="construct">
+<h3><span class="hidden">__construct</span><a class="headerlink" href="#construct" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::__construct">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">__construct</code><span class="sig-paren">(</span><em>array $data</em><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::__construct" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$data</strong> (<em>array</em>) &#8211; The data from which to build the Product entity</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The Product entity&#8217;s constructor needs the data to populate its properties (see getters below). This class is automatically instantiated after a <a class="reference internal" href="#Swader\Diffbot\Api\Product" title="Swader\Diffbot\Api\Product"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Product</span></code></a> or <a class="reference internal" href="api-analyze.html#Swader\Diffbot\Api\Analyze" title="Swader\Diffbot\Api\Analyze"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Analyze</span></code></a> call. You probably won&#8217;t ever need to manually create an instance of this class.</p>
+<p>In the case of the Product entity, the constructor differs from the abstract one (<a class="reference internal" href="abstract-api.html#Swader\Diffbot\Abstracts\Api::__construct" title="Swader\Diffbot\Abstracts\Api::__construct"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Abstracts\Api::__construct</span></code></a>) in that it also looks for the <cite>discussion</cite> key in the result, in order to build a <a class="reference internal" href="api-discussion.html#Swader\Diffbot\Entity\Discussion" title="Swader\Diffbot\Entity\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\Discussion</span></code></a> sub-entity (see <a class="reference internal" href="#Swader\Diffbot\Entity\Product::getDiscussion" title="Swader\Diffbot\Entity\Product::getDiscussion"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Entity\Product::getDiscussion</span></code></a>).</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="gettype">
+<h3><span class="hidden">getType</span><a class="headerlink" href="#gettype" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getType">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getType" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+<p>Will always return &#8220;product&#8221; for products:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ... API setup ... //</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getType</span><span class="p">();</span> <span class="c1">// &quot;product&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="gettext">
+<h3><span class="hidden">getText</span><a class="headerlink" href="#gettext" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getText">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getText" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string | null</td>
+</tr>
+</tbody>
+</table>
+<p>Returns the plaintext content of the processed product page. HTML tags are stripped completely, images are removed. If the text property is missing in the result, returns <code class="docutils literal"><span class="pre">null</span></code>.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getregularprice">
+<h3><span class="hidden">getRegularPrice</span><a class="headerlink" href="#getregularprice" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getRegularPrice">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getRegularPrice</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getRegularPrice" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+<p>Returns regular price as string, e.g. &#8220;$23.99&#8221; or &#8220;32 kn&#8221;. If not found, returns offerPrice instead - see <a class="reference internal" href="#Swader\Diffbot\Entity\Product::getOfferPrice" title="Swader\Diffbot\Entity\Product::getOfferPrice"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Entity\Product::getOfferPrice</span></code></a>.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getregularpricedetails">
+<h3><span class="hidden">getRegularPriceDetails</span><a class="headerlink" href="#getregularpricedetails" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getRegularPriceDetails">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getRegularPriceDetails</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getRegularPriceDetails" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+<p>Separates regularPrice into components like currency, amount, and full string. If not found, serves as alias for <a class="reference internal" href="#Swader\Diffbot\Entity\Product::getOfferPriceDetails" title="Swader\Diffbot\Entity\Product::getOfferPriceDetails"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Entity\Product::getOfferPriceDetails</span></code></a>.</p>
+<p>Usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ... API setup ... //</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getRegularPriceDetails</span><span class="p">());</span>
+
+<span class="sd">/**</span>
+
+<span class="sd">array (size=3)</span>
+<span class="sd">  &#39;amount&#39; =&gt; float 49.85</span>
+<span class="sd">  &#39;text&#39; =&gt; string &#39;£49.85&#39; (length=7)</span>
+<span class="sd">  &#39;symbol&#39; =&gt; string &#39;£&#39; (length=2)</span>
+
+<span class="sd">**/</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getshippingamount">
+<h3><span class="hidden">getShippingAmount</span><a class="headerlink" href="#getshippingamount" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getShippingAmount">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getShippingAmount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getShippingAmount" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+<p>Returns shipping price as string, e.g. &#8220;$5.99&#8221;.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getsaveamount">
+<h3><span class="hidden">getSaveAmount</span><a class="headerlink" href="#getsaveamount" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getSaveAmount">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getSaveAmount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getSaveAmount" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+<p>Returns difference between regular price and offer price, as string, e.g. &#8220;$5.99&#8221;.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getsaveamountdetails">
+<h3><span class="hidden">getSaveAmountDetails</span><a class="headerlink" href="#getsaveamountdetails" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getSaveAmountDetails">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getSaveAmountDetails</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getSaveAmountDetails" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+<p>Separates saveAmount into components like currency, amount, and full string, much like <a class="reference internal" href="#Swader\Diffbot\Entity\Product::getRegularPriceDetails" title="Swader\Diffbot\Entity\Product::getRegularPriceDetails"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Entity\Product::getRegularPriceDetails</span></code></a>. One of the array keys is also a flag indicating whether or not the save amount is a percentage value.</p>
+<p>Usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ... API setup ... //</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getSaveAmountDetails</span><span class="p">());</span>
+
+<span class="sd">/**</span>
+
+<span class="sd">array (size=4)</span>
+<span class="sd">  &#39;amount&#39; =&gt; float 13.5</span>
+<span class="sd">  &#39;text&#39; =&gt; string &#39;£13.50&#39; (length=7)</span>
+<span class="sd">  &#39;symbol&#39; =&gt; string &#39;£&#39; (length=2)</span>
+<span class="sd">  &#39;percentage&#39; =&gt; boolean false</span>
+
+<span class="sd">**/</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getproductid">
+<h3><span class="hidden">getProductId</span><a class="headerlink" href="#getproductid" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getProductId">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getProductId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getProductId" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string | null</td>
+</tr>
+</tbody>
+</table>
+<p>Diffbot-determined unique product ID. If upc, isbn, mpn or sku are identified on the page, productId will select from these values in the above order. Null if none found.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getupc">
+<h3><span class="hidden">getUpc</span><a class="headerlink" href="#getupc" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getUpc">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getUpc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getUpc" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string | null</td>
+</tr>
+</tbody>
+</table>
+<p>UPC number, if found.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getmpn">
+<h3><span class="hidden">getMpn</span><a class="headerlink" href="#getmpn" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getMpn">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getMpn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getMpn" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string | null</td>
+</tr>
+</tbody>
+</table>
+<p>MPN number, if found.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getisbn">
+<h3><span class="hidden">getIsbn</span><a class="headerlink" href="#getisbn" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getIsbn">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getIsbn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getIsbn" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string | null</td>
+</tr>
+</tbody>
+</table>
+<p>ISBN number, if found.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getsku">
+<h3><span class="hidden">getSku</span><a class="headerlink" href="#getsku" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getSku">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getSku</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getSku" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string | null</td>
+</tr>
+</tbody>
+</table>
+<p>Returns Stock Keeping Unit &#8211; store/vendor inventory number or identifier if available. If not, returns null.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getspecs">
+<h3><span class="hidden">getSpecs</span><a class="headerlink" href="#getspecs" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getSpecs">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getSpecs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getSpecs" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+<p>If a specifications table or similar data is available on the product page, individual specifications will be returned in the specs object as name/value pairs. Names will be normalized to lowercase with spaces replaced by underscores, e.g. display_resolution.</p>
+<p>If no specs table is found, an empty array will be returned.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getimages">
+<h3><span class="hidden">getImages</span><a class="headerlink" href="#getimages" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getImages">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getImages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getImages" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+<p>An array of images found on the product page, with their details. The elements of the array are arrays like this one:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="sd">/**</span>
+
+<span class="sd">array (size=7)</span>
+<span class="sd">  &#39;height&#39; =&gt; int 512</span>
+<span class="sd">  &#39;diffbotUri&#39; =&gt; string &#39;image|3|-851701004&#39; (length=18)</span>
+<span class="sd">  &#39;naturalHeight&#39; =&gt; int 727</span>
+<span class="sd">  &#39;width&#39; =&gt; int 749</span>
+<span class="sd">  &#39;primary&#39; =&gt; boolean true</span>
+<span class="sd">  &#39;naturalWidth&#39; =&gt; int 1063</span>
+<span class="sd">  &#39;url&#39; =&gt; string &#39;http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2014/07/140624455201.png&#39; (length=79)</span>
+
+<span class="sd">**/</span>
+</pre></div>
+</div>
+<p>Unlike the <a class="reference internal" href="api-discussion.html#Swader\Diffbot\Api\Discussion" title="Swader\Diffbot\Api\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Discussion</span></code></a> API which returns details about discussion posts even when used with the <a class="reference internal" href="#Swader\Diffbot\Api\Product" title="Swader\Diffbot\Api\Product"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Product</span></code></a> API, the image data returned with this method is minimal. For fuller details about images, use the <a class="reference internal" href="api-image.html#Swader\Diffbot\Api\Image" title="Swader\Diffbot\Api\Image"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Api\Image</span></code></a> API.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getprefixcode">
+<h3><span class="hidden">getPrefixCode</span><a class="headerlink" href="#getprefixcode" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getPrefixCode">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getPrefixCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getPrefixCode" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string | null</td>
+</tr>
+</tbody>
+</table>
+<p>Country of origin as identified by UPC/ISBN, e.g. &#8220;United Kingdom&#8221;. Null if not present.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getproductorigin">
+<h3><span class="hidden">getProductOrigin</span><a class="headerlink" href="#getproductorigin" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getProductOrigin">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getProductOrigin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getProductOrigin" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+<p>If available, two-character ISO country code where the product was produced (e.g. &#8220;gb&#8221;). Null if not present.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getpricerange">
+<h3><span class="hidden">getPriceRange</span><a class="headerlink" href="#getpricerange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getPriceRange">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getPriceRange</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getPriceRange" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">array | null</td>
+</tr>
+</tbody>
+</table>
+<p>If the product is available in a range of prices, the minimum and maximum values will be returned. The lowest price will also be returned as the offerPrice (see <a class="reference internal" href="#Swader\Diffbot\Entity\Product::getOfferPrice" title="Swader\Diffbot\Entity\Product::getOfferPrice"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Entity\Product::getOfferPrice</span></code></a>). If no range is detected, returns null.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getquantityprices">
+<h3><span class="hidden">getQuantityPrices</span><a class="headerlink" href="#getquantityprices" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getQuantityPrices">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getQuantityPrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getQuantityPrices" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">array | null</td>
+</tr>
+</tbody>
+</table>
+<p>If the product is available with quantity-based discounts, all identifiable price points will be returned. The lowest price will also be returned as the offerPrice (see <a class="reference internal" href="#Swader\Diffbot\Entity\Product::getOfferPrice" title="Swader\Diffbot\Entity\Product::getOfferPrice"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Entity\Product::getOfferPrice</span></code></a>). If no range is detected, returns null.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="isavailable">
+<h3><span class="hidden">isAvailable</span><a class="headerlink" href="#isavailable" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::isAvailable">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">isAvailable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::isAvailable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool | null</td>
+</tr>
+</tbody>
+</table>
+<p>Tries to determine whether or not the product is available / in stock. Returns boolean if determined, or null if not.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getofferprice">
+<h3><span class="hidden">getOfferPrice</span><a class="headerlink" href="#getofferprice" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getOfferPrice">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getOfferPrice</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getOfferPrice" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+<p>Returns price as string, e.g. &#8220;£49.85&#8221; or &#8220;32 kn&#8221;.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getofferpricedetails">
+<h3><span class="hidden">getOfferPriceDetails</span><a class="headerlink" href="#getofferpricedetails" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getOfferPriceDetails">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getOfferPriceDetails</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getOfferPriceDetails" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+<p>Separates offerPrice into components like currency, amount, and full string.</p>
+<p>Usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="c1">// ... API setup ... //</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getOfferPriceDetails</span><span class="p">());</span>
+
+<span class="sd">/**</span>
+
+<span class="sd">array (size=3)</span>
+<span class="sd">  &#39;amount&#39; =&gt; float 49.85</span>
+<span class="sd">  &#39;text&#39; =&gt; string &#39;£49.85&#39; (length=7)</span>
+<span class="sd">  &#39;symbol&#39; =&gt; string &#39;£&#39; (length=2)</span>
+
+<span class="sd">**/</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getsize">
+<h3><span class="hidden">getSize</span><a class="headerlink" href="#getsize" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getSize">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getSize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">array | null</td>
+</tr>
+</tbody>
+</table>
+<p>If product is available in different sizes, returns array of those sizes. Highly experimental and often unreliable. This field is optional, and needs to be set on the API. See <a class="reference internal" href="#Swader\Diffbot\Api\Product::setSize" title="Swader\Diffbot\Api\Product::setSize"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Api\Product::setSize</span></code></a>.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getcolors">
+<h3><span class="hidden">getColors</span><a class="headerlink" href="#getcolors" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getColors">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getColors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getColors" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">array | null</td>
+</tr>
+</tbody>
+</table>
+<p>If the product is available in multiple colors, returns the color options. Highly experimental and often unreliable. This field is optional, and needs to be set on the API. See <a class="reference internal" href="#Swader\Diffbot\Api\Product::setColors" title="Swader\Diffbot\Api\Product::setColors"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Api\Product::setColors</span></code></a>.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getbrand">
+<h3><span class="hidden">getBrand</span><a class="headerlink" href="#getbrand" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getBrand">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getBrand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getBrand" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+<p>The brand of the product, as determined by Diffbot.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="getdiscussion">
+<h3><span class="hidden">getDiscussion</span><a class="headerlink" href="#getdiscussion" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="method">
+<dt id="Swader\Diffbot\Entity\Product::getDiscussion">
+<code class="descclassname">Swader\Diffbot\Entity\Product::</code><code class="descname">getDiscussion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Swader\Diffbot\Entity\Product::getDiscussion" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference internal" href="api-discussion.html#Swader\Diffbot\Entity\Discussion" title="Swader\Diffbot\Entity\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\Discussion</span></code></a> | null</td>
+</tr>
+</tbody>
+</table>
+<p>Returns the <a class="reference internal" href="api-discussion.html#Swader\Diffbot\Entity\Discussion" title="Swader\Diffbot\Entity\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\Discussion</span></code></a> found on the product&#8217;s page (review section). See <a class="reference internal" href="#Swader\Diffbot\Api\Product::setDiscussion" title="Swader\Diffbot\Api\Product::setDiscussion"><code class="xref php php-meth docutils literal"><span class="pre">Swader\Diffbot\Api\Product::setDiscussion</span></code></a> for details and below for usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">use</span> <span class="nx">Swader\Diffbot\Diffbot</span><span class="p">;</span>
+
+<span class="nv">$url</span> <span class="o">=</span> <span class="s2">&quot;http://www.sportsdirect.com/slazenger-plain-polo-shirt-mens-542006?colcode=54200601&quot;</span><span class="p">;</span>
+
+<span class="nv">$diffbot</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Diffbot</span><span class="p">(</span><span class="s2">&quot;my_token&quot;</span><span class="p">);</span>
+<span class="nv">$api</span> <span class="o">=</span> <span class="nv">$diffbot</span><span class="o">-&gt;</span><span class="na">createProductApi</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
+
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="na">call</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getDiscussion</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getNumPosts</span><span class="p">();</span> <span class="c1">// 10</span>
+<span class="k">echo</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getDiscussion</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getParticipants</span><span class="p">();</span> <span class="c1">// 10</span>
+</pre></div>
+</div>
+<p>For other methods exposed on the <a class="reference internal" href="api-discussion.html#Swader\Diffbot\Entity\Discussion" title="Swader\Diffbot\Entity\Discussion"><code class="xref php php-class docutils literal"><span class="pre">Swader\Diffbot\Entity\Discussion</span></code></a> entity, see its documentation.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
 </div>
 </div>
 

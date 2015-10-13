@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Diffbot PHP Client Documentation 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-26 21:06+0000\n"
+"POT-Creation-Date: 2015-10-13 20:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,15 +29,15 @@ msgid ":hidden:`__construct`"
 msgstr ""
 
 #: ../../abstract-api.rst:24
-msgid "This class takes a single argument during construction, the URL of the page to process. Alternatively, the argument can be \"crawl\", if the API is to be used in conjunction with the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Crawl` API."
-msgstr ""
-
-#: ../../abstract-api.rst:26
 msgid "The URL of the page to process"
 msgstr ""
 
-#: ../../abstract-api.rst:27
+#: ../../abstract-api.rst:25
 msgid "InvalidArgumentException if the URL is invalid AND not the word \"crawl\""
+msgstr ""
+
+#: ../../abstract-api.rst:27
+msgid "This class takes a single argument during construction, the URL of the page to process. Alternatively, the argument can be \"crawl\", if the API is to be used in conjunction with the :php:class:`Swader\\\\Diffbot\\\\Api\\\\Crawl` API."
 msgstr ""
 
 #: ../../abstract-api.rst:30
@@ -45,19 +45,19 @@ msgid ":hidden:`setTimeout`"
 msgstr ""
 
 #: ../../abstract-api.rst:34
-msgid "Setting the timeout will define how long Diffbot will keep trying to fetch the API results. A timeout can happen for various reasons, from Diffbot's failure, to the site being crawled being exceptionally slow, and more."
-msgstr ""
-
-#: ../../abstract-api.rst:36
 msgid "Optional. The timeout, in milliseconds. Defaults to 30,000, a.k.a. 30 seconds"
 msgstr ""
 
-#: ../../abstract-api.rst:37
+#: ../../abstract-api.rst:35
 msgid "$this"
 msgstr ""
 
-#: ../../abstract-api.rst:38
+#: ../../abstract-api.rst:36
 msgid "InvalidArgumentException if the timeout value is invalid (negative or not an integer)"
+msgstr ""
+
+#: ../../abstract-api.rst:38
+msgid "Setting the timeout will define how long Diffbot will keep trying to fetch the API results. A timeout can happen for various reasons, from Diffbot's failure, to the site being crawled being exceptionally slow, and more."
 msgstr ""
 
 #: ../../abstract-api.rst:40
@@ -71,11 +71,11 @@ msgid ":hidden:`call`"
 msgstr ""
 
 #: ../../abstract-api.rst:49
-msgid "When the API instance has been fully configured, this method executes the call."
+msgid ":php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator` The return value will be an iterable collection of appropriate entities. Refer to each API's documentation for details on entities returned from each API call."
 msgstr ""
 
 #: ../../abstract-api.rst:51
-msgid "\\\\Swader\\\\Diffbot\\\\Entity\\\\EntityIterator The return value will be an iterable collection of appropriate entities. Refer to each API's documentation for details on entites returned from each API call."
+msgid "When the API instance has been fully configured, this method executes the call."
 msgstr ""
 
 #: ../../abstract-api.rst:60
@@ -83,10 +83,10 @@ msgid ":hidden:`buildUrl`"
 msgstr ""
 
 #: ../../abstract-api.rst:64
-msgid "This method is called automatically when :php:meth:`Swader\\\\Diffbot\\\\Abstracts\\\\Api::call` is called. It builds the URL which is to be called by the HTTPClient in :php:meth:`Swader\\\\Diffbot\\\\Diffbot::setHttpClient`, and returns it. This method can be used to get the URL for the purposes of testing in third party API clients like `Postman <https://www.getpostman.com/>`_."
+msgid "string"
 msgstr ""
 
 #: ../../abstract-api.rst:66
-msgid "string"
+msgid "This method is called automatically when :php:meth:`Swader\\\\Diffbot\\\\Abstracts\\\\Api::call` is called. It builds the URL which is to be called by the HTTPClient in :php:meth:`Swader\\\\Diffbot\\\\Diffbot::setHttpClient`, and returns it. This method can be used to get the URL for the purposes of testing in third party API clients like `Postman <https://www.getpostman.com/>`_."
 msgstr ""
 

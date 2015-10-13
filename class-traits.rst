@@ -39,7 +39,7 @@ StandardApi
 
 .. :php:method:: setLinks($bool)
 
-    :param bool $param: Either ``true`` or ``false``
+    :param bool $bool: Either ``true`` or ``false``
     :returns: $this
 
     Sets the ``links`` optional field to true, forcing the API to return all links found in the processed web page
@@ -49,7 +49,7 @@ StandardApi
 
 .. :php:method:: setMeta($bool)
 
-    :param bool $param: Either ``true`` or ``false``
+    :param bool $bool: Either ``true`` or ``false``
     :returns: $this
 
     Sets the ``meta`` optional field to true, forcing the API to return metadata (i.e. the meta tags in the HTML source)
@@ -59,7 +59,7 @@ StandardApi
 
 .. php:method:: setBreadcrumb($bool)
 
-    :param bool $param: Either ``true`` or ``false``
+    :param bool $bool: Either ``true`` or ``false``
     :returns: $this
 
     Sets the ``breadcrumb`` optional field to true. The API then returns a top-level array (breadcrumb) of URLs and link text from page breadcrumbs.
@@ -69,7 +69,7 @@ StandardApi
 
 .. php:method:: setQuerystring($bool)
 
-    :param bool $param: Either ``true`` or ``false``
+    :param bool $bool: Either ``true`` or ``false``
     :returns: $this
 
     Sets the ``querystring`` optional field to true. The API then returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as true.
@@ -88,7 +88,7 @@ StandardEntity
 
         :returns: string
 
-    Returns the language code of the detected language of the processed content. The code returned is a two-character ISO 639-1 code: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+        Returns the language code of the detected language of the processed content. The code returned is a two-character ISO 639-1 code: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
 :hidden:`getHumanLanguage`
 """"""""""""""""""""""""""
@@ -97,7 +97,7 @@ StandardEntity
 
         :returns: string
 
-    Alias method for ``getLang()`` above.
+        Alias method for ``getLang()`` above.
 
 :hidden:`getPageUrl`
 """""""""""""""""""""
@@ -106,7 +106,7 @@ StandardEntity
 
         :returns: string
 
-    Returns the URL which was processed
+        Returns the URL which was processed
 
 :hidden:`getResolvedPageUrl`
 """"""""""""""""""""""""""""
@@ -115,7 +115,7 @@ StandardEntity
 
         :returns: string
 
-    Returns page URL which was resolved by redirects, if any. Will often be identical to result from ``getPageUrl`` above.
+        Returns page URL which was resolved by redirects, if any. Will often be identical to result from ``getPageUrl`` above.
 
 :hidden:`getTitle`
 """"""""""""""""""
@@ -124,7 +124,7 @@ StandardEntity
 
         :returns: string
 
-    Returns the title of the document which was processed.
+        Returns the title of the document which was processed.
 
 :hidden:`getLinks`
 """"""""""""""""""
@@ -133,7 +133,7 @@ StandardEntity
 
         :returns: array | null
 
-    Returns an array of all links found on the processed page. Links will be simple string elements in an indexed array. If the :php:meth:`Swader\\Diffbot\\Traits\\StandardApi::setLinks` method was not called, will return ``null``.
+        Returns an array of all links found on the processed page. Links will be simple string elements in an indexed array. If the :php:meth:`Swader\\Diffbot\\Traits\\StandardApi::setLinks` method was not called, will return ``null``.
 
 
 :hidden:`getMeta`
@@ -143,7 +143,7 @@ StandardEntity
 
         :returns: array | null
 
-    Returns an array containing the full contents of page meta tags, including sub-arrays for OpenGraph tags, Twitter Card metadata, schema.org microdata, and -- if available -- oEmbed metadata. If the :php:meth:`Swader\\Diffbot\\Traits\\StandardApi::setMeta` method was not called, will return ``null``.
+        Returns an array containing the full contents of page meta tags, including sub-arrays for OpenGraph tags, Twitter Card metadata, schema.org microdata, and -- if available -- oEmbed metadata. If the :php:meth:`Swader\\Diffbot\\Traits\\StandardApi::setMeta` method was not called, will return ``null``.
 
 :hidden:`getBreadcrumb`
 """""""""""""""""""""""
@@ -152,7 +152,7 @@ StandardEntity
 
         :returns: array | null
 
-    Returns a top-level array (breadcrumb) of URLs and link text from page breadcrumbs. If the :php:meth:`Swader\\Diffbot\\Traits\\StandardApi::setBreadcrumb` method was not called, will return ``null``.
+        Returns a top-level array (breadcrumb) of URLs and link text from page breadcrumbs. If the :php:meth:`Swader\\Diffbot\\Traits\\StandardApi::setBreadcrumb` method was not called, will return ``null``.
 
 
 :hidden:`getQueryString`
@@ -162,5 +162,14 @@ StandardEntity
 
         :returns: array | null
 
-    Returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as true. If the :php:meth:`Swader\\Diffbot\\Traits\\StandardApi::setQuerystring` method was not called, will return ``null``.
+        Returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as true. If the :php:meth:`Swader\\Diffbot\\Traits\\StandardApi::setQuerystring` method was not called, will return ``null``.
+
+:hidden:`getDiffbotUri`
+"""""""""""""""""""""""
+
+    .. php:method:: getDiffbotUri()
+
+        :returns: string
+
+        A unique identifier of the entity in Diffbot's database. Useful for filtering out duplicates, caching, etc.
 

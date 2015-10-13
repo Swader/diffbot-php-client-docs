@@ -19,16 +19,14 @@ Article API Class
 
 .. php:class:: Article
 
+Basic Usage::
 
-:hidden:`__construct`
-"""""""""""""""""""""
+    use Swader\Diffbot\Diffbot;
 
-    .. php:method:: __construct($url)
+    $url = 'http://some-article-to-process.com';
 
-        :param string $url: The URL of the page to process or the string "crawl"
-        :returns: $this
-
-    This class takes a single argument during construction, the URL of the page to process. Alternatively, the argument can be the string "crawl", if the API is to be used in conjunction with :php:class:`Swader\\Diffbot\\Api\\Crawl`.
+    $diffbot = new Diffbot('my_token');
+    $api = $diffbot->createArticleApi($url);
 
 :hidden:`setSentiment`
 """"""""""""""""""""""
@@ -38,7 +36,7 @@ Article API Class
         :param bool $bool: Either ``true`` or ``false``
         :returns: $this
 
-    This method sets the ``sentiment`` optional field value. This determines whether or not to return the sentiment score of the analyzed article text, a value ranging from -1.0 (very negative) to 1.0 (very positive). Sentiment analysis is powered by `Semantria <http://support.diffbot.com/automatic-apis/semantria-powered-sentiment-entity-extraction-and-other-text-analysis-features/>`__ for advanced features like keyword and entity extraction, but the basic sentiment analysis (score only) is enabled for everyone, even those without Semantria accounts.
+        This method sets the ``sentiment`` optional field value. This determines whether or not to return the sentiment score of the analyzed article text, a value ranging from -1.0 (very negative) to 1.0 (very positive). Sentiment analysis is powered by `Semantria <http://support.diffbot.com/automatic-apis/semantria-powered-sentiment-entity-extraction-and-other-text-analysis-features/>`__ for advanced features like keyword and entity extraction, but the basic sentiment analysis (score only) is enabled for everyone, even those without Semantria accounts.
 
         Usage::
 
@@ -61,13 +59,13 @@ Article API Class
         :param bool $bool: Either ``true`` or ``false``
         :returns: $this
 
-    If set to false, Diffbot will not auto-concatenate several pages of a multi-page article into one. Defaults to true, max 20 pages.
+        If set to false, Diffbot will not auto-concatenate several pages of a multi-page article into one. Defaults to true, max 20 pages.
 
-    For more info about auto-concatenation, see `here <http://support.diffbot.com/automatic-apis/handling-multiple-page-articles/>`__.
+        For more info about auto-concatenation, see `here <http://support.diffbot.com/automatic-apis/handling-multiple-page-articles/>`__.
 
-    While practical, this is a less reliable method of concatenating long posts than finding out the number of pages manually and processing them each one by one. Not only does it often fail to recognize the next page links, but also if there's a chance that the series is longer than 20 parts, everything from 20 onward will remain ignored. This is a limitation of Diffbot, not the client, and there's little chance of it changing - concatenations longer than 20 pages would likely trigger timeouts as the page count becomes less and less trivial.
+        While practical, this is a less reliable method of concatenating long posts than finding out the number of pages manually and processing them each one by one. Not only does it often fail to recognize the next page links, but also if there's a chance that the series is longer than 20 parts, everything from 20 onward will remain ignored. This is a limitation of Diffbot, not the client, and there's little chance of it changing - concatenations longer than 20 pages would likely trigger timeouts as the page count becomes less and less trivial.
 
-    If you need to process multiple pages of something, it is thus recommended you find out those links yourself, then pass them into Article API one by one and concatenate later. If you'd like to analyze the entire concatenated post after the fact, it's best to manually concat and then send the merged content into Diffbot as a `POST value <https://tldrify.com/bhr>`__ for processing.
+        If you need to process multiple pages of something, it is thus recommended you find out those links yourself, then pass them into Article API one by one and concatenate later. If you'd like to analyze the entire concatenated post after the fact, it's best to manually concat and then send the merged content into Diffbot as a `POST value <https://tldrify.com/bhr>`__ for processing.
 
 
         Usage::
@@ -92,24 +90,24 @@ Article API Class
         :param int $max: The number of tags to generate and return
         :returns: $this
 
-    Set the maximum number of automatically-generated tags to return. By default a maximum of five tags will be returned. Tags are a built-in feature of Diffbot, and *could* generate different results on two different calls to the same URL provided enough time has passed, due to Diffbot's engine evolving over time as it processed more and more content.
+        Set the maximum number of automatically-generated tags to return. By default a maximum of five tags will be returned. Tags are a built-in feature of Diffbot, and *could* generate different results on two different calls to the same URL provided enough time has passed, due to Diffbot's engine evolving over time as it processed more and more content.
 
-    For an example of what the tags might look like, run the demo example at https://diffbot.com or see :php:meth:`Swader\\Diffbot\\Entity\\Article::getTags`.
+        For an example of what the tags might look like, run the demo example at https://diffbot.com or see :php:meth:`Swader\\Diffbot\\Entity\\Article::getTags`.
 
 :hidden:`setDiscussion`
 """""""""""""""""""""""
 
     .. php:method:: setDiscussion($bool = true)
 
-        :param bool $param: Either ``true`` or ``false``
+        :param bool $bool: Either ``true`` or ``false``
         :returns: $this
 
-    Whether or not to use the Discussion API to additionally process any detected comment or review threads in the article. Behaves as if the :php:class:`Swader\\Diffbot\\Api\\Discussion` was set to process the page, and merges the returned data with the Article API's results by means of a ``discussion`` field in the result. The field will have all the sub-fields of the usual :php:class:`Swader\\Diffbot\\Api\\Discussion` call; i.e. you will be able to access the :php:class:`Swader\\Diffbot\\Entity\\Discussion` entity and all its sub entities via the :php:meth:`Swader\\Diffbot\\Entity\\Article::getDiscussion` method.
+        Whether or not to use the Discussion API to additionally process any detected comment or review threads in the article. Behaves as if the :php:class:`Swader\\Diffbot\\Api\\Discussion` was set to process the page, and merges the returned data with the Article API's results by means of a ``discussion`` field in the result. The field will have all the sub-fields of the usual :php:class:`Swader\\Diffbot\\Api\\Discussion` call; i.e. you will be able to access the :php:class:`Swader\\Diffbot\\Entity\\Discussion` entity and all its sub entities via the :php:meth:`Swader\\Diffbot\\Entity\\Article::getDiscussion` method.
 
 Article Entity Class
 ====================
 
-When the Article API is done processing an article (or several) the result will be an Article Entity (i.e. a collection of *one* Article Entities inside an instance of :php:class:`Swader\\Diffbot\\Entity\\EntityIterator`.
+When the Article API is done processing an article (or several) the result will be an Article Entity (i.e. a collection of *one* Article Entities inside an instance of :php:class:`Swader\\Diffbot\\Entity\\EntityIterator`).
 
 For an overview of the abstract class all Entities build on, see :php:class:`Swader\\Diffbot\\Abstracts\\Entity`.
 
@@ -257,7 +255,7 @@ Note that the Article entity can also be returned by the :php:class:`Swader\\Dif
 
         :returns: array
 
-        If the article is a multi-page one, returns the list of URLs of the pages that follow after the one that was processed. If the article is a single-page one, an empty array is returned.
+        If the article is a multi-page one, returns the list of absolute URLs of the pages that follow after the one that was processed. If the article is a single-page one, an empty array is returned.
 
 :hidden:`getSentiment`
 """"""""""""""""""""""
