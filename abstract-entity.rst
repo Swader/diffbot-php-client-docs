@@ -8,7 +8,7 @@ Entity Abstract
 
 This page will describe the Entity Abstract class. This class is the root of all Entity classes. Entity classes are used as containers for return values from various API endpoints. For example, the Article API will return an Article Entity, the Discussion API will return a Discussion Entity, and so on.
 
-It is important to note that an API class will *never* return an Entity class directly. Rather, it will return an :php:class:`Swader\\Diffbot\\Entity\\EntityIterator`, an iterable container with all the Entities inside. The container, however, is configured in such a way that executing *get* methods on it directly will forward those calls to the first Entity in its dataset. Thus, in instances where
+It is important to note that an API class will *never* return an Entity class directly. Rather, it will return an :php:class:`Swader\\Diffbot\\Entity\\EntityIterator`, an iterable container with all the Entities inside. The container, however, is configured in such a way that executing *get* methods on it directly will forward those calls to the first Entity in its dataset. See :php:class:`Swader\\Diffbot\\Entity\\EntityIterator`.
 
 .. php:namespace:: Swader\Diffbot\Abstracts
 

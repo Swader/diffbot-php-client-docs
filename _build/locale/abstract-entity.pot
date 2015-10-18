@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Diffbot PHP Client Documentation 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-13 20:51+0000\n"
+"POT-Creation-Date: 2015-10-18 14:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgid "This page will describe the Entity Abstract class. This class is the root
 msgstr ""
 
 #: ../../abstract-entity.rst:15
-msgid "It is important to note that an API class will *never* return an Entity class directly. Rather, it will return an :php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`, an iterable container with all the Entities inside. The container, however, is configured in such a way that executing *get* methods on it directly will forward those calls to the first Entity in its dataset. Thus, in instances where"
+msgid "It is important to note that an API class will *never* return an Entity class directly. Rather, it will return an :php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`, an iterable container with all the Entities inside. The container, however, is configured in such a way that executing *get* methods on it directly will forward those calls to the first Entity in its dataset. See :php:class:`Swader\\\\Diffbot\\\\Entity\\\\EntityIterator`."
 msgstr ""
 
 #: ../../abstract-entity.rst:22
